@@ -1,0 +1,128 @@
+.head h1 {
+  color: blue;
+  display: inline-block;
+  margin-right: 20px;
+  font-family: 'Jua', sans-serif;
+}
+body, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu ul {
+  background-color: #F5F5DC;
+}
+.menu > ul {
+  background-color: dodgerblue;
+  display: inline-block;
+  padding: 0px 10px;
+  border-radius: 5px;
+}
+.menu > ul > li {
+  display: inline-block;
+  padding: 0;
+  width: 180px;
+}
+.menu {
+  text-align: center;
+  display: inline-block;
+}
+a {
+  color:inherit;
+  text-decoration: inherit;
+}
+.menu li > a {
+  padding: 10px;
+  display: block;
+  font-size: 20px;
+  font-family: 'Jua', sans-serif;
+}
+.menu li:hover > a {
+  background-color: black;
+  color: white;
+}
+.menu ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+.menu li:hover > ul {
+  display: block;
+  width: 180px;
+}
+.menu li {
+  position: relative;
+}
+.top {
+  border-bottom: 1px solid gray;
+  text-align: left;
+}
+.logo {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 30px;
+}
+.head > * {
+  vertical-align: middle;
+}
+.searchform {
+  display: inline-block;
+  padding-left: 20px;
+}
+.searchform input {
+  border: 2px solid royalblue;
+  border-radius: 5px;
+  font-family: 'Jua', sans-serif;
+  padding: 10px;
+}
+.first {
+  display: block;
+  margin-left: 135px;
+  margin-top: 10px;
+  font-family: 'Jua', sans-serif;
+}
+.first ul {
+  display: inline-flex;
+}
+.first예외 {
+  color: red;
+  font-size: 20px;
+  margin-right: 20px;
+}
+.first1 {
+  display: inline-block;
+  margin-left: 530px;
+}
+.first1 > ul li {
+  padding: 10px;
+  color: gray;
+}
+.first1 > ul li:hover {
+  text-decoration: underline;
+}
+@media(max-width: 1420px) {
+  .first1 {
+    display: inline-block;
+    margin-left: 5px;
+  }
+  .first {
+    display: inline-block;
+    margin-left: 5px;
+  }
+  .logo {
+    margin-left: 5px;
+  }
+  .searchform {
+    display: inline-block;
+    padding-left: 0px;
+  }
+  .menu li {
+    width: 145px;
+  }
+  .menu ul li {
+    width: 145px;
+  }
+  .menu li:hover > ul {
+    width: 145px;
+  }
+}
