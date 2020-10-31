@@ -29,3 +29,13 @@
 .header .header-tit {text-align: center;}
 .header .header-tit h1 {font-weight: normal; margin-top: 40px; padding: 5px 20px 6px 20px; font-size: 28px; text-transform: uppercase; background-color: #4aa8d4; color: #fff; display: inline-block;}
 .header .header-tit a {margin-top: -5px; color: #fff; padding: 5px 20px 6px 20px; font-size: 18px; background-color: #2698cb; display: inline-block;}
+.header .header-icon {text-align: center; margin-top: 30px;}
+.header .header-icon a {width: 60px; height: 60px; display: inline-block; background: url(../img/icon.png); margin: 0 3px;}
+.header .header-icon .icon1 {background-position: 0 0;}
+.header .header-icon .icon2 {background-position: 0 -60px;}
+.header .header-icon .icon3 {background-position: 0 -120px;}
+.header .header-icon .icon4 {background-position: 0 -180px;}
+.header .header-icon .icon1:hover {background-position: -60px 0;}
+.header .header-icon .icon2:hover {background-position: -60px -60px;}
+.header .header-icon .icon3:hover {background-position: -60px -120px;}
+.header .header-icon .icon4:hover {background-position: -60px -180px;}
