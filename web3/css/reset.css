@@ -11,5 +11,9 @@ a:hover {color: #390;}
 body,input,textarea,select,button,table {color: #222; font-size: 13px; line-height: 1.5; font-family:
   'Nanum Gothic',sans-serif;}
 
+/* 폰트 초기화 */
+dl,ul,li,ol,menu {list-style: none;}
+
 /* IR 효과 */
 .ir_pm {display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px;}
+.ir_su {overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px;}
