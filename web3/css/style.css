@@ -2,7 +2,7 @@
 
 /* 스킵 네비게이션 */
 #skip {position: relative;}
-#skip a {position: absolute; left: 0; top: -35px; border: 1px solid #fff; color: #fff; background-color: #333; line-height: 30px; width: 180px; text-align: center;}
+#skip a {position: absolute; left: 0; top: -35px; border: 1px solid #fff; color: #fff; background-color: #333; line-height: 30px; width: 140px; text-align: center;}
 #skip a:active,
 #skip a:focus {top: 0;}
 
@@ -26,3 +26,6 @@
 .header .header-menu {text-align: right;}
 .header .header-menu a {color: #fff; padding: 10px 0 10px 13px; display: inline-block;}
 .header .header-menu a:hover {color: #666;}
+.header .header-tit {text-align: center;}
+.header .header-tit h1 {font-weight: normal; margin-top: 40px; padding: 5px 20px 6px 20px; font-size: 28px; text-transform: uppercase; background-color: #4aa8d4; color: #fff; display: inline-block;}
+.header .header-tit a {margin-top: -5px; color: #fff; padding: 5px 20px 6px 20px; font-size: 18px; background-color: #2698cb; display: inline-block;}
