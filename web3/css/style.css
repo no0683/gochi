@@ -13,8 +13,8 @@
 #footer {height: 200px; background-color: #333;}
 
 /* 컨텐츠 레이아웃 */
-#cont_nav {}
-#cont_tit {height: 200px; background-color: #444;}
+#cont_nav {background-color: #f6fdff;}
+#cont_tit {background-color: #eaf7fd;}
 #cont_ban {height: 200px; background-color: #555;}
 #cont_cont {height: 200px; background-color: #666;}
 
@@ -48,3 +48,8 @@
 .nav > div.last > ol li {width: 100%;}
 .nav > div > h3 {font-size: 18px; color: #25a2d0; margin-bottom: 4px;}
 .nav > div > ol > li > a:hover {text-decoration: underline;}
+
+/* 타이틀 */
+.tit {position: relative;}
+.tit h2 {font-size: 40px; text-align: center; padding: 5px 0; letter-spacing: 2px; color: #2c94c4; font-family: 'Nanum Brush Script', cursive;}
+.tit a.btn {position: absolute; top: 5px; right: 0; background: url(../img/icon.png) no-repeat 0 -600px; width: 60px; height: 60px;}
