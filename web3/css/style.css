@@ -107,5 +107,15 @@
 .notice2 ul {}
 .notice2 ul li {overflow: hidden; font-size: 12px; background: url(../img/dot.gif) no-repeat 0 8px; padding-left: 8px;}
 .notice2 ul li a {float: left; width: 65%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
-.notice2 ul li span {float: right; width: 30%;}
+.notice2 ul li span {float: right; width: 30%; text-align: right;}
 .notice2 .more {position: absolute; top: 0; right: 0; background: url(../img/icon.png) no-repeat -150px -90px; width: 17px; height: 17px; display: block;}
+
+/* 게시판3 */
+.notice3 {position: relative;}
+.notice3 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold; margin-top: 15px;}
+.notice3 ul {}
+.notice3 ul li {position: relative; padding: 8px 0 14px 60px;}
+.notice3 ul li img {width: 50px; position: absolute; top: 0; left: 0; border: 1px solid #0093bd;}
+.notice3 ul li strong {display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice3 ul li span {display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px;}
+.notice3 .more {position: absolute; top: 0; right: 0; background: url(../img/icon.png) no-repeat -150px -90px; width: 17px; height: 17px; display: block;}
