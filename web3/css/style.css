@@ -144,3 +144,14 @@
 .notice_hover2 ul li a span em {visibility: hidden; position: absolute; bottom: 0; left: 0; background: rgba(0,0,0,0.7); color: #fff; width: 100%;}
 .notice_hover2 ul li a span:hover em {visibility: visible;}
 .notice_hover2 ul li a strong {display: inline-block; padding-top: 3px; font-size: 12px;}
+
+/* 탭 메뉴 */
+.tab_menu {position: relative; border: 1px solid #ccc; padding: 8px; height: 105px;}
+.tab_menu ul {overflow: hidden; border-bottom: 1px solid #ccc; width: 234px;}
+.tab_menu ul li {float: left; border: 1px solid #ccc; margin-right: -1px; margin-bottom: -1px;}
+.tab_menu ul li a {padding: 5px 10px; display: block;}
+.tab_menu ul li ul {border: none; position: absolute; top: 48px; left: 0; width: 270px;}
+.tab_menu ul li ul li {float: none; border: none; background: url(../img/dot.gif) no-repeat 9px 8px; padding-left: 18px;}
+.tab_menu ul li ul li a {overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%; padding: 0 0 3px 0;}
+.tab_menu ul li.active {background-color: #2c94c4;}
+.tab_menu ul li.active > a {color: #fff;}
