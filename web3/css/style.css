@@ -10,7 +10,7 @@
 #wrap {}
 #header {height: 325px; background: url(../img/header_bg.jpg) center repeat-x;}
 #contents {}
-#footer {height: 200px; background-color: #333;}
+#footer {border-top: 1px solid #eee;}
 
 /* 컨텐츠 레이아웃 */
 #cont_nav {background-color: #f6fdff;}
@@ -210,3 +210,13 @@
 .popup ul li.last {margin-right: 0;}
 .popup ul li a {}
 .popup ul li a img {width: 100%;}
+
+/* 푸터 */
+.footer {padding: 25px 0; text-align: center;}
+.footer ul {margin-bottom: 20px;}
+.footer ul li {position: relative; display: inline; padding: 0 7px 0 10px;}
+.footer ul li:before {content: ''; width: 1px; height: 12px; background-color: #ccc; left: 0; top: 2px; position: absolute;}
+.footer ul li:first-child:before {width: 0; height: 0;}
+.footer ul li a {}
+.footer address {}
+.footer .w3c {margin-top: 15px;}

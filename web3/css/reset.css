@@ -12,7 +12,7 @@ body,input,textarea,select,button,table {color: #222; font-size: 13px; line-heig
   'Nanum Gothic',sans-serif;}
 
 /* 폰트 스타일 초기화 */
-em {font-style: normal;}
+em,address {font-style: normal;}
 
 /* 블릿기호 초기화 */
 dl,ul,li,ol,menu {list-style: none;}
@@ -28,9 +28,9 @@ img,fieldset {border: none;}
 .ir_su {overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px;}
 
 /* margin,padding */
-.mt10 {margin-top: 10px; !important;}
-.mt15 {margin-top: 15px; !important;}
-.mt20 {margin-top: 20px; !important;}
-.mt25 {margin-top: 25px; !important;}
-.mt30 {margin-top: 30px; !important;}
-.mt35 {margin-top: 35px; !important;}
+.mt10 {margin-top: 10px;}
+.mt15 {margin-top: 15px;}
+.mt20 {margin-top: 20px;}
+.mt25 {margin-top: 25px;}
+.mt30 {margin-top: 30px;}
+.mt35 {margin-top: 35px;}
