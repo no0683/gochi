@@ -155,3 +155,13 @@
 .tab_menu ul li ul li a {overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%; padding: 0 0 3px 0;}
 .tab_menu ul li.active {background-color: #2c94c4;}
 .tab_menu ul li.active > a {color: #fff;}
+
+/* 게시판4 */
+.notice4 {position: relative; border: 1px solid #ccc;}
+.notice4 h4 {color: #0093bd; font-weight: 700; font-size: 14px; border-bottom: 1px solid #ccc; padding: 8px 10px;}
+.notice4 h4 em{color: #cf3292;}
+.notice4 ul {padding: 10px;}
+.notice4 ul li {overflow: hidden; background: url(../img/dot.gif) no-repeat 0px 8px; padding-left: 8px; padding-bottom: 2px;}
+.notice4 ul li a {float: left; width: 60%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice4 ul li span {float: right; width: 30%; text-align: right;}
+.notice4 a.more {position: absolute; top: 9px; right: 9px;}
