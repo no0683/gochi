@@ -415,5 +415,12 @@
       <!-- //footer -->
     </div>
     <!-- //wrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(".tit .btn").click(function(){
+        $("#cont_nav").slideToggle(200);
+        $(this).toggleClass("on");
+      })
+    </script>
   </body>
 </html>
