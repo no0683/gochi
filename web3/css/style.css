@@ -185,7 +185,7 @@
 .gallery {position: relative; border: 1px solid #ccc; height: 254px; overflow: hidden;}
 .gallery h4 {font-size: 14px; color: #0093bd; border-bottom: 1px solid #ccc; font-weight: bold; padding: 10px 0 8px 11px;}
 .gallery .gallery_btn {position: absolute; top: 7px; right: 5px;}
-.gallery .gallery_btn ul {overflow: hidden;}
+/* .gallery .gallery_btn ul {overflow: hidden;}
 .gallery .gallery_btn ul li {float: left; margin: 1px 2px;}
 .gallery .gallery_btn ul li.gb_icon1 a {background-position: -150px -120px;}
 .gallery .gallery_btn ul li.gb_icon2 a {background-position: -150px -143px;}
@@ -195,11 +195,20 @@
 .gallery .gallery_btn ul li.gb_icon2 a:hover {background-position: -173px -143px;}
 .gallery .gallery_btn ul li.gb_icon3 a:hover {background-position: -173px -166px;}
 .gallery .gallery_btn ul li.gb_icon4 a:hover {background-position: -173px -189px;}
-.gallery .gallery_btn ul li a {background: url(../img/icon.png) no-repeat; display: block; width: 23px; height: 23px;}
-.gallery .gallery_img {}
-.gallery .gallery_img ul {}
-.gallery .gallery_img ul li {}
-.gallery .gallery_img ul li img {width: 100%;}
+.gallery .gallery_btn ul li a {background: url(../img/icon.png) no-repeat; display: block; width: 23px; height: 23px;} */
+.gallery .gallery_img img {width: 100%;}
+
+/* 슬릭 갤러리 */
+.gallery .gallery_btn {overflow: hidden;}
+.gallery .gallery_btn .gb_icon1 {background-position: -150px -120px;}
+.gallery .gallery_btn .gb_icon2 {background-position: -150px -143px;}
+.gallery .gallery_btn .gb_icon3 {background-position: -150px -166px;}
+.gallery .gallery_btn .gb_icon4 {background-position: -150px -189px;}
+.gallery .gallery_btn .gb_icon1:hover {background-position: -173px -120px;}
+.gallery .gallery_btn .gb_icon2:hover {background-position: -173px -143px;}
+.gallery .gallery_btn .gb_icon3:hover {background-position: -173px -166px;}
+.gallery .gallery_btn .gb_icon4:hover {background-position: -173px -189px;}
+.gallery .gallery_btn div {float: left; margin: 1px 2px; background: url(../img/icon.png) no-repeat; display: block; width: 23px; height: 23px; cursor: pointer;}
 
 /* 로그인 */
 #login_wrap {margin-bottom: 15px; background-color: #f2f4f5; padding: 15px;}
@@ -211,7 +220,7 @@
 .login_content {position: relative;}
 .login_content .lc_text {}
 .login_content .lc_text .input_text {width: 182px; height: 16px; padding: 2px 5px; border: 1px solid #bebebe; margin-bottom: 3px; background-color: #fff;}
-.login_content .lc_btn {position: absolute; top: 0; right: 0; width: 62px; height: 47px; background-color: #fff; border: 1px solid #bebebe;}
+.login_content .lc_btn {position: absolute; top: 0; right: 0; width: 62px; height: 47px; background-color: #fff; border: 1px solid #bebebe; cursor: pointer;}
 .login_footer {margin-top: 5px;}
 .login_footer ul {}
 .login_footer ul li {display: inline;}
