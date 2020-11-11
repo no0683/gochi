@@ -3,9 +3,15 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 #header {}
 #nav {background: #f6fdff;}
 #title {background: #eaf7fd;}
+#contents {}
+#contents .container {position: relative; border-left: 1px solid #dbdbdb; border-right: 1px solid #dbdbdb;}
+#cont_left {float: left; width: 250px;}
+#cont_center {overflow: hidden; min-height: 1300px; margin-right: 250px; border-left: 1px solid #dbdbdb; border-right: 1px solid #dbdbdb;}
+#cont_right {position: absolute; right: 0; top: 0; width: 250px;}
+#footer {border-top: 1px solid #dbdbdb;}
 
 /* 컨테이너 */
-.container {width: 1200px; margin: 0 auto; background: rgba(0,0,0,0.3);}
+.container {width: 1200px; margin: 0 auto; background: rgba(0,0,0,0.1);}
 
 /* 헤더 */
 .header {height: 327px;}
@@ -47,11 +53,27 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
    position: absolute; right: 0; top: 0; transition: all 0.3s ease;}
 .title .btn:hover {box-shadow: 0 0 0 3px rgba(75,154,191,0.9) inset, 0 0 0 100px rgba(0,0,0,0.1) inset;}
 
+/* 컨텐츠 */
+.column {padding: 15px; border-bottom: 1px solid #dbdbdb;}
+.column.col1 {}
+.column.col2 {}
+.column.col3 {border-bottom: none;}
+.column.col4 {}
+.column.col5 {}
+.column.col6 {border-bottom: none;}
+.column.col7 {}
+.column.col8 {}
+.column.col9 {border-bottom: none;}
+
+/* 푸터 */
+.footer {}
+
 /* mediaquery */
 /* 화면너비 0~1220px */
 @media (max-width: 1220px) {
   .container {width: 100%;}
   .row {padding: 0 15px;}
+  #contents .container {border: 0;}
   .title .btn {right: 5px;}
 }
 
@@ -62,11 +84,15 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
   .nav > div ol {margin-bottom: 10px;}
   .nav > div ol li {width: 33.3333%;}
   .nav > div:last-child ol li {width: 33.3333%;}
+
+  #cont_right {position: static; border-right: 0; width: 100%; border-top: 1px solid #dbdbdb;}
+  #cont_center {margin-right: 0; border-right: 0;}
 }
 
 /* 화면너비 0~768px */
 @media (max-width: 768px) {
-
+  #cont_left {float: none; width: 100%; border-bottom: 1px solid #dbdbdb;}
+  #cont_center {border-left: 0;}
 }
 
 /* 화면너비 0~600px */
