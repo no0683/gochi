@@ -1,6 +1,7 @@
 /* 레이아웃 */
 #header {background: url(../img/header_bg.jpg) repeat-x center top;}
 #nav {background: #f6fdff;}
+#title {background: #eaf7fd;}
 
 /* 컨테이너 */
 .container {width: 1200px; margin: 0 auto; background: rgba(0,0,0,0.3);}
@@ -19,7 +20,7 @@
 
 .header .header_icon {text-align: center; margin-top: 40px; padding-bottom: 45px;}
 .header .header_icon li {display: inline; padding: 0 2px;}
-.header .header_icon li a {position: relative; background-color: #3192bf; border-radius: 50%; width: 60px; height: 60px; color: #fff; display: inline-block; font-size: 35px; line-height: 60px; transition: all 0.3c ease;}
+.header .header_icon li a {position: relative; background-color: #3192bf; border-radius: 50%; width: 60px; height: 60px; color: #fff; display: inline-block; font-size: 35px; line-height: 60px; transition: all 0.3s ease;}
 .header .header_icon li a span {position: absolute; top: -40px; left: 50%; font-size: 12px; line-height: 1.6; background: #3192bf; transform: translateX(-50%); padding: 3px 9px; border-radius: 6px 0; opacity: 0; transition: all 0.3s ease;}
 .header .header_icon li a span:before {content:''; position: absolute; left: 50%; bottom: -5px; margin-left: -5px; border-top: 5px solid #3192bf; border-left: 5px solid transparent;  border-right: 5px solid transparent;}
 .header .header_icon li a:hover span {opacity: 1; top: -33px;}
@@ -37,6 +38,13 @@
 .nav > div ol li a {position: relative;}
 .nav > div ol li a:after {content: ''; width: 0; height: 1px; background: #25aad0; position: absolute; bottom: 0; left: 0; transition: all 0.2s ease-out;}
 .nav > div ol li:hover a:after {width: 100%;}
+
+/* 타이틀 */
+.title {position: relative; text-align: center;}
+.title h2 {font-size: 39px; color: #0093bd; padding: 5px 0; font-family: 'Nanum Brush Script', cursive;}
+.title .btn {margin-top: 5px; line-height: 60px; width: 60px; height: 60px; border-radius: 50%; background: #3192bf; color: #fff; font-size: 35px;
+   position: absolute; right: 0; top: 0; transition: all 0.3s ease;}
+.title .btn:hover {box-shadow: 0 0 0 3px rgba(75,154,191,0.9) inset, 0 0 0 100px rgba(0,0,0,0.1) inset;}
 
 /* mediaquery */
 @media (max-width: 1220px) {
