@@ -92,6 +92,21 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 .notice2 ul li a {}
 .notice2 .more {position: absolute; top: 3px; right: 0; color: #878787; text-transform: uppercase; font-size: 10px;}
 
+/* 블로그1 */
+.blog1 {}
+.blog1 img {width: 100%;}
+.blog1 .img-retina {display: none;}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+        only screen and (min-device-pixel-ratio: 1.5),
+        only screen and (min-resolution: 1.5dppx) {
+        .blog1 .img-retina {display: initial;}
+        .blog1 .img-normal {display: none;}
+}
+
+/* 블로그2 */
+.blog2 {}
+
 /* 푸터 */
 .footer {}
 
