@@ -55,7 +55,8 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 
 /* 컨텐츠 */
 .column {padding: 15px; border-bottom: 1px solid #dbdbdb;}
-.column.col1 {}
+.column .col_tit {font-size: 20px; color: #2f7fa6; padding-bottom: 5px;}
+.column .col_desc {border-bottom: 1px dashed #dbdbdb; padding-bottom: 15px; margin-bottom: 15px; color: #878787; line-height: 18px;}
 .column.col2 {}
 .column.col3 {border-bottom: none;}
 .column.col4 {}
