@@ -75,12 +75,22 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 .menu li a i {position: absolute; right: 10px; top: 15px;}
 
 /* 게시판1 */
-.notice1 {}
+.notice1 {position: relative;}
 .notice1 h5 {font-size: 14px; color: #2f7fa6; padding-bottom: 5px;}
 .notice1 ul {}
-.notice1 ul li {position: relative; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-left: 8px;}
+.notice1 ul li {position: relative; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-left: 8px; padding-bottom: 5px;}
 .notice1 ul li:before {content: ''; width: 3px; height: 3px; background: #449ce2; border-radius: 50%; position: absolute; left: 0; top: 8px;}
 .notice1 ul li a {}
+.notice1 .more {position: absolute; top: 3px; right: 0; color: #878787; text-transform: uppercase; font-size: 10px;}
+
+/* 게시판2 */
+.notice2 {position: relative;}
+.notice2 h5 {font-size: 14px; color: #2f7fa6; padding-bottom: 5px;}
+.notice2 ul {}
+.notice2 ul li {position: relative; overflow: hidden; text-overflow: ellipsis; padding-left: 8px; padding-bottom: 5px; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;}
+.notice2 ul li:before {content: ''; width: 3px; height: 3px; background: #449ce2; border-radius: 50%; position: absolute; left: 0; top: 8px;}
+.notice2 ul li a {}
+.notice2 .more {position: absolute; top: 3px; right: 0; color: #878787; text-transform: uppercase; font-size: 10px;}
 
 /* 푸터 */
 .footer {}
