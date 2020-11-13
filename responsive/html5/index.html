@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/lightgallery.css">
 
     <!-- Facebook meta tags -->
     <meta property="og:type" content="article">
@@ -52,21 +53,25 @@
     <![endif]-->
   </head>
   <body>
+    <!-- header -->
     <header id="header">
       <div class="container">
         <div class="row">
           <div class="header">
+            <!-- header_menu -->
             <div class="header_menu">
               <a href="#">Blog</a>
               <a href="#">Github</a>
               <a href="#">Webstandard</a>
             </div>
             <!-- //header_menu -->
+            <!-- header_tit -->
             <div class="header_tit">
               <h1>Professional Web Publisher</h1><br>
               <a href="#">Gochi</a>
             </div>
             <!-- //header_tit -->
+            <!-- header_icon -->
             <div class="header_icon">
               <ul>
                 <li><a href="#"><i class="fa fa-html5" aria-hidden="true"></i><span>HTML5</span></a></li>
@@ -86,6 +91,7 @@
       </div>
     </header>
     <!-- //header -->
+    <!-- nav -->
     <nav id="nav">
       <div class="container">
         <div class="row">
@@ -146,6 +152,7 @@
       </div>
     </nav>
     <!-- //nav -->
+    <!-- title -->
     <article id="title">
       <div class="container">
         <div class="title">
@@ -164,6 +171,7 @@
           <h2 class="ir_su">반응형 사이트 컨텐츠</h2>
           <section id="cont_left">
             <h3 class="ir_su">반응형 사이트 왼쪽 컨텐츠</h3>
+            <!-- column col1 -->
             <article class="column col1">
               <h4 class="col_tit">Menu</h4>
               <p class="col_desc">box-shadow를 이용한 마우스 오버 효과 입니다.</p>
@@ -180,6 +188,8 @@
               </div>
               <!-- //menu -->
             </article>
+            <!-- //column col1 -->
+            <!-- column col2 -->
             <article class="column col2">
               <h4 class="col_tit">Notice</h4>
               <p class="col_desc">게시판 영역의 한줄 효과와 두줄 효과 게시판 입니다.</p>
@@ -208,6 +218,8 @@
               </div>
               <!-- //Notice2 -->
             </article>
+            <!-- //column col2 -->
+            <!-- column col3 -->
             <article class="column col3">
               <h4 class="col_tit">Blog</h4>
               <p class="col_desc">해상도에 따라 이미지를 다르게 표한하는 방법 입니다.</p>
@@ -231,13 +243,15 @@
               </div>
               <!-- //blog2 -->
             </article>
+            <!-- //column col3 -->
           </section>
           <section id="cont_center">
             <h3 class="ir_su">반응형 사이트 가운데 컨텐츠</h3>
+            <!-- column col4 -->
             <article class="column col4">
               <h4 class="col_tit">Slick Slider</h4>
               <p class="col_desc">slick.js를 이용한 이미지  슬라이드 효과 입니다.</p>
-              <!-- 이미지 슬라이드 -->
+              <!-- 이미지 슬라이더 -->
               <div class="slider">
                 <div>
                   <figure>
@@ -267,12 +281,29 @@
                   </figure>
                 </div>
               </div>
-              <!-- //이미지 슬라이드 -->
+              <!-- //이미지 슬라이더 -->
             </article>
+            <!-- //column col4 -->
+            <!-- column col5 -->
             <article class="column col5">
-              <h4 class="col_tit">Title</h4>
-              <p class="col_desc">이 곳은 설명 부분 입니다.</p>
+              <h4 class="col_tit">Blend Effect</h4>
+              <p class="col_desc">Background-blend-mode와 mix-blend-mode</p>
+              <!-- lightbox -->
+              <div class="lightbox square clearfix">
+                <a href="img/light01_s.jpg"><img src="img/light01.jpg" alt="이미지1"></a>
+                <a href="img/light02_s.jpg"><img src="img/light02.jpg" alt="이미지2"></a>
+                <a href="img/light03_s.jpg"><img src="img/light03.jpg" alt="이미지3"></a>
+                <a href="img/light04_s.jpg"><img src="img/light04.jpg" alt="이미지4"></a>
+                <a href="img/light05_s.jpg"><img src="img/light05.jpg" alt="이미지5"></a>
+                <a href="img/light06_s.jpg"><img src="img/light06.jpg" alt="이미지6"></a>
+                <a href="img/light07_s.jpg"><img src="img/light07.jpg" alt="이미지7"></a>
+                <a href="img/light08_s.jpg"><img src="img/light08.jpg" alt="이미지8"></a>
+                <a href="img/light09_s.jpg"><img src="img/light09.jpg" alt="이미지9"></a>
+                <a href="img/light10_s.jpg"><img src="img/light10.jpg" alt="이미지10"></a>
+              </div>
+              <!-- //lightbox -->
             </article>
+            <!-- //column col5 -->
             <article class="column col6">
               <h4 class="col_tit">Title</h4>
               <p class="col_desc">이 곳은 설명 부분 입니다.</p>
@@ -310,7 +341,13 @@
   <script src="js/jquery.min_1.12.4.js"></script>
   <script src="js/modernizr-custom.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/lightgallery.min.js"></script>
   <script>
+    // 라이트 박l
+    $(".lightbox").lightGallery({
+
+    });
+
     // 이미지 슬라이더
     $(".slider").slick({
     infinite: true,

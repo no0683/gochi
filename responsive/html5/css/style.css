@@ -144,6 +144,11 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 
 .slider .slick-dots .slick-active button {background: #2b91c8;}
 
+/* 라이트 박스 */
+.lightbox a {float: left; width: 19%; margin: 0.5%;}
+.lightbox a img {width: 100%; display: block;}
+
+
 /* mediaquery */
 /* 화면너비 0~1220px */
 @media (max-width: 1220px) {
@@ -151,6 +156,14 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
   .row {padding: 0 15px;}
   #contents .container {border: 0;}
   .title .btn {right: 5px;}
+  .lightbox a {width: 24%;}
+  .lightbox a:nth-child(5n) {display: none;}
+}
+
+/* 화면너비 0~1024px */
+@media (max-width: 1024px) {
+  .lightbox a {width: 32.3333%;}
+  .lightbox a:nth-child(5) {display: block;}
 }
 
 /* 화면너비 0~960px */
@@ -195,6 +208,9 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
   .slider figure figcaption {padding: 10px;}
   .slider figure figcaption em {font-size: 18px;}
   .slider figure figcaption span {font-size: 14px;}
+
+  .lightbox a {width: 49%;}
+  .lightbox a:nth-child(5n) {display: block;}
 }
 
 /* 화면너비 0~480px */
@@ -206,4 +222,6 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 @media (max-width: 320px) {
   .nav > div ol li {width: 100%;}
   .nav > div:last-child ol li {width: 100%;}
+
+  .lightbox a {width: 100%; margin-left: 0; margin-right: 0;}
 }
