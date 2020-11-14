@@ -189,8 +189,12 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
   .nav > div ol li {width: 33.3333%;}
   .nav > div:last-child ol li {width: 33.3333%;}
 
-  #cont_right {position: static; border-right: 0; width: 100%; border-top: 1px solid #888;}
+  #cont_right {overflow: hidden; position: static; border-right: 0; width: 100%; border-top: 1px solid #888;}
   #cont_center {margin-right: 0; border-right: 0;}
+
+  #cont_right .column {float: left; width: 33.3333%; box-sizing: border-box;}
+  #cont_right .column.col7 {border-bottom: 0; border-right: 1px solid #888;}
+  #cont_right .column.col8 {border-bottom: 0; border-right: 1px solid #888;}
 }
 
 /* 화면너비 0~768px */
@@ -220,6 +224,10 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
   .column.col1 .menu ul li a i {display: none;}
   .column.col2 {background: #fff;}
 
+  #cont_right .column {width: 50%;}
+  #cont_right .column.col9 {display: none;}
+  #cont_right .column.col8 {border-right: 0;}
+
   .slider figure figcaption {padding: 10px;}
   .slider figure figcaption em {font-size: 18px;}
   .slider figure figcaption span {font-size: 14px;}
@@ -237,6 +245,10 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 @media (max-width: 320px) {
   .nav > div ol li {width: 100%;}
   .nav > div:last-child ol li {width: 100%;}
+
+  #cont_right .column {width: 100%;}
+  #cont_right .column.col7 {border-right: 0;}
+  #cont_right .column.col9 {display: block;}
 
   .lightbox a {width: 100%; margin-left: 0; margin-right: 0;}
 }
