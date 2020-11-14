@@ -6,7 +6,7 @@ a {color: #222; text-decoration: none;}
 a:hover {color: #2698cb;}
 
 /* 폰트 초기화 */
-body,input,textarea,select,button,table {color: #222; font-size: 13px; line-height: 1.5; font-family: 'Nanum Gothic',sans-serif;}
+body,input,textarea,select,button,table {color: #222; font-size: 13px; line-height: 1.6; font-family: 'Nanum Gothic',sans-serif;}
 
 /* 폰트 스타일 초기화 */
 em,address {font-style: normal;}
