@@ -145,9 +145,20 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 .slider .slick-dots .slick-active button {background: #2b91c8;}
 
 /* 라이트 박스 */
-.lightbox a {float: left; width: 19%; margin: 0.5%;}
+.lightbox a {position: relative; float: left; width: 19%; margin: 0.5%; overflow: hidden;}
 .lightbox a img {width: 100%; display: block;}
-
+.lightbox a em {background: rgba(0,0,0,0.7); color: #fff; position: absolute; left: 0; bottom: -30px; width: 100%; text-align: center; transition: all 0.3s ease;}
+.lightbox a:hover em {bottom: 0; background: rgba(0,0,0,0.5);}
+.lightbox a:nth-child(1):hover img {filter: blur(2px);}
+.lightbox a:nth-child(2):hover img {filter: brightness(50%);}
+.lightbox a:nth-child(3):hover img {filter: contrast(10%);}
+.lightbox a:nth-child(4):hover img {filter: grayscale(100%);}
+.lightbox a:nth-child(5):hover img {filter: hue-rotate(120deg);}
+.lightbox a:nth-child(6):hover img {filter: invert(100%);}
+.lightbox a:nth-child(7):hover img {filter: opacity(10%);}
+.lightbox a:nth-child(8):hover img {filter: saturate(10%);}
+.lightbox a:nth-child(9):hover img {filter: sepia(120%);}
+.lightbox a:nth-child(10):hover img {filter: sepia(120%) hue-rotate(120deg);}
 
 /* mediaquery */
 /* 화면너비 0~1220px */
