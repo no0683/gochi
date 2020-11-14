@@ -4,11 +4,11 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 #nav {background: #f6fdff;}
 #title {background: #eaf7fd;}
 #contents {}
-#contents .container {position: relative; border-left: 1px solid #888; border-right: 1px solid #888;  border-top: 1px solid #888;}
+#contents .container {position: relative; border-left: 1px solid #dbdbdb; border-right: 1px solid #dbdbdb;  border-top: 1px solid #dbdbdb;}
 #cont_left {float: left; width: 250px;}
-#cont_center {overflow: hidden; min-height: 1350px; margin-right: 250px; border-left: 1px solid #888; border-right: 1px solid #888;}
+#cont_center {overflow: hidden; min-height: 1350px; margin-right: 250px; border-left: 1px solid #dbdbdb; border-right: 1px solid #dbdbdb;}
 #cont_right {position: absolute; right: 0; top: 0; width: 250px;}
-#footer {border-top: 1px solid #888;}
+#footer {border-top: 1px solid #dbdbdb;}
 
 /* 컨테이너 */
 .container {width: 1200px; margin: 0 auto; /* background: rgba(0,0,0,0.1); */}
@@ -19,7 +19,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 .header .header_menu a {color: #fff; padding: 8px 0 6px 10px; display: inline-block; font-family: 'Abel', sans-serif;}
 .header .header_menu a:hover {color: #ccc; transition: color 0.3s ease;}
 
-.header .header_tit {text-align: center; text-transform: uppercase; font-family: 'Abel', sans-serif;}
+.header .header_tit {text-align: center; text-transform: uppercase; font-family: 'Abel', sans-serif; margin-top: 55px;}
 .header .header_tit h1 {font-size: 30px; color: #fff; background: #51b0dc; letter-spacing: 2px; font-weight: 900; display: inline-block; padding: 5px 30px; transition: box-shadow 0.25s ease-in-out;}
 .header .header_tit h1:hover {box-shadow: -9em 0 0 0 #257fac inset, 9em 0 0 0 #257fac inset;}
 .header .header_tit a {font-size: 16px; color: #fff; background: #4a9abf; display: inline-block; padding: 10px 20px; margin-top: -7px;}
@@ -34,7 +34,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 .header .header_icon li a:hover {box-shadow: 0 0 0 3px rgba(75,154,191,0.9) inset, 0 0 0 100px rgba(0,0,0,0.1) inset;}
 
 /* 전체메뉴 */
-.nav {overflow: hidden; display: none;}
+.nav {overflow: hidden; display: none; padding: 25px 0;}
 .nav > div {float: left; width: 40%;}
 .nav > div:last-child {width: 20%;}
 .nav > div ol {overflow: hidden;}
@@ -54,9 +54,9 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 .title .btn:hover {box-shadow: 0 0 0 3px rgba(75,154,191,0.9) inset, 0 0 0 100px rgba(0,0,0,0.1) inset;}
 
 /* 컨텐츠 */
-.column {padding: 15px; border-bottom: 1px solid #888;}
+.column {padding: 15px; border-bottom: 1px solid #dbdbdb;}
 .column .col_tit {font-size: 20px; color: #2f7fa6; padding-bottom: 5px;}
-.column .col_desc {border-bottom: 1px dashed #888; padding-bottom: 15px; margin-bottom: 15px; color: #878787; line-height: 18px;}
+.column .col_desc {border-bottom: 1px dashed #dbdbdb; padding-bottom: 15px; margin-bottom: 15px; color: #878787; line-height: 18px;}
 .column.col2 {}
 .column.col3 {border-bottom: none;}
 .column.col4 {}
@@ -70,7 +70,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 .menu {}
 .menu ul {}
 .menu li {position: relative;}
-.menu li a {transition: box-shadow 0.3s ease, background 0.3s ease; font-size: 16px; text-transform: uppercase; color: #878787; padding: 10px; display: block; border-bottom: 1px solid #888;}
+.menu li a {transition: box-shadow 0.3s ease, background 0.3s ease; font-size: 16px; text-transform: uppercase; color: #878787; padding: 10px; display: block; border-bottom: 1px solid #dbdbdb;}
 .menu li a:hover {box-shadow: 180px 0 0 0 rgba(36,130,174,0.7) inset; color: #fff; background: rgba(36,130,174,0.9);}
 .menu li a i {position: absolute; right: 10px; top: 15px;}
 
@@ -167,7 +167,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 /* 푸터 */
 .footer {text-align: center; padding: 30px 50px;}
 .footer ul li {position: relative; display: inline; padding: 0 7px 0 10px; white-space: nowrap;}
-.footer ul li:before {position: absolute; left: 0; top: 2px; content: ''; width: 1px; height: 12px; background: #888;}
+.footer ul li:before {position: absolute; left: 0; top: 2px; content: ''; width: 1px; height: 12px; background: #dbdbdb;}
 .footer ul li:first-child:before {width: 0;}
 .footer address {padding-top: 15px;}
 
@@ -196,17 +196,17 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
   .nav > div ol li {width: 33.3333%;}
   .nav > div:last-child ol li {width: 33.3333%;}
 
-  #cont_right {overflow: hidden; position: static; border-right: 0; width: 100%; border-top: 1px solid #888;}
+  #cont_right {overflow: hidden; position: static; border-right: 0; width: 100%; border-top: 1px solid #dbdbdb;}
   #cont_center {margin-right: 0; border-right: 0;}
 
   #cont_right .column {float: left; width: 33.3333%; box-sizing: border-box;}
-  #cont_right .column.col7 {border-bottom: 0; border-right: 1px solid #888;}
-  #cont_right .column.col8 {border-bottom: 0; border-right: 1px solid #888;}
+  #cont_right .column.col7 {border-bottom: 0; border-right: 1px solid #dbdbdb;}
+  #cont_right .column.col8 {border-bottom: 0; border-right: 1px solid #dbdbdb;}
 }
 
 /* 화면너비 0~768px */
 @media (max-width: 768px) {
-  #cont_left {float: none; width: 100%; border-bottom: 1px solid #888;}
+  #cont_left {float: none; width: 100%; border-bottom: 1px solid #dbdbdb;}
   #cont_center {border-left: 0;}
 }
 
@@ -224,7 +224,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
   .column.col1 .col_tit {display: none;}
   .column.col1 .col_desc {display: none;}
   .column.col1 .menu ul {overflow: hidden;}
-  .column.col1 .menu ul li {float: left; width: 33.3333%; text-align: center; border-right: 1px solid #888; box-sizing: border-box;}
+  .column.col1 .menu ul li {float: left; width: 33.3333%; text-align: center; border-right: 1px solid #dbdbdb; box-sizing: border-box;}
   .column.col1 .menu ul li:nth-child(3n) {border-right: 0;}
   .column.col1 .menu ul li a {color: #fff; text-shadow: 0 0 5px rgba(0,0,0,0.7);}
   .column.col1 .menu ul li a:hover {box-shadow: none; background: rgba(36,130,174,0.3);}
