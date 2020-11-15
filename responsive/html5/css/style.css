@@ -164,6 +164,14 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 .video {position: relative; width: 100%; padding-bottom: 56.25%;}
 .video iframe {position: absolute; width: 100%; height: 100%;}
 
+/* 사이드 이펙트1 */
+.side1 {position: relative; perspective: 600px;}
+.side1 .front {transform-style: preserve-3d; transform: rotateY(0deg); transition: all 0.5s ease-in-out; backface-visibility: hidden;}
+.side1 .back {position: absolute; top: 0; left: 0; transform-style: preserve-3d; transform: rotateY(-180deg); transition: all 0.5s ease-in-out; backface-visibility: hidden; color: #fff; background: #4038dc; width: 100%; height: 100%; z-index: -1;}
+.side1 .back i {position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); font-size: 60px; transition: all 0.3s ease;}
+.side1:hover .front {transform: rotateY(180deg);}
+.side1:hover .back {transform: rotateY(0deg); z-index: 1;}
+
 /* 푸터 */
 .footer {text-align: center; padding: 30px 50px;}
 .footer ul li {position: relative; display: inline; padding: 0 7px 0 10px; white-space: nowrap;}
