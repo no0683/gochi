@@ -172,6 +172,14 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 .side1:hover .front {transform: rotateY(180deg);}
 .side1:hover .back {transform: rotateY(0deg); z-index: 1;}
 
+/* 사이드 이펙트2 */
+.side2 {position: relative; perspective: 600px;}
+.side2 .front {transform-style: preserve-3d; transition: all 0.5s ease-in-out; backface-visibility: hidden; transform: rotateY(0deg);}
+.side2 .back {position: absolute; top: 0; left: 0; transform-style: preserve-3d; transition: all 0.5s ease-in-out; backface-visibility: hidden; transform: rotateY(-180deg); width: 100%; height: 100%; z-index: -1;}
+.side2:hover .front {transform: rotateY(180deg);}
+.side2:hover .back {transform: rotateY(0deg); z-index: 1;}
+.side2 figcaption {text-align: center; width: 60%; padding: 3px 10px; font-size: 20px; font-weight: bold; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) translateZ(100px); color: #fff; background: rgba(0,0,0,0.5);}
+
 /* 푸터 */
 .footer {text-align: center; padding: 30px 50px;}
 .footer ul li {position: relative; display: inline; padding: 0 7px 0 10px; white-space: nowrap;}
