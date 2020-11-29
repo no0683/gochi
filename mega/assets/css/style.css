@@ -1,13 +1,14 @@
 @charset "utf-8";
 
 /* 레이아웃 */
-#header {width: 100%; height: 70px; background: rgba(0,0,0,0); border-bottom: 1px solid #c6c6c6;}
+#header {background: rgba(0,0,0,0); border-bottom: 1px solid #c6c6c6;}
+#banner {}
 
 /* 로우 영역 */
 .row {padding: 0 28px;}
 
 /* 가운데 영역 */
-.container {width: 1224px; background: rgba(0,0,0,0); margin: 0 auto;}
+.container {position: relative; width: 1224px; background: rgba(0,0,0,0); margin: 0 auto;}
 
 /*헤더 영역 */
 .header {position: relative;}
@@ -21,3 +22,30 @@
 .header .nav ul {border-left: 1px solid #c6c6c6;}
 .header .nav ul li {float: left; width: 104px; border-right: 1px solid #c6c6c6; text-align: center;}
 .header .nav ul li a {display: block; height: 70px; line-height: 70px; font-weight: 700; color: #444; font-size: 17px;}
+
+/*배너 영역 */
+.banner_menu {position: absolute; left: 0; top: 20px; width: 100%;}
+.banner_menu a {color: #fff; font-size: 16px; transition: all 0.3s;}
+.banner_menu a:hover {color: #c1c1c1;}
+.banner_menu .bm_left {float: left; margin-left: 28px;}
+.banner_menu .bm_left li {display: inline-block; margin-right: 25px;}
+.banner_menu .bm_left li.line {position: relative;}
+.banner_menu .bm_left li.line:after {content: ''; width: 1px; height: 14px; background: #fff; position: absolute; right: -15px; top: 6px;}
+.banner_menu .bm_left li.total {width: 104px; border: 1px solid #fff; margin-right: 15px; text-align: center; line-height: 41px; transition: all 0.3s;}
+.banner_menu .bm_left li.total a {height: 41px; display: block;}
+.banner_menu .bm_left li.total a:hover {background: #fff; border-color: #000; color: #000;}
+.banner_menu .bm_right {float: right; margin-right: 28px;}
+.banner_menu .bm_right li {display: inline-block; margin-right: 25px;}
+.banner_menu .bm_right li.line {position: relative;}
+.banner_menu .bm_right li.line:after {content: ''; width: 1px; height: 14px; background: #fff; position: absolute; right: -15px; top: 6px;}
+.banner_menu .bm_right ul:first-child {float: left; margin-top: 10px;}
+.banner_menu .bm_right ul:last-child {float: left;}
+.banner_menu .bm_right ul:last-child li {width: 141px; margin-right: 0; text-align: center; line-height: 41px;}
+.banner_menu .bm_right ul:last-child li a {height: 41px; display: block;}
+.banner_menu .bm_right ul:last-child li:first-child {border: 1px solid #a245f1; background: #fff;}
+.banner_menu .bm_right ul:last-child li:first-child a {color: #a245f1;}
+.banner_menu .bm_right ul:last-child li:last-child {border: 1px solid #a245f1; background: #391a6a;}
+.banner_menu .bm_right ul:last-child li:last-child a {color: #fff;}
+
+.slider {}
+.slider img {}
