@@ -10,7 +10,7 @@
 /* 가운데 영역 */
 .container {position: relative; width: 1224px; background: rgba(0,0,0,0); margin: 0 auto;}
 
-/*헤더 영역 */
+/* 헤더 영역 */
 .header {position: relative;}
 .header h1 {float: left;}
 .header h1 a {}
@@ -23,7 +23,13 @@
 .header .nav ul li {float: left; width: 104px; border-right: 1px solid #c6c6c6; text-align: center;}
 .header .nav ul li a {display: block; height: 70px; line-height: 70px; font-weight: 700; color: #444; font-size: 17px;}
 
-/*배너 영역 */
+.mNav {display: none; position: absolute; width: 30px; height: 18px; right: 0; top: 23px; background: rgba(0,0,0,0);}
+.mNav .ham {display: block; height: 18px;}
+.mNav .ham span {position: relative; display: block; width: 30px; height: 4px; background: #391a6a;}
+.mNav .ham span:before {content: ''; width: 30px; height: 4px; background: #391a6a; position: absolute; top: 7px;}
+.mNav .ham span:after {content: ''; width: 30px; height: 4px; background: #391a6a; position: absolute; top: 14px;}
+
+/* 배너 영역 */
 .banner_menu {position: absolute; left: 0; top: 20px; width: 100%;}
 .banner_menu a {color: #fff; font-size: 16px; transition: all 0.3s;}
 .banner_menu a:hover {color: #c1c1c1;}
@@ -47,5 +53,42 @@
 .banner_menu .bm_right ul:last-child li:last-child {border: 1px solid #a245f1; background: #391a6a;}
 .banner_menu .bm_right ul:last-child li:last-child a {color: #fff;}
 
-.slider {}
-.slider img {}
+/* 미디어 쿼리 */
+@media (max-width: 1280px){
+  .container {width: 100%;}
+  .header .nav ul li {width: 90px;}
+  .header .nav ul li a {height: 60px; line-height: 60px;}
+  .header h1 a em {padding: 14px 5px 10px 0;}
+  .header h1 a strong {top: 23px;}
+}
+
+@media (max-width: 1024px){
+  .mNav {display: block;}
+  .header .nav {display: none;}
+  .header h1 {float: none; text-align: center;}
+  .header h1 a strong {left: 0;}
+}
+
+@media (max-width: 960px){
+
+}
+
+@media (max-width: 768px){
+  .header h1 a strong {display: none;}
+  .header h1 {text-align: left;}
+  .row {padding: 0 24px;}
+  .banner_menu .bm_left {margin-left: 24px;}
+  .banner_menu .bm_right {margin-right: 24px;}
+}
+
+@media (max-width: 600px){
+
+}
+
+@media (max-width: 480px){
+
+}
+
+@media (max-width: 320px){
+
+}
