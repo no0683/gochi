@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="https://no0683.github.io/gochi/mega/assets/icons/favicon.ico">
@@ -97,7 +99,17 @@
         </div>
       </div>
       <div class="slider">
-        <div><img src="assets/img/main_slider01.jpg" alt="베스와 베라"></div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide ss1">Slide 1</div>
+              <div class="swiper-slide ss2">Slide 2</div>
+              <div class="swiper-slide ss3">Slide 3</div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-scrollbar"></div>
+        </div>
       </div>
     </section>
     <!-- //banner -->
@@ -106,4 +118,24 @@
   <script src="assets/js/jquery.min_1.12.4.js"></script>
   <script src="assets/js/modernizr-custom.js"></script>
   <script src="assets/js/ie-checker.js"></script>
+  <script src="assets/js/swiper-bundle.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script>
+    var mySwiper = new Swiper('.swiper-container', {
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })
+  </script>
 </html>
