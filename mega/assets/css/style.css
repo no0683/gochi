@@ -57,6 +57,10 @@
 .slider .ss1 {background: url(../img/main_slider02_2000.jpg) no-repeat center; background-size: cover;}
 .slider .ss2 {background: url(../img/swiper01.jpg) no-repeat center; background-size: cover;}
 .slider .ss3 {background: url(../img/main_slider03_2000.jpg) no-repeat center; background-size: cover;}
+.slider .swiper-slide h2 {display: inline-block; position: relative; color: #fff; margin-top: 200px; font-size: 60px; line-height: 70px;}
+.slider .swiper-slide h2:after {content: ''; width: 100%; height: 1px; background: rgba(255,255,255,0.3); position: absolute; bottom: -10px;}
+.slider .swiper-slide h2 em {display: block; font-weight: 100;}
+.slider .swiper-slide p {color: #fff; font-size: 30px; margin-top: 45px;}
 
 /* 미디어 쿼리 */
 @media (max-width: 1280px){
@@ -65,6 +69,10 @@
   .header .nav ul li a {height: 60px; line-height: 60px;}
   .header h1 a em {padding: 14px 5px 10px 0;}
   .header h1 a strong {top: 23px;}
+  .swiper-button-next:after,.swiper-button-prev:after {display: none;}
+  .slider {height: 550px;}
+  .slider .swiper-slide h2 {font-size: 55px; margin-top: 180px; line-height: 65px;}
+  .slider .swiper-slide p {font-size: 25px; margin-top: 40px;}
 }
 
 @media (max-width: 1024px){
@@ -72,10 +80,17 @@
   .header .nav {display: none;}
   .header h1 {float: none; text-align: center;}
   .header h1 a strong {left: 0;}
+  .banner_menu .bm_left {display: none;}
+  .banner_menu .bm_right ul:first-child {display: none;}
+  .slider {height: 500px;}
+  .slider .swiper-slide h2 {font-size: 50px; margin-top: 160px; line-height: 60px;}
+  .slider .swiper-slide p {font-size: 20px; margin-top: 35px;}
 }
 
 @media (max-width: 960px){
-
+  .slider {height: 450px;}
+  .slider .swiper-slide h2 {font-size: 45px; margin-top: 140px; line-height: 55px;}
+  .slider .swiper-slide p {font-size: 15px; margin-top: 30px;}
 }
 
 @media (max-width: 768px){
@@ -84,10 +99,20 @@
   .row {padding: 0 24px;}
   .banner_menu .bm_left {margin-left: 24px;}
   .banner_menu .bm_right {margin-right: 24px;}
+  .slider {height: 400px;}
+  .slider .swiper-slide h2 {font-size: 40px; margin-top: 120px; line-height: 50px;}
+  .slider .swiper-slide p {margin-top: 25px;}
+  .banner_menu .bm_right ul:last-child li {width: 120px; line-height: 36px;}
+  .banner_menu .bm_right ul:last-child li a {height: 36px;}
 }
 
 @media (max-width: 600px){
-
+  .slider {height: 350px;}
+  .slider .swiper-slide h2 {font-size: 35px; margin-top: 100px; line-height: 45px;}
+  .slider .swiper-slide p {margin-top: 20px;}
+  .banner_menu .bm_right ul:last-child li {width: 100px; line-height: 31px;}
+  .banner_menu .bm_right ul:last-child li a {height: 31px; font-size: 14px;}
+  .swiper-pagination-bullet {width: 15px !important; height: 15px !important;}
 }
 
 @media (max-width: 480px){
