@@ -75,8 +75,8 @@
 .poster_chart .movie_chart:last-child {margin-right: 0;}
 .poster_chart .movie_chart .poster_top {position: relative;}
 .poster_chart .movie_chart .poster_top img {display: block; width: 292px; height: 432px;}
-.poster_chart .movie_chart .poster_top .rank {position: absolute; top: 17px; left: 0; width: 50px; height: 50px; background: #38116a; text-align: center; line-height: 50px;}
-.poster_chart .movie_chart .poster_top .rank strong {color: #fff; font-size: 18px;}
+.poster_chart .movie_chart .poster_top .rank {position: absolute; top: 17px; left: 0; width: 50px; height: 50px; background: #38116a; text-align: center; line-height: 50px; box-shadow: 3px 3px 5px rgba(0,0,0,0.5);}
+.poster_chart .movie_chart .poster_top .rank strong {color: #fff; font-size: 18px; text-shadow: 2px 2px 5px rgba(0,0,0,0.5);}
 .poster_chart .movie_chart .poster_top .mx {position: absolute; top: 17px; right: 17px; width: 103px;}
 .poster_chart .movie_chart .poster_top .mx .icon {display: block;}
 .poster_chart .movie_chart .poster_top .mx .icon.m {height: 25px; background-position: 0 -75px;}
