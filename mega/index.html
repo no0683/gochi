@@ -135,10 +135,10 @@
     </section>
     <!-- //banner -->
     <section id="poster">
-      <h2 class="ir_su">포스터 영역</h2>
       <div class="container">
         <div class="row">
           <div class="poster">
+            <h2 class="ir_su">영화 예매</h2>
             <div class="poster_title">
               <ul>
                 <li class="active"><a href="#">박스오피스</a></li>
@@ -707,13 +707,29 @@
 
     // 슬라이드2
     var mySwiper = new Swiper('.swiper-container2', {
-      slidesPerView: 4,
-      spaceBetween: 18.65,
-      autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-      },
-    });
+      breakpoints: {
+        1: {
+            slidesPerView: 1.4,
+            spaceBetween: 15
+        },
+        600: {
+            slidesPerView: 2,
+            spaceBetween: 15
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 15
+        },
+        960: {
+            slidesPerView: 4,
+            spaceBetween: 15
+        }
+      }
+      // autoplay: {
+      // delay: 4000,
+      // disableOnInteraction: false,
+      // },
+      });
 
     // 포스터 탭 메뉴
     var mov_btn = $(".poster_title > ul > li");
