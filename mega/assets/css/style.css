@@ -3,6 +3,8 @@
 /* 레이아웃 */
 #header {background: #fff; border-bottom: 1px solid #c6c6c6;}
 #banner {}
+#poster {background: #f8f8f8;}
+#event {}
 
 /* 로우 영역 */
 .row {padding: 0 28px;}
@@ -93,6 +95,17 @@
 .poster_main div div div .poster_bottom .infor_btn a {float: left; width: 49%; margin-right: 2%; text-align: center; padding: 15px 0; background: #e6e6e6; font-size: 18px;}
 .poster_main div div div .poster_bottom .infor_btn a:last-child {margin-right: 0;}
 
+/* 이벤트 */
+.event {overflow: hidden; padding: 100px 0;}
+.event img {display: block;}
+.event h2 {font-size: 30px; font-weight: 500; margin-bottom: 20px;}
+.event .event_left {overflow: hidden; float: left; width: 66%; margin-right: 2%;}
+.event .event_left .event_slider {}
+.event .event_left .event_box1 {float: left; width: 50%;}
+.event .event_left .event_box2 {float: left; width: 50%;}
+.event .event_right {float: left; width: 32%;}
+.event .event_right .event_slider {}
+
 /* 미디어 쿼리 */
 @media (max-width: 1280px){
   .container {width: 100%;}
@@ -140,7 +153,8 @@
   .poster {padding: 0;}
   .poster .ir_su {position: static; width: auto; height: auto; line-height: normal; text-indent: 0; font-size: 24px; font-weight: bold; padding-bottom: 20px;}
   body {background: #d9d7e0;}
-  #poster .row {background: #fff; margin: 24px; padding: 24px;}
+  #poster {background: none;}
+  #poster .row {background: #fff; margin: 24px 24px 0 24px; padding: 24px;}
   .poster_title {margin-bottom: 20px;}
   .poster_title ul {margin-bottom: 0; padding-bottom: 10px; position: relative;}
   .poster_title ul:before {content: ''; position: absolute; left: 0; bottom: 0; background: #e1e1e1; width: 100%; height: 2px;}
@@ -148,6 +162,11 @@
   .poster_title li a {font-weight: 400; padding: 0; margin-right: 35px;}
   .poster_title li.active a {position: relative; background: none; color: #666;}
   .poster_title li.active a:before {content: ''; position: absolute; left: 0; bottom: -10px; background: #666; width: 100%; height: 2px;}
+  #event .row {background: #fff; margin: 24px; padding: 24px;}
+  .event {padding: 0;}
+  .event h2 {font-size: 24px; font-weight: 700;}
+  .event .event_right {display: none;}
+  .event .event_left {width: 100%; margin-right: 0;}
 }
 
 @media (max-width: 600px){
@@ -171,6 +190,8 @@
   .poster_main div div div .poster_bottom .infor_btn a:last-child {display: none;}
   .poster_main div div div .poster_bottom {padding: 5px;}
   .poster_main div div div .poster_bottom .infor_btn {margin-bottom: 5px;}
+  #event .row {margin: 12px; padding: 12px;}
+  .event h2 {font-size: 18px; margin-bottom: 10px;}
 }
 
 @media (max-width: 480px){
