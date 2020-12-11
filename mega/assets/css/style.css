@@ -151,6 +151,9 @@
   .slider .swiper-slide p {font-size: 15px; margin-top: 30px;}
   .poster_title li {width: 25%; box-sizing: border-box;}
   .poster_title ul {width: auto;}
+  .opening {padding: 50px 0;}
+  .opening .open_box {display: none;}
+  .opening .desc {font-size: 25px;}
 }
 
 @media (max-width: 768px){
@@ -206,6 +209,11 @@
   .poster_main div div div .poster_bottom .infor_btn {margin-bottom: 5px;}
   #event .row {margin: 12px; padding: 12px;}
   .event h2 {font-size: 18px; margin-bottom: 10px;}
+  .opening .date {display: none;}
+  .opening {padding: 25px 0;}
+  .opening .desc {font-size: 18px; padding-bottom: 15px;}
+  .opening h2 {margin-bottom: 0;}
+  .opening h2 .grand {background-size: 360px; background-position: 0px -126px; width: 237PX; height: 29px;}
 }
 
 @media (max-width: 480px){
