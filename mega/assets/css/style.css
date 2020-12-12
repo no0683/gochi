@@ -6,6 +6,7 @@
 #poster {background: #f8f8f8;}
 #event {}
 #opening {background: url(../img/bg01.jpg) no-repeat center top; background-size: cover;}
+#new {}
 
 /* 로우 영역 */
 .row {padding: 0 28px;}
@@ -119,6 +120,15 @@
 .opening .open_box > div p {padding: 6% 0 10% 0; color: #fff; font-size: 23px; font-weight: 700;}
 .opening .open_box > div p em {display:block;}
 .opening .open_box > div p strong {display:block;}
+
+/* 새로운 영화 */
+.new {position: relative; padding: 100px 0;}
+.new h2 {font-size: 30px; font-weight: 500; margin-bottom: 20px;}
+.new .new_left {position: relative; height: 500px; background: url(../img/new01.jpg) center center; background-size: cover; margin-right: 423px;}
+.new .new_left .play {width: 120px; height: 120px; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+.new .new_left .play .st0 {fill: #fff; opacity: 0.3;}
+.new .new_left .play .st1 {fill: #fff;}
+.new .new_right {position: absolute; right: 0; top: 165px; height: 500px; background: #ddd; width: 400px;}
 
 /* 미디어 쿼리 */
 @media (max-width: 1280px){
