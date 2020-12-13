@@ -128,7 +128,19 @@
 .new .new_left .play {width: 120px; height: 120px; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
 .new .new_left .play .st0 {fill: #fff; opacity: 0.3;}
 .new .new_left .play .st1 {fill: #fff;}
-.new .new_right {position: absolute; right: 0; top: 165px; height: 500px; background: #ddd; width: 400px;}
+.new .new_right {padding: 34px; box-sizing: border-box; position: absolute; right: 0; top: 165px; height: 500px; background: #ddd; width: 400px;}
+.new .new_right h3 {font-size: 28px; color: #000;}
+.new .new_right .release {font-size: 15px; color: #333;}
+.new .new_right .star {padding: 13px 0;}
+.new .new_right .star span {display: inline-block; width: 20px; height: 20px; vertical-align: -3px;}
+.new .new_right .star .star1 {background-position: -393px 0;}
+.new .new_right .star .star2 {background-position: -412px 0;}
+.new .new_right .star .star0 {background-position: -374px 0;}
+.new .new_right .star strong {font-size: 18px; padding-left: 5px;}
+.new .new_right .summary {font-size: 14px;}
+.new .new_right .summary .genre {padding-bottom: 3px;}
+.new .new_right .summary .age {padding-bottom: 10px;}
+.new .new_right .summary .desc {margin-bottom: 20px; height: 108px; overflow: hidden;}
 
 /* 미디어 쿼리 */
 @media (max-width: 1280px){
