@@ -141,6 +141,17 @@
 .new .new_right .summary .genre {padding-bottom: 3px;}
 .new .new_right .summary .age {padding-bottom: 10px;}
 .new .new_right .summary .desc {margin-bottom: 20px; height: 108px; overflow: hidden;}
+.new .new_right .select {overflow: hidden;}
+.new .new_right .select .s1 {float: left; width: 49%; margin-right: 2%;}
+.new .new_right .select .s1 .ui_select1 {appearance: none; width: 100%; border: 0; padding: 10px; background: #2c2f34 url(../img/down.svg) no-repeat right 10px center; background-size: 10px; color: #fff;}
+.new .new_right .select .s2 {float: right; width: 49%;}
+.new .new_right .select .s2 .ui_select2 {appearance: none; width: 100%; border: 0; padding: 10px; background: #2c2f34 url(../img/down.svg) no-repeat right 10px center; background-size: 10px; color: #fff;}
+.new .new_right .select .s3 {float: left; width: 100%; margin-top: 2%;}
+.new .new_right .select .s3 .ui_input1 {width: 100%; border: 0; padding: 10px; box-sizing: border-box; background: #2c2f34; color: #fff;}
+.new .new_right .select .s3 .ui_input1::placeholder {color: #fff; opacity: 0.5;}
+.new .new_right .btn {overflow: hidden; margin-top: 2%;}
+.new .new_right .btn .white {float: left; width: 49%; margin-right: 2%; color: #3a0e6a; background: #fff; text-align: center; padding: 10px 0; border: 1px solid #3a0e6a; box-sizing: border-box;}
+.new .new_right .btn .purple {float: left; width: 49%; color: #fff; background: #3a0e6a; text-align: center; padding: 10px 0; border: 1px solid #3a0e6a; box-sizing: border-box;}
 
 /* 미디어 쿼리 */
 @media (max-width: 1280px){
