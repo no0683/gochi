@@ -141,10 +141,10 @@
 .new .new_right .summary {font-size: 14px;}
 .new .new_right .summary .genre {padding-bottom: 3px;}
 .new .new_right .summary .genre .bar {position: relative; margin-right: 12px;}
-.new .new_right .summary .genre .bar:after {content: ''; width: 1px; height: 12px; position: absolute; top: 4px; right: -6px; background: #222;}
+.new .new_right .summary .genre .bar:after {content: ''; width: 1px; height: 12px; position: absolute; top: 5px; right: -6px; background: #222;}
 .new .new_right .summary .age {padding-bottom: 10px;}
 .new .new_right .summary .age .bar {position: relative; margin-right: 12px;}
-.new .new_right .summary .age .bar:after {content: ''; width: 1px; height: 12px; position: absolute; top: 4px; right: -6px; background: #222;}
+.new .new_right .summary .age .bar:after {content: ''; width: 1px; height: 12px; position: absolute; top: 5px; right: -6px; background: #222;}
 .new .new_right .summary .desc {margin-bottom: 20px; height: 108px; overflow: hidden;}
 .new .new_right .select {overflow: hidden;}
 .new .new_right .select .s1 {float: left; width: 49%; margin-right: 2%;}
@@ -178,6 +178,16 @@
 .help .help_box1 .notice ul li ul li dl dt .bar:after{content: ''; width: 1px; height: 12px; position: absolute; top: 4px; right: -11px; background: #999;}
 .help .help_box1 .notice ul li ul li dl dt em {color: #999;}
 .help .help_box1 .notice ul li ul li dl dd {white-space: nowrap; text-overflow: ellipsis; overflow: hidden; padding-top: 3px; color: #777;}
+
+.help .help_box2 {}
+.help .help_box2 h3 {font-size: 30px; font-weight: 500; margin-bottom: 20px;}
+.help .help_box2 .card {border: 1px solid #dbdbdb; padding: 17px; height: 350px;}
+.help .help_box2 .card ul {}
+.help .help_box2 .card ul li {position: relative; border: 1px solid #dbdbdb; padding: 17px; margin-bottom: 20px; height: 67px;}
+.help .help_box2 .card ul li span {position: absolute; left: 17px; top: 17px;}
+.help .help_box2 .card ul li span img {width: 105px;}
+.help .help_box2 .card ul li strong {display: block; margin-left: 120px; font-size: 20px; color: #777; font-weight: 500;}
+.help .help_box2 .card ul li em {display: block; margin-left: 120px; font-size: 14px;}
 
 /* 미디어 쿼리 */
 @media (max-width: 1280px){
