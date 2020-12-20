@@ -99,7 +99,7 @@
 .poster_main div div div .poster_bottom .infor_btn a:last-child {margin-right: 0;}
 
 /* 이벤트 */
-.event {overflow: hidden; padding: 100px 0;}
+.event {overflow: hidden; padding: 0 0 100px 0;}
 .event img {display: block;}
 .event h2 {font-size: 30px; font-weight: 500; margin-bottom: 20px;}
 .event .event_left {overflow: hidden; float: left; width: 66%; margin-right: 2%;}
@@ -159,7 +159,7 @@
 .new .new_right .btn .purple {float: left; width: 49%; color: #fff; background: #3a0e6a; text-align: center; padding: 10px 0; border: 1px solid #3a0e6a; box-sizing: border-box;}
 
 /* 공지사항 */
-.help {overflow: hidden; padding: 100px 0;}
+.help {overflow: hidden;}
 .help article {float: left; width: 32%; margin-right: 2%;}
 .help article:last-child {margin-right: 0;}
 .help .help_box1 {}
@@ -226,6 +226,11 @@
   .slider {height: 500px;}
   .slider .swiper-slide h2 {font-size: 50px; margin-top: 160px; line-height: 60px;}
   .slider .swiper-slide p {font-size: 20px; margin-top: 35px;}
+  .help .help_box1 {width: 49%;}
+  .help .help_box2 {width: 49%; margin-right: 0;}
+  .help .help_box3 {width: 100%; margin-top: 2%;}
+  .help .help_box3 h3 {display: none;}
+  .help .help_box3 .service ul li {width: 25%;}
 }
 
 @media (max-width: 960px){
@@ -273,6 +278,12 @@
   #new .row {margin: 24px; padding: 24px; background: #fff;}
   .new {padding: 0;}
   .new h2 {font-size: 24px; font-weight: 700;}
+  .help .help_box1 {width: 100%; background: #fff; padding: 24px; margin-right: 0; margin-bottom: 24px; box-sizing: border-box;}
+  .help .help_box2 {width: 100%; background: #fff; padding: 24px; margin-bottom: 24px; box-sizing: border-box;}
+  .help .help_box3 {width: 100%; background: #fff; margin-top: 0; margin-bottom: 24px;}
+  .help .help_box3 .service ul li {border: 0;}
+  .help .help_box1 h3 {font-size: 24px; font-weight: 700;}
+  .help .help_box2 h3 {font-size: 24px; font-weight: 700;}
 }
 
 @media (max-width: 600px){
@@ -312,6 +323,21 @@
   .new .new_right h3 {font-size: 22px;}
   .new .new_right .select .s1 {float: none; width: 100%;}
   .new .new_right .select .s2 {float: none; margin-top: 2%; width: 100%;}
+  .help .help_box1 {padding: 12px; margin-bottom: 12px;}
+  .help .help_box2 {padding: 12px; margin-bottom: 12px;}
+  .help .help_box3 {margin-bottom: 12px;}
+  #help .row {padding: 0 12px;}
+  .help .help_box3 .service ul li {width: 50%; height: auto;}
+  .help .help_box3 .service ul li a {height: auto;}
+  .help .help_box3 .service ul li:nth-child(1) {border-right: 1px solid #dbdbdb; border-bottom: 1px solid #dbdbdb;}
+  .help .help_box3 .service ul li:nth-child(2) {border-bottom: 1px solid #dbdbdb;}
+  .help .help_box3 .service ul li:nth-child(3) {border-right: 1px solid #dbdbdb;}
+  .help .help_box3 .service ul li a span {width: 80px; height: 80px;}
+  .help .help_box2 .card {padding: 12px; height: auto;}
+  .help .help_box2 .card ul li {padding: 12px;}
+  .help .help_box2 .card ul li:last-child {margin-bottom: 0;}
+  .help .help_box1 h3 {font-size: 18px; margin-bottom: 10px;}
+  .help .help_box2 h3 {font-size: 18px; margin-bottom: 10px;}
 }
 
 @media (max-width: 480px){
