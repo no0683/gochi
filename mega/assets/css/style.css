@@ -208,7 +208,7 @@
 #footer_infor h3 {}
 #footer_infor h3 img {width: 150px;}
 #footer_infor ul {padding: 15px 0;}
-#footer_infor ul li {position: relative; display: inline; padding-right: 16px;}
+#footer_infor ul li {position: relative; display: inline; padding-right: 16px; white-space: nowrap;}
 #footer_infor ul li:after {content: ''; position: absolute; right: 6px; top: 4px; width: 1px; height: 11px; background: #8f8f8f;}
 #footer_infor ul li:last-child:after {width: 0; height: 0;}
 #footer_infor ul li a {color: #8f8f8f;}
@@ -216,7 +216,7 @@
 #footer_infor p {color: #8f8f8f;}
 
 #footer_icon {}
-#footer_icon .footer_icon {position: absolute; right: 28px; top: -238px;}
+#footer_icon .footer_icon {position: absolute; right: 28px; top: 35px;}
 #footer_icon .footer_icon ul {}
 #footer_icon .footer_icon ul li {display: inline-block; margin-left: 4px;}
 #footer_icon .footer_icon ul li.s1 {background-position: 0 -375px;}
@@ -277,6 +277,10 @@
   .new .new_right {position: static; width: 100%; top: 0; height: auto;}
   .new .new_left {margin-right: 0; height: 400px;}
   .new .new_right .summary .desc {height: auto;}
+  #footer_icon {background: #352c2c;}
+  #footer_icon .footer_icon {position: static; text-align: center; padding-bottom: 14px;}
+  #footer_icon .tel {display: none;}
+  #footer_infor {text-align: center;}
 }
 
 @media (max-width: 768px){
@@ -310,6 +314,7 @@
   #new .row {margin: 24px; padding: 24px; background: #fff;}
   .new {padding: 0;}
   .new h2 {font-size: 24px; font-weight: 700;}
+  .help {padding-bottom: 0;}
   .help .help_box1 {width: 100%; background: #fff; padding: 24px; margin-right: 0; margin-bottom: 24px; box-sizing: border-box;}
   .help .help_box2 {width: 100%; background: #fff; padding: 24px; margin-bottom: 24px; box-sizing: border-box;}
   .help .help_box3 {width: 100%; background: #fff; margin-top: 0; margin-bottom: 24px;}
@@ -370,6 +375,7 @@
   .help .help_box2 .card ul li:last-child {margin-bottom: 0;}
   .help .help_box1 h3 {font-size: 18px; margin-bottom: 10px;}
   .help .help_box2 h3 {font-size: 18px; margin-bottom: 10px;}
+  #footer_infor address br {display: none;}
 }
 
 @media (max-width: 480px){
