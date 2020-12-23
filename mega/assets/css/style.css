@@ -167,18 +167,18 @@
 .help .help_box1 h3 {font-size: 30px; font-weight: 500; margin-bottom: 20px;}
 .help .help_box1 .notice {position: relative; border: 1px solid #dbdbdb; padding: 17px; height: 350px;}
 .help .help_box1 .notice ul {overflow: hidden;}
-.help .help_box1 .notice ul li {float: left; text-align: center; margin-right: -1px;}
-.help .help_box1 .notice ul li a {display: block; padding: 10px 20px; border: 1px solid #dbdbdb; font-size: 15px; color: #666; width: 80px; background: #f5f5f5;}
-.help .help_box1 .notice ul li a.active {background: #fff;}
+.help .help_box1 .notice ul li {float: left; text-align: center; margin-right: -1px; background: #f5f5f5;}
+.help .help_box1 .notice ul li > a {display: block; padding: 10px 20px; border: 1px solid #dbdbdb; font-size: 15px; color: #666; width: 80px;}
+.help .help_box1 .notice ul li.active {background: #fff;}
 .help .help_box1 .notice ul li ul {position: absolute; left: 17px; top: 70px; width: 90%;}
-.help .help_box1 .notice ul li ul li {width: 100%; padding: 17px; box-sizing: border-box; border-bottom: 1px solid #dbdbdb;}
+.help .help_box1 .notice ul li ul li {width: 100%; padding: 15px; box-sizing: border-box; border-bottom: 1px solid #dbdbdb;}
 .help .help_box1 .notice ul li ul li dl {text-align: left;}
 .help .help_box1 .notice ul li ul li dl dt {}
 .help .help_box1 .notice ul li ul li dl dt strong {}
 .help .help_box1 .notice ul li ul li dl dt .bar {position: relative; margin-right: 16px;}
 .help .help_box1 .notice ul li ul li dl dt .bar:after{content: ''; width: 1px; height: 12px; position: absolute; top: 4px; right: -11px; background: #999;}
 .help .help_box1 .notice ul li ul li dl dt em {color: #999;}
-.help .help_box1 .notice ul li ul li dl dd {white-space: nowrap; text-overflow: ellipsis; overflow: hidden; padding-top: 3px; color: #777;}
+.help .help_box1 .notice ul li ul li dl dd a {display: block; font-size: 14px; width: 100%; border: 0; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; padding: 3px 0 0 0; color: #777;}
 
 .help .help_box2 {}
 .help .help_box2 h3 {font-size: 30px; font-weight: 500; margin-bottom: 20px;}
@@ -205,18 +205,19 @@
 
 /* 푸터 */
 #footer_infor {padding: 50px 0;}
-#footer_infor h3 {}
-#footer_infor h3 img {width: 150px;}
-#footer_infor ul {padding: 15px 0;}
-#footer_infor ul li {position: relative; display: inline; padding-right: 16px; white-space: nowrap;}
-#footer_infor ul li:after {content: ''; position: absolute; right: 6px; top: 4px; width: 1px; height: 11px; background: #8f8f8f;}
-#footer_infor ul li:last-child:after {width: 0; height: 0;}
-#footer_infor ul li a {color: #8f8f8f;}
-#footer_infor address {color: #8f8f8f; padding-bottom: 15px;}
-#footer_infor p {color: #8f8f8f;}
+#footer_infor .footer_infor {}
+#footer_infor .footer_infor h3 {}
+#footer_infor .footer_infor h3 img {width: 150px;}
+#footer_infor .footer_infor ul {padding: 15px 0;}
+#footer_infor .footer_infor ul li {position: relative; display: inline; padding-right: 16px; white-space: nowrap;}
+#footer_infor .footer_infor ul li:after {content: ''; position: absolute; right: 6px; top: 4px; width: 1px; height: 11px; background: #8f8f8f;}
+#footer_infor .footer_infor ul li:last-child:after {width: 0; height: 0;}
+#footer_infor .footer_infor ul li a {color: #8f8f8f;}
+#footer_infor .footer_infor address {color: #8f8f8f; padding-bottom: 15px;}
+#footer_infor .footer_infor p {color: #8f8f8f;}
 
 #footer_icon {}
-#footer_icon .footer_icon {position: absolute; right: 28px; top: 35px;}
+#footer_icon .footer_icon {position: absolute; right: 28px; top: 35px; z-index: 1;}
 #footer_icon .footer_icon ul {}
 #footer_icon .footer_icon ul li {display: inline-block; margin-left: 4px;}
 #footer_icon .footer_icon ul li.s1 {background-position: 0 -375px;}
