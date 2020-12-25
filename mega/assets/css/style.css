@@ -133,7 +133,8 @@
 .new {position: relative; padding: 100px 0;}
 .new h2 {font-size: 30px; font-weight: 500; margin-bottom: 20px;}
 .new .new_left {position: relative; height: 500px; background: url(../img/new01.jpg) center center; background-size: cover; margin-right: 423px;}
-.new .new_left .play {width: 120px; height: 120px; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+.new .new_left .play {width: 120px; height: 120px; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); cursor: pointer;}
+.new .new_left .play:hover {opacity: 0.5;}
 .new .new_left .play .st0 {fill: #fff; opacity: 0.3;}
 .new .new_left .play .st1 {fill: #fff;}
 .new .new_right {padding: 34px; box-sizing: border-box; position: absolute; right: 0; top: 165px; height: 500px; background: #e1e1e1; width: 400px;}
@@ -241,6 +242,17 @@
 #footer_icon .tel {text-align: right; padding-top: 5px;}
 #footer_icon .tel a {color: #8f8f8f; font-size: 21px;}
 #footer_icon .tel em {color: #fff;}
+
+/* 트레일러 */
+.overlay {background: rgba(0, 0, 0, 0.5); display: none; width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 10000;}
+.modal {position: absolute;}
+.modal_close {
+    background: url(../img/close.svg) no-repeat; background-size: 32px 32px;
+    border: 0; color: transparent;
+    display: block; width: 32px; height: 32px; overflow: hidden;
+    position: absolute; top: 24px; right: 24px; text-indent: 100%;
+}
+body.modal_on {overflow: hidden;}
 
 /* 미디어 쿼리 */
 @media (max-width: 1280px){

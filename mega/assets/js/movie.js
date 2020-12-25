@@ -2,7 +2,7 @@
 
     /* 트레일러 영상 플레이어를 활성화 */
     /* YouTube iframe API: https://developers.google.com/youtube/player_parameters */
-    
+
     (function handleTrailer() {
         // 셀렉터 캐시
         var $selector = {
@@ -12,19 +12,16 @@
             showButton: $( "#showTrailer" ),
             hideButton: $( "#hideTrailer" ),
         };
-        
+
         // 플레이어
         var player = {
             obj: null, // 플레이어 오브젝트
             query : {
-                theme: "dark",
-                color: "white",
-                controls: 1, 
+                color: "red",
+                controls: 1,
                 autoplay: 1,
-                enablejsapi: 1,
-                modestbranding: 0, // YouTube 로고 감춤
-                rel: 0,  // 관련 동영상 표시
-                showinfo: 0, // 제목, 업로더 감춤
+                enablejsapi: 0,
+                modestbranding: 1, // YouTube 로고 감춤
                 iv_load_policy: 3 // 특수효과 감춤
             },
             visible: false
@@ -37,9 +34,9 @@
         // YouTube API를 이용해 iframe을 생성
         function setPlayer( id ) {
             player.obj = new YT.Player( "trailer", {
-                width: 480,
-                height: 282,
-                videoId: id,    
+                width: '480',
+                height: '232',
+                videoId: id,
                 playerVars: player.query
             });
 
@@ -60,7 +57,7 @@
             viewport.height = $( window ).height();
 
             frame.width = viewport.width;
-            frame.height = frame.width / 1.6; // 16 : 10
+            frame.height = frame.width / 2.4; // 16 : 10
 
             modal.top = ( ( viewport.height - frame.height ) / 2 ) + "px";
             modal.left = "0px";
@@ -72,7 +69,7 @@
 
         // iframe 보이기
         function showPlayer() {
-            // 처음 클릭시 iframe을 생성 
+            // 처음 클릭시 iframe을 생성
             if ( !player.obj ) {
                 setPlayer( $selector.showButton.data("youtube") );
             }
@@ -92,4 +89,4 @@
 
     })();
 
-})(jQuery);     
+})(jQuery);

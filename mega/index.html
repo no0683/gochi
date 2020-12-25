@@ -747,7 +747,7 @@
           <div class="new">
             <h2>새로운 영화</h2>
             <div class="new_left">
-              <div class="play">
+              <div class="play" id="showTrailer" data-youtube="F1239ZePXfM">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve">
                   <circle class="st0" cx="60" cy="60.4" r="56"/>
                   <path class="st1" d="M81,65.4c4.8-2.8,4.8-7.2,0-10L53.5,39.6c-4.8-2.8-8.7-0.5-8.7,5v31.7c0,5.5,3.9,7.8,8.7,5L81,65.4z"/>
@@ -1415,6 +1415,13 @@
       </div>
     </section>
     <!-- //footer -->
+    <aside id="blackout" class="overlay">
+      <div id="trailerModal" class="modal">
+          <div id="trailer"></div><!-- YouTube 플레이어로 대체되는 부분 -->
+      </div>
+      <button id="hideTrailer" class="modal_close">닫기</button>
+    </aside>
+<!-- //트레일러 -->
   </body>
   <!-- 자바스크립트 라이브러리 -->
   <script src="assets/js/jquery.min_1.12.4.js"></script>
@@ -1422,6 +1429,8 @@
   <script src="assets/js/ie-checker.js"></script>
   <script src="assets/js/swiper-bundle.js"></script>
   <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/movie.js"></script>
+  <script src="assets/js/iframe_api.js"></script>
   <script>
     // 슬라이드
     var mySwiper = new Swiper('.swiper-container', {
