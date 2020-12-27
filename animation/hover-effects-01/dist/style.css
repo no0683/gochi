@@ -1,0 +1,74 @@
+body {
+  height: 100vh;
+  background: #0f2027;
+  background: linear-gradient(120deg,#2c5364,#203a43);
+  font-family: 'Jua', sans-serif;
+}
+
+.figure_wrap {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.figure_wrap figure {
+  width: 400px;
+  margin: 10px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.figure_wrap figure img {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+.figure_wrap figure figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.3);
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  box-sizing: border-box;
+  border-radius: 0 0 5px 5px;
+}
+
+.figure_wrap figure figcaption h3 {
+  font-size: 23px;
+  font-weight: 300;
+}
+.figure_wrap figure figcaption p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* 오버 효과1 */
+.figure_wrap figure.hover1 figcaption {
+  opacity: 0;
+  transition: opacity 0.33s ease-in-out; 
+}
+.figure_wrap figure.hover1:hover figcaption {
+  opacity: 1;
+}
+
+/* 오버 효과2 */
+.figure_wrap figure.hover2 figcaption {
+  opacity: 0;
+  transition: opacity 0.33s ease-in-out,
+    bottom 0.33s ease;
+  bottom: -90px;
+}
+.figure_wrap figure.hover2:hover figcaption {
+  opacity: 1;
+  bottom: 0;
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 700px){
+  .figure_wrap {flex-direction: column;}
+}
+
+/* 리셋 */
+body,h3,p {margin: 0;}
