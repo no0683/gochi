@@ -1,0 +1,79 @@
+body {
+  height: 100vh;
+  background: linear-gradient(120deg,#2C5364, #203A43, #0F2027);
+}
+.hover_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.hover_wrap figure {
+  position: relative;
+  margin: 10px;
+  width: 400px;
+  background: linear-gradient(45deg, #874da2, #c43a30);
+  overflow: hidden;
+  cursor: pointer;
+}
+.hover_wrap figure.hover3:before {
+  content: '';
+  width: 60px; height: 1px;
+  background: #fff;
+  position: absolute;
+  left: 100%; top: 50%;
+  transform: translate(-50%,50%);
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+.hover_wrap figure.hover4:before {
+  content: '';
+  width: 60px; height: 1px;
+  background: #fff;
+  position: absolute;
+  right: 100%; top: 50%;
+  transform: translate(50%,50%);
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+.hover_wrap figure:after {
+  content: '';
+  width: 1px; height: 60px;
+  background: #fff;
+  position: absolute;
+  left: 50%; top: 100%;
+  transform: translate(50%,-50%);
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+.hover_wrap figure img {
+  width: 100%;
+  display: block;
+  transition: all 0.3s ease;
+}
+ 
+/* 오버효과 */
+.hover_wrap figure.hover3:hover img {opacity: 0.3;}
+.hover_wrap figure.hover4:hover img {opacity: 0.3;}
+.hover_wrap figure.hover3:hover:before {
+  left: 50%;
+  opacity: 1;
+}
+.hover_wrap figure.hover4:hover:before {
+  right: 50%;
+  opacity: 1;
+}
+.hover_wrap figure:hover:after {
+  top: 50%;
+  opacity: 1;
+}
+
+/* 리셋 */
+body {
+  margin: 0;
+}
+
+/* 미디어 쿼리 */
+@media(max-width: 800px){
+  .hover_wrap {flex-direction: column;}
+}
