@@ -1,0 +1,87 @@
+body {
+  height: 100vh;
+  background: linear-gradient(120deg, #2C5364, #203A43, #0F2027);
+  font-family: 'Jua', sans-serif;
+}
+
+.hover_wrap {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+.hover_wrap .effect figure {
+  position: relative;
+  width: 400px;
+  margin: 10px;
+}
+.hover_wrap .effect figure img {
+  width: 100%;
+  display: block;
+}
+.hover_wrap .effect figure figcaption {
+  position: absolute;
+  bottom: 0; left: 0;
+  background: rgba(0,0,0,0.3);
+  width: 100%;
+  color: #fff;
+  padding: 10px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+.hover_wrap .effect figure figcaption h3 {
+  font-size: 24px;
+}
+.hover_wrap .effect figure figcaption p {
+  font-size: 20px;
+}
+/* 오버 효과1 */
+.hover_wrap .effect.hover7 {
+  position: relative;
+}
+.hover_wrap .effect.hover7 .front {
+  z-index: 1;
+  backface-visibility: hidden;
+  transition: all 1s;
+}
+.hover_wrap .effect.hover7:hover .front {
+  transform: rotatey(180deg);
+}
+.hover_wrap .effect.hover7 .back {
+  position: absolute;
+  top: 0; left: 0;
+  transition: all 1s;
+  transform: rotatey(-180deg);
+}
+.hover_wrap .effect.hover7:hover .back {
+  transform: rotatey(0deg);
+}
+/* 오버 효과2 */
+.hover_wrap .effect.hover8 {
+  position: relative;
+}
+.hover_wrap .effect.hover8 .front {
+  z-index: 1;
+  backface-visibility: hidden;
+  transition: all 1s;
+}
+.hover_wrap .effect.hover8:hover .front {
+  transform: rotatex(180deg);
+}
+.hover_wrap .effect.hover8 .back {
+  position: absolute;
+  top: 0; left: 0;
+  transition: all 1s;
+  transform: rotatex(-180deg);
+}
+.hover_wrap .effect.hover8:hover .back {
+  transform: rotatex(0deg);
+}
+/* 미디어 쿼리 */
+@media(max-width: 800px) {
+  .hover_wrap {flex-direction: column;}
+}
+
+/* 리셋 */
+body,h3,p {margin: 0;}
