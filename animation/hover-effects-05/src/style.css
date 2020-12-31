@@ -1,0 +1,87 @@
+body {
+  height: 100vh;
+  background: linear-gradient(120deg, #2C5364, #203A43, #0F2027);
+  font-family: 'Jua', sans-serif;
+}
+.hover_wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hover_wrap .effect {
+  position: relative;
+  perspective: 1000px;
+}
+.hover_wrap .effect figure {
+  width: 400px;
+  margin: 10px;
+}
+.hover_wrap .effect figure img {
+  width: 100%;
+}
+.hover_wrap .effect figure figcaption {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%) translatez(100px);
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap;
+  backface-visibility: hidden;
+}
+.hover_wrap .effect figure figcaption h3 {
+  font-size: 24px;
+}
+.hover_wrap .effect figure figcaption p {
+  font-size: 18px;
+}
+.hover_wrap .effect .front {
+  z-index: 1;
+}
+.hover_wrap .effect .back {
+  position: absolute;
+  top: 0; left: 0;
+  z-index: -1;
+}
+/* 오버 효과1 */
+.hover_wrap .effect.hover09 .front {
+  transform: rotatey(0deg);
+  transition: all 1s;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+.hover_wrap .effect.hover09:hover .front {
+  transform: rotatey(180deg);
+}
+.hover_wrap .effect.hover09 .back {
+  transform: rotatey(-180deg);
+  transition: all 1s;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+.hover_wrap .effect.hover09:hover .back {
+  transform: rotatey(0deg);
+}
+/* 오버 효과2 */
+.hover_wrap .effect.hover10 .front {
+  transform: rotatex(0deg);
+  transition: all 1s;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+.hover_wrap .effect.hover10:hover .front {
+  transform: rotatex(180deg);
+}
+.hover_wrap .effect.hover10 .back {
+  transform: rotatex(-180deg);
+  transition: all 1s;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+.hover_wrap .effect.hover10:hover .back {
+  transform: rotatex(0deg);
+}
+/* 리셋 */
+body,h3,p {margin: 0;}
