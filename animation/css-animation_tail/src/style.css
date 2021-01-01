@@ -1,0 +1,66 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+.circle {
+  position: absolute;
+  animation: movex 2s ease-in-out alternate infinite;
+}
+.circle > div {
+  width: 50px; height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  animation: movey 2s linear infinite;
+}
+.circle:nth-of-type(2) > div {
+  width: 40px; height: 40px;
+  opacity: 0.8;
+}
+.circle:nth-of-type(3) > div {
+  width: 30px; height: 30px;
+  opacity: 0.6;
+}
+.circle:nth-of-type(4) > div {
+  width: 20px; height: 20px;
+  opacity: 0.4;
+}
+.circle:nth-of-type(5) > div {
+  width: 10px; height: 10px;
+  opacity: 0.2;
+}
+
+.circle:nth-of-type(2),
+.circle:nth-of-type(2) > div {
+  animation-delay: 0.1s;
+}
+.circle:nth-of-type(3),
+.circle:nth-of-type(3) > div {
+  animation-delay: 0.2s;
+}
+.circle:nth-of-type(4),
+.circle:nth-of-type(4) > div {
+  animation-delay: 0.3s;
+}
+.circle:nth-of-type(5),
+.circle:nth-of-type(5) > div {
+  animation-delay: 0.4s;
+}
+/* Tail Animation */
+@keyframes movex {
+  0% {transform: translate(-300px,0);}
+  100% {transform: translate(300px,0);}
+}
+@keyframes movey {
+  0% {transform: translate(0,0);}
+  20% {transform: translate(0,-250px);}
+  40% {transform: translate(0,225px);}
+  60% {transform: translate(0,-200px);}
+  80% {transform: translate(0,175px);}
+  100% {transform: translate(0,0);}
+}
+
+/* 리셋 */
+body {margin: 0;}
