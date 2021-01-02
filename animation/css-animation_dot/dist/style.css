@@ -1,0 +1,108 @@
+body {
+  height: 100vh;
+  background-image: linear-gradient(to right, #a18cd1 0%, #fbc2eb 100%);
+}
+.loading {
+  width: 30px; height: 150px;
+  position: absolute;
+  top: 40%; left: 50%;
+  transform: translate(-50%,-50%);
+  animation: loading ease-in-out 5s infinite;
+}
+.loading .circle1 {
+  width: 30px; height: 30px;
+  background: #fff;
+  border-radius: 50%;
+}
+.loading .circle2 {
+  width: 30px; height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  margin-top: 90px;
+}
+.loading2 {
+  width: 30px; height: 150px;
+  position: absolute;
+  top: 40%; left: 50%;
+  transform: translate(-50%,-50%);
+  animation: loading2 ease-in-out 5s infinite;
+  opacity: 0.8;
+}
+.loading2 .circle1 {
+  width: 30px; height: 30px;
+  background: #fff;
+  border-radius: 50%;
+}
+.loading2 .circle2 {
+  width: 30px; height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  margin-top: 90px;
+}
+.loading3 {
+  width: 30px; height: 150px;
+  position: absolute;
+  top: 40%; left: 50%;
+  transform: translate(-50%,-50%);
+  animation: loading3 ease-in-out 5s infinite;
+  opacity: 0.6;
+}
+.loading3 .circle1 {
+  width: 30px; height: 30px;
+  background: #fff;
+  border-radius: 50%;
+}
+.loading3 .circle2 {
+  width: 30px; height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  margin-top: 90px;
+}
+.loading4 {
+  width: 30px; height: 150px;
+  position: absolute;
+  top: 40%; left: 50%;
+  transform: translate(-50%,-50%);
+  animation: loading4 ease-in-out 5s infinite;
+  opacity: 0.4;
+}
+.loading4 .circle1 {
+  width: 30px; height: 30px;
+  background: #fff;
+  border-radius: 50%;
+}
+.loading4 .circle2 {
+  width: 30px; height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  margin-top: 90px;
+}
+.loading2,
+.loading2 {animation-delay: 0.4s;}
+
+.loading3,
+.loading3 {animation-delay: 0.8s;}
+
+.loading4,
+.loading4 {animation-delay: 1.2s;}
+
+/* 애니메이션 */
+@keyframes loading {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+@keyframes loading2 {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+@keyframes loading3 {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+@keyframes loading4 {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+/* 리셋 */
+body {margin: 0;}
