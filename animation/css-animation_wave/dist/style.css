@@ -1,0 +1,34 @@
+body {
+  height: 100vh;
+  background: linear-gradient(120deg,#96fbc4 0%,#f9f586 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row {
+  display: flex;
+}
+.circle {
+  width: 20px; height: 20px;
+  background: rgba(0,0,0,0.5);
+  margin: 10px;
+  border-radius: 50%;
+  transform-origin: top center;
+  animation: spin 1s linear infinite;
+}
+/* 애니메이션 */
+@keyframes spin {
+  0% {transform: rotate(0) scale(1.0);}
+  50% {transform: rotate(180deg) scale(0.3);}
+  100% {transform: rotate(360deg) scale(1.0);}
+}
+
+.row:nth-child(1) .circle {animation-delay: 100ms;}
+.row:nth-child(2) .circle {animation-delay: 200ms;}
+.row:nth-child(3) .circle {animation-delay: 300ms;}
+.row:nth-child(4) .circle {animation-delay: 400ms;}
+.row:nth-child(5) .circle {animation-delay: 500ms;}
+.row:nth-child(6) .circle {animation-delay: 600ms;}
+
+/* 리셋 */
+body {margin: 0;}
