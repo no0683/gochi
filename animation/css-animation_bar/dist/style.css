@@ -1,0 +1,24 @@
+body {
+  height: 100vh;
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar {
+  background: #fff;
+  width: 4px; height: 300px;
+  animation: bar 2s ease-in-out infinite;
+}
+
+/* 애니메이션 */
+@keyframes bar {
+  0% {transform: rotate(0); height: 0;}
+  25% {transform: rotate(0); height: 300px;}
+  50% {transform: rotate(180deg); height: 300px;}
+  100% {transform: rotate(180deg); height: 0;}
+}
+
+/* 리셋 */
+body {margin: 0;}
