@@ -1,0 +1,100 @@
+body {
+  background: #ffebee;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+.cube {
+  position: relative;
+  width: 100px; height: 100px;
+  transform-style: preserve-3d;
+  transform: rotatex(-20deg) rotatey(-140deg);
+  animation: rotate 8s linear infinite;
+}
+.cube div {
+  display: flex;
+  position: absolute;
+  top: 0; left: 0;
+  align-items: center;
+	justify-content: center;
+  width: 100px; height: 100px;
+  opacity: 0.75;
+  color: #fff;
+}
+.cube div:nth-child(1) {
+  background: #ffcc80;
+  transform-origin: center top;
+  transform: rotatex(90deg) translatey(-100px);
+  animation: top 4s 4s ease-in-out infinite;
+}
+.cube div:nth-child(2) {
+  background: #ffb74d;
+  transform-origin: center bottom;
+  transform: rotatex(-90deg) translatey(100px);
+  animation: bottom 4s 4s ease-in-out infinite;
+}
+.cube div:nth-child(3) {
+  background: #ffa726;
+  transform-origin: center left;
+  transform: rotatey(-90deg) translatex(-100px);
+  animation: left 4s 4s ease-in-out infinite;
+}
+.cube div:nth-child(4) {
+  background: #ff9800;
+  transform-origin: center right;
+  transform: rotatey(90deg) translatex(100px);
+  animation: right 4s 4s ease-in-out infinite;
+}
+.cube div:nth-child(5) {
+  background: #fb8c00;
+  transform-origin: center front;
+  transform: rotatey(180deg) translatex(0px);
+  animation: front 4s 4s ease-in-out infinite;
+}
+.cube div:nth-child(6) {
+  background: #f57c00;
+  transform-origin: center center;
+  transform: rotatex(180deg) translatez(100px);
+  animation: back 4s 4s ease-in-out infinite;
+}
+
+/* 애니메이션 */
+@keyframes rotate {
+  0% {transform: rotatex(0deg) rotatey(0deg);}
+  100% {transform: rotatex(360deg) rotatey(360deg);}
+}
+@keyframes top {
+  0% {transform: rotatex(90deg) translatey(-100px) translatez(0);}
+  50% {transform: rotatex(90deg) translatey(-100px) translatez(200px);}
+  100% {transform: rotatex(90deg) translatey(-100px) translatez(0);}
+}
+@keyframes bottom {
+  0% {transform: rotatex(-90deg) translatey(100px) translatez(0);}
+  50% {transform: rotatex(-90deg) translatey(100px) translatez(200px);}
+  100% {transform: rotatex(-90deg) translatey(100px) translatez(0);}
+}
+@keyframes left {
+  0% {transform: rotatey(-90deg) translatex(-100px) scaley(1);}
+  50% {transform: rotatey(-90deg) translatex(-100px) scaley(5);}
+  100% {transform: rotatey(-90deg) translatex(-100px) scaley(1);}
+}
+@keyframes right {
+  0% {transform: rotatey(90deg) translatex(100px) scaley(1);}
+  50% {transform: rotatey(90deg) translatex(100px) scaley(5);}
+  100% {transform: rotatey(90deg) translatex(100px) scaley(1);}
+}
+@keyframes front {
+  0% {transform: rotatey(180deg) translatex(0px) scaley(1);}
+  50% {transform: rotatey(180deg) translatex(0px) scaley(5);}
+  100% {transform: rotatey(180deg) translatex(0px) scaley(1);}
+}
+@keyframes back {
+  0% {transform: rotatex(180deg) translatez(100px) scaley(1);}
+  50% {transform: rotatex(180deg) translatez(100px) scaley(5);}
+  100% {transform: rotatex(180deg) translatez(100px) scaley(1);}
+}
+
+/* 리셋 */
+body {margin: 0;}
