@@ -17,6 +17,9 @@
     font-weight: bold;
     font-size: 32px;
     color: #000000;
+    border-bottom: 1px solid #D5D5D5;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 #header .header-id {
     position: absolute;
@@ -29,6 +32,25 @@
     color: #FFFFFF;
     text-align: center;
     line-height: 40px;
+    margin-bottom: 10px;
+}
+
+/* 베스트 뮤직 */
+#bestM .best .bestM-title .bt-stit {
+    font-weight: 500;
+    font-size: 12px;
+    color: #DA5E7C;
+}
+#bestM .best .bestM-title .bt-tit {
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+#bestM .best .bestM-title .bt-desc {
+    font-weight: 300;
+    font-size: 22px;
+    color: #818181;
+    margin-bottom: 10px;
 }
 
 /* media query */
