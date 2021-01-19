@@ -53,6 +53,35 @@
     margin-bottom: 10px;
 }
 
+/* 최신 뮤직 */
+#recentM h2 {
+    font-weight: bold;
+    font-size: 20px;
+    border-top: 1px solid #D5D5D5;
+    padding: 10px 0;
+    margin-top: 15px;
+    overflow: hidden;
+}
+#recentM .recent {
+    float: left;
+    width: 49%;
+    padding-right: 2%;
+}
+#recentM .recent:last-child {
+    padding-right: 0;
+}
+#recentM .recent .recentM-title .rt-stit {
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px 0;
+    display: block;
+}
+#recentM .recent .recentM-title .rt-tit {
+    font-weight: 500;
+    font-size: 15px;
+    color: #908F94;
+}
+
 /* media query */
 @media (max-width: 1020px) {
     .container {width: 100%;}
