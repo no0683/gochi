@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관심세션 선택</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: #fff;
+        }
+        p {
+            font-size: 50px;
+        }
+        strong {
+            font-size: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        var session = prompt("관심 세션을 선택해주세요. 1-마케팅, 2-개발, 3-게임","1");
+
+        switch(session) {
+            case "1" : document.querySelector("#result").innerHTML = "<p>마케팅 세션은 <strong>201호</strong>에서 진행 됩니다.</p>";
+                break;
+            case "2" : document.querySelector("#result").innerHTML = "<p>개발 세션은 <strong>202호</strong>에서 진행 됩니다.</p>";
+                break;
+            case "3" : document.querySelector("#result").innerHTML = "<p>게임 세션은 <strong>203호</strong>에서 진행 됩니다.</p>";
+                break;
+            default : alert("잘못 입력 했습니다.");
+        };
+    </script>
+</body>
+</html>
