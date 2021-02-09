@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 비교하기</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h2 {
+            font-size: 60px;
+            margin: 0;
+            padding: 0 10px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var num1 = parseInt(prompt("첫 번째 숫자를 입력하세요."));
+        var num2 = parseInt(prompt("두 번째 숫자를 입력하세요."));
+
+        comParison(num1, num2);
+
+        function comParison(a, b){
+            if(a == b){
+                document.write("<h2>" + num1 + "</h2>" + "과(와)" + "<h2>" + num2 + "</h2>" + "는 같습니다.");
+            } else if(a > b){
+                document.write("<h2>" + num1 + "</h2>" + "는(은)" + "<h2>" + num2 + "</h2>" + "보다 큽니다.");
+            } else {
+                document.write("<h2>" + num2 + "</h2>" + "는(은)" + "<h2>" + num1 + "</h2>" + "보다 큽니다.");
+            };
+        };
+    </script>
+</body>
+</html>
