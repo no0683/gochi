@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>곱셈,덧셈 구분하기</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h2 {
+            font-size: 60px;
+            margin: 0;
+            padding: 0 10px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var num1 = parseInt(prompt("첫 번째 숫자를 입력하세요."));
+        var num2 = parseInt(prompt("두 번째 숫자를 입력하세요."));
+
+        sumMulti(num1, num2);
+
+        function sumMulti(a, b){
+            if(a == b){
+                var sum1 = a * b;
+                document.write("두 숫자는 같으므로 곱하면" + "<h2>" +sum1 + "</h2>" + "입니다.");
+            } else {
+                var sum2 = a + b;
+                document.write("두 숫자는 다르므로 더하면" + "<h2>" +sum2 + "</h2>" + "입니다.");
+            };
+        };
+    </script>
+</body>
+</html>
