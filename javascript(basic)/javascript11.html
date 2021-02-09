@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 효과</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #detail {
+            display: none;
+        }
+        #wrap {
+            width: 100%;
+        }
+        h2 {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .img {
+            width: 50%;
+            margin: 0 auto;
+        }
+        img {
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <div class="img">
+                <img class="image" src="assets/img/bestM01.jpg" alt="이미지1">
+            </div>
+            <div class="btn">
+                <button id="open" onclick="detailShow()">상세내용보기</button>
+            </div>
+            <div id="detail">
+                <h2 class="title">오버워치</h2>
+                <p class="desc">오버워치는 재밌다. 오버워치는 재밌다. 오버워치는 재밌다. 오버워치는 재밌다.</p>
+                <button id="close" onclick="detailHide()">상세내용닫기</button>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        var image = document.querySelector(".image");
+
+        // 이미지 효과
+        image.onclick = function(){
+            alert("이미지를 클릭 했습니다.");
+        };
+
+        image.onmouseover = function(){
+            image.style.border = "5px solid #111";
+        };
+
+        image.onmouseout = function(){
+            image.style.border = "";
+        };
+
+        // 버튼,내용 효과
+        function detailShow(){
+            document.querySelector("#detail").style.display = "block";
+            document.querySelector("#open").style.display = "none";
+        };
+
+        function detailHide(){
+            document.querySelector("#detail").style.display = "none";
+            document.querySelector("#open").style.display = "inline-block";
+        };
+    </script>
+</body>
+</html>
