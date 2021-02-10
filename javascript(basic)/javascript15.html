@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div {
+            border: 2px solid rgb(148, 144, 144);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        div h1 {
+            text-align: center;
+            margin: 0;
+        }
+        span {
+            color: rgb(51, 51, 168);
+            font-weight: 600;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 생성자 객체
+        function Game(name, price, company){
+            this.name = name;
+            this.price = price;
+            this.company = company;
+        };
+
+        // 객체 인스턴스
+        var overwatch = new Game("오버워치", "20,000", "블리자드");
+        var maplestory = new Game("메이플스토리", "15,000", "넥슨");
+        var leagueoflegend = new Game("롤", "25,000", "라이엇");
+        var starcraft = new Game("스타크래프트", "30,000", "블리자드");
+
+        // 객체 배열
+        var myGame = [overwatch, maplestory, starcraft, leagueoflegend];
+
+        // 화면표시
+        document.write("<div>");
+            document.write("<h1>나의 게임</h1>");
+            for(var i = 0; i < myGame.length; i++){
+                document.write("<p>" + (i+1) + ". " + myGame[i].name + "의 가격은 " + "<span>" + myGame[i].price + "</span>" + "원 입니다." + "</p>");
+            };
+        document.write("</div>");
+    </script>
+</body>
+</html>
