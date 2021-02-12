@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기념일 계산</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1,ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        #wrap {
+            border: 1px solid rgb(138, 135, 135);
+            width: 25%;
+        }
+        #header {
+            text-align: center;
+        }
+        #header h1 {
+            font-size: 20px;
+            padding: 20px 0;
+        }
+        #header .afterday {
+            padding-bottom: 30px;
+        }
+        #line h1 {
+            font-size: 15px;
+            background-color: rgb(56, 53, 53);
+            color: #fff;
+            padding: 5px 0 5px 15px;
+            font-weight: 400;
+        }
+        #anniversary ul {
+            padding: 15px;
+            border-bottom: 1px dotted black;
+            overflow: hidden;
+        }
+        #anniversary ul:last-child {
+            border: none;
+        }
+        #anniversary ul li {
+            float: left;
+        }
+        #anniversary ul li:last-child {
+            float: right;
+        }
+        #anniversary ul li:first-child {
+            font-size: 20px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>우리 만난 지</h1>
+            <div class="afterday">결과 값</div>
+        </div>
+        <div id="line">
+            <h1>기념일 계산</h1>
+        </div>
+        <div id="anniversary">
+            <ul>
+                <li>100일</li>
+                <li class="day100">결과 값</li>
+            </ul>
+            <ul>
+                <li>200일</li>
+                <li class="day200">결과 값</li>
+            </ul>
+            <ul>
+                <li>365일</li>
+                <li class="day365">결과 값</li>
+            </ul>
+            <ul>
+                <li>500일</li>
+                <li class="day500">결과 값</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // 만난 날 계산
+        var now = new Date();
+        var first = new Date("2013-05-02");
+        var nowTime = now.getTime();
+        var firstTime = first.getTime();
+        var count = Math.round((nowTime - firstTime) / (24 * 60 * 60 * 1000));
+
+        document.querySelector(".afterday").innerHTML = count + "일";
+
+        // 기념일 계산
+        dateCalc(100);
+        dateCalc(200);
+        dateCalc(365);
+        dateCalc(500);
+
+        function dateCalc(days){
+            var future = firstTime + days * (24 * 60 * 60 * 1000);
+            var someday = new Date(future);
+            var futureYear = someday.getFullYear();
+            var futureMonth = someday.getMonth() + 1;
+            var futureDate = someday.getDate();
+
+            document.querySelector(".day" + days).innerHTML = futureYear + "년 " + futureMonth + "월 " + futureDate + "일";
+        };
+    </script>
+</body>
+</html>
