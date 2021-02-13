@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자 함수 활용</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 2em;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var r = prompt("원의 반지름은? (cm)");
+        var circle1 = new Circle(r);
+        
+        document.write("<div>");
+            document.write("반지름이 " + r + "cm 일때" + "<br>원의 둘레 : 약 " + circle1.result1() + "cm <br>원의 넓이 : 약 " + circle1.result2()+"cm<sup>2</sup>");
+        document.write("</div>");
+
+        function Circle(radius){
+            this.radius = radius,
+            this.result1 = function(){
+                return Math.floor(2 * this.radius * Math.PI);
+            },
+            this.result2 = function(){
+                return Math.floor(Math.pow(this.radius, 2) * Math.PI);
+            }
+        };
+    </script>
+</body>
+</html>
