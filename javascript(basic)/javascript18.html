@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행 준비물 점검 목록</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #wrap {
+            text-align: center;
+        }
+        .search {
+            background-color: rgb(73, 73, 73);
+            padding: 15px;
+            display: flex;
+        }
+        .search input {
+            width: 300px;
+            height: 18px;
+        }
+        .search button {
+            display: block;
+            margin-left: 5px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+        li {
+            overflow: hidden;
+        }
+        strong {
+            float: left;
+        }
+        span {
+            float: right;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h2>여행 준비물 점검 목록</h2>
+        <div class="search">
+            <input type="text" id="item">
+            <button type="button" id="add" class="addBtn">추가</button>
+        </div>
+        <div class="itemList"></div>
+    </div>
+    <script>
+        var itemList = [];
+
+        function addList(){
+            var item = document.querySelector("#item").value;
+            if(item != null){
+                itemList.push(item);
+                document.querySelector("#item").value = "";
+                document.querySelector("#item").focus();
+
+                showList();
+            };            
+        };
+
+        var addBtn = document.querySelector("#add");
+        addBtn.addEventListener("click", addList);
+
+        function showList(){
+            var list = "<ul>";
+                for(var i = 0; i < itemList.length; i++){
+                    list += "<li>" + "<strong>" + itemList[i] + "</strong>" + "<span id=" + i + " class='close'>X</span>" + "</li>";
+                };
+                list += "</ul>"
+                document.querySelector(".itemList").innerHTML = list;
+
+                var remove = document.querySelectorAll(".close");
+                for(var i = 0; i < remove.length; i++){
+                    remove[i].addEventListener("click", removeList);
+                };
+        };
+
+        function removeList(){
+            var id = this.getAttribute("id");
+            itemList.splice(id, 1);
+            showList();
+        };
+    </script>
+</body>
+</html>
