@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM 객체 모델 활용</title>
     <style>
-        #wrap {
+        #wrap1 {
             display: flex;
         }
         #left-side {
@@ -14,6 +14,7 @@
         }
         #right-side {
             margin-left: 30px;
+            position: relative;
         }
         .smallImg {
             display: flex;
@@ -50,7 +51,7 @@
             position: absolute;
             left: -5px; top: 14px;
         }
-        ul li:nth-child(4)::before {
+        #right-side ul li:nth-child(4)::before {
             width: 0;
         }
         ul li span {
@@ -72,11 +73,24 @@
             background-color: #fff;
             color: black;
         }
+        #right-side a {
+            display: block;
+            position: absolute;
+            left: 0; bottom: 0;
+        }
+        #bottom-side {
+            opacity: 0;
+            transition: 0.5s ease;
+        }
+        #bottom-side.live {
+            opacity: 1;
+            transition: 0.5s ease;
+        }
     </style>
 </head>
 <body>
     <h1>오버워치</h1>
-    <div id="wrap">
+    <div id="wrap1">
         <div id="left-side">
             <div class="bigImg">
                 <img src="assets/img/bestM01.jpg" alt="큰 이미지" class="big">
@@ -97,10 +111,26 @@
                 <li><span>출시일:</span> 2015.01.01</li>
             </ul>
             <button>장바구니에 담기</button>
+            <a href="#" id="show">상세 설명 보기</a>
+        </div>
+    </div>
+    <div id="wrap2">
+        <div id="bottom-side">
+            <h2>상품 상세 정보</h2>
+            <ul>
+                <li>다양한 역할: 돌격,공격,지원</li>
+                <li>게임모드: 빠른대전,랭크</li>
+                <li>워크샵: 나만의 게임</li>
+                <li>추천: 지휘관,팀 플레이어</li>
+            </ul>
+            <h2>오버워치에 오신 것을 환영 합니다.</h2>
+            <p>오버워치는 다수의 강력한 영웅을 플레이할 수 있는 다채로운 팀전 슈팅게임입니다. 세계를 여행하며 팀을 구성해, 짜릿한 6대 6 전투를 펼치십시오.</p>
         </div>
     </div>
 
     <script>
+
+        // 이미지 효과
         var smallImg = document.querySelectorAll(".small");
         var bigImg = document.querySelector(".big");
 
@@ -112,6 +142,23 @@
             var newSrc = this.src;
             bigImg.setAttribute("src", newSrc);
         };
+
+        // 상세설명 효과
+        var link = document.querySelector("#show");
+        var desc = document.querySelector("#bottom-side");
+        var decision = false;
+
+        link.addEventListener("click", function(){
+            if(decision == false){
+                desc.classList = "live";
+                link.innerHTML = "상세 설명 닫기";
+                decision = true;
+            } else {
+                desc.classList = "";
+                link.innerHTML = "상세 설명 보기";
+                decision = false;
+            }
+        });
     </script>
 </body>
 </html>
