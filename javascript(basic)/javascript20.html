@@ -57,13 +57,15 @@
 
             var nameList = document.querySelector("#nameList");
 
-            nameList.appendChild(newP);
+            // nameList.appendChild(newP);
 
-            var wrap = document.querySelector("#wrap");
+            nameList.insertBefore(newP, nameList.childNodes[0]);
 
-            wrap.appendChild(nameList);
+            // var wrap = document.querySelector("#wrap");
 
-            document.body.appendChild(wrap);
+            // wrap.appendChild(nameList);
+
+            // document.body.appendChild(wrap);
 
             name.value = "";
         };
