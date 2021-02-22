@@ -33,6 +33,25 @@
             border: 1px solid rgb(134, 134, 134);
             border-radius: 5px;
         }
+        p {
+            overflow: hidden;
+        }
+        .text {
+            display: block;
+            float: left;
+        }
+        .del {
+            display: block;
+            float: right;
+            cursor: pointer;
+            font-weight: 600;
+            color: rgb(117, 114, 114);
+            opacity: 0.5;
+        }
+        .del:hover {
+            opacity: 1;
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -51,22 +70,28 @@
             var newP = document.createElement("p");
             var name = document.querySelector(".name");
             var newText = document.createTextNode(name.value);
+            var textWrap = document.createElement("span");
+            textWrap.setAttribute("class", "text");
+
+            // 노드 연결(부모:textWrap, 자식:newText)
+            textWrap.appendChild(newText);
             
-            // 노드 연결(부모:newP, 자식:newText)
-            newP.appendChild(newText);
+            // 노드 연결(부모:newP, 자식:textWrap)
+            newP.appendChild(textWrap);
 
             var nameList = document.querySelector("#nameList");
 
-            // nameList.appendChild(newP);
-
+            // nameList 첫번째 자식노드앞에 newP 삽입
             nameList.insertBefore(newP, nameList.childNodes[0]);
 
-            // var wrap = document.querySelector("#wrap");
+            // 삭제 버튼 생성,연결
+            var delBtn = document.createElement("span");
+            var delText = document.createTextNode("X");
+            delBtn.setAttribute("class", "del");
+            delBtn.appendChild(delText);
+            newP.appendChild(delBtn);
 
-            // wrap.appendChild(nameList);
-
-            // document.body.appendChild(wrap);
-
+            // 이름입력창 초기화
             name.value = "";
         };
     </script>
