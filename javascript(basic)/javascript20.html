@@ -66,33 +66,46 @@
 
     <script>
         function nameShow(){
-            // 노드 만들기(요소,텍스트)
-            var newP = document.createElement("p");
-            var name = document.querySelector(".name");
-            var newText = document.createTextNode(name.value);
-            var textWrap = document.createElement("span");
-            textWrap.setAttribute("class", "text");
+            var name = document.querySelector(".name").value;
+            if(name != ""){
+                // 노드 만들기(요소,텍스트)
+                var newP = document.createElement("p");
+                var newText = document.createTextNode(name);
+                var textWrap = document.createElement("span");
+                textWrap.setAttribute("class", "text");
 
-            // 노드 연결(부모:textWrap, 자식:newText)
-            textWrap.appendChild(newText);
-            
-            // 노드 연결(부모:newP, 자식:textWrap)
-            newP.appendChild(textWrap);
+                // 노드 연결(부모:textWrap, 자식:newText)
+                textWrap.appendChild(newText);
+                
+                // 노드 연결(부모:newP, 자식:textWrap)
+                newP.appendChild(textWrap);
 
-            var nameList = document.querySelector("#nameList");
+                var nameList = document.querySelector("#nameList");
 
-            // nameList 첫번째 자식노드앞에 newP 삽입
-            nameList.insertBefore(newP, nameList.childNodes[0]);
+                // nameList 첫번째 자식노드앞에 newP 삽입
+                nameList.insertBefore(newP, nameList.childNodes[0]);
 
-            // 삭제 버튼 생성,연결
-            var delBtn = document.createElement("span");
-            var delText = document.createTextNode("X");
-            delBtn.setAttribute("class", "del");
-            delBtn.appendChild(delText);
-            newP.appendChild(delBtn);
+                // 삭제 버튼 생성,연결
+                var delBtn = document.createElement("span");
+                var delText = document.createTextNode("X");
+                delBtn.setAttribute("class", "del");
+                delBtn.appendChild(delText);
+                newP.appendChild(delBtn);
 
-            // 이름입력창 초기화
-            name.value = "";
+                // 이름입력창 초기화
+                name.value = "";
+
+                // 삭제 버튼 이벤트
+                var delBtns = document.querySelectorAll(".del");
+
+                for(i = 0; i < delBtns.length; i++){
+                    delBtns[i].addEventListener("click", function(){
+                        if(this.parentNode.parentNode){
+                            this.parentNode.parentNode.removeChild(this.parentNode);
+                        };
+                    });
+                };
+            };
         };
     </script>
 </body>
