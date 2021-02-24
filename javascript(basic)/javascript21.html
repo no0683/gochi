@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문서</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #wrap {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .info {
+            border: 1px dotted black;
+            padding: 30px 20px 30px 20px;
+            margin: 40px 20px 40px 20px;
+            width: 400px;
+            position: relative;
+        }
+        .info .info-title {
+            position: absolute;
+            top: -21px;
+            left: 50px;
+            margin: 0;
+            background-color: white;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            overflow: hidden;
+            padding: 10px;
+        }
+        .input-label {
+            width: 55px;
+            display: block;
+            float: left;
+            text-align: right;
+        }
+        .input-box {
+            float: right;
+            width: 300px;
+        }
+        #payment .payBtn {
+            padding: 20px;
+            margin: 0 20px 40px 20px;
+            width: 444px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <div id="billingInfo" class="info">
+                <h2 class="info-title">주문 정보</h2>
+                <ul>
+                    <li>
+                        <label class="input-label" for="billingName">이름: </label>
+                        <input class="input-box" type="text" id="billingName">
+                    </li>
+                    <li>
+                        <label class="input-label" for="billingTel">연락처: </label>
+                        <input class="input-box" type="text" id="billingTel">
+                    </li>
+                    <li>
+                        <label class="input-label" for="billingAddr">주소: </label>
+                        <input class="input-box" type="text" id="billingAddr">
+                    </li>
+                </ul>
+            </div>
+            <div id="shippingInfo" class="info">
+                <h2 class="info-title">배송 정보</h2>
+                <input type="checkbox" id="check">
+                <label for="check">주문 정보와 배송 정보가 같습니다.</label>
+                <ul>
+                    <li>
+                        <label class="input-label" for="shippingName">이름: </label>
+                        <input class="input-box" type="text" id="shippingName">
+                    </li>
+                    <li>
+                        <label class="input-label" for="shippingTel">연락처: </label>
+                        <input class="input-box" type="text" id="shippingTel">
+                    </li>
+                    <li>
+                        <label class="input-label" for="shippingAddr">주소: </label>
+                        <input class="input-box" type="text" id="shippingAddr">
+                    </li>
+                </ul>
+            </div>
+            <div id="payment">
+                <button class="payBtn">결제하기</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var check = document.querySelector("#check");
+
+        check.addEventListener("click", function(){
+            if(check.checked == true){
+                document.querySelector("#shippingName").value = document.querySelector("#billingName").value;
+                document.querySelector("#shippingTel").value = document.querySelector("#billingTel").value;
+                document.querySelector("#shippingAddr").value = document.querySelector("#billingAddr").value;
+            } else {
+                document.querySelector("#shippingName").value = "";
+                document.querySelector("#shippingTel").value = "";
+                document.querySelector("#shippingAddr").value = "";
+            }
+        });
+    </script>
+</body>
+</html>
