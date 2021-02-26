@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수강신청</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1,h2,p {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+        .area {
+            border: 2px solid rgb(88, 88, 88);
+            padding: 30px 15px;
+            margin-bottom: 30px;
+            width: 400px;
+            position: relative;
+        }
+        .area h2 {
+            position: absolute;
+            top: -20px; left: 30px;
+            background-color: white;
+        }
+        #wrap h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="wrap" name="course">
+        <h1>수강신청</h1>
+        <div id="applicant" class="area">
+            <h2>신청인</h2>
+            <div id="input-name">
+                <label for="name">이름: </label>
+                <input type="text" id="name">
+            </div>
+            <div id="select-major">
+                <label for="major">학과: </label>
+                <select id="major" onchange="selectShow()">
+                    <option value="tour">관광경영과</option>
+                    <option value="hotel">호텔경영과</option>
+                    <option value="flight">항공경영과</option>
+                </select>
+            </div>
+        </div>
+        <div id="subject" class="area">
+            <h2>신청 과목</h2>
+            <p>이 달에 신청할 과목을 선택하세요.</p>
+            <label><input type="radio" name="subject" value="dialogue">회화</label>
+            <label><input type="radio" name="subject" value="grammar">문법</label>
+            <label><input type="radio" name="subject" value="writing">작문</label>
+        </div>
+        <div id="mail" class="area">
+            <h2>메일링</h2>
+            <p>메일로 받고 싶은 뉴스 주제를 선택해 주세요.</p>
+            <label><input type="checkbox" name="mailing1" value="message">메세지</label>
+            <label><input type="checkbox" name="mailing2" value="conversation">5분 회화</label>
+            <label><input type="checkbox" name="mailing3" value="pops">모닝팝스</label>
+        </div>
+    </form>
+
+    <script>
+        var major = document.querySelector("#major");
+
+        function selectShow(){
+            var selected_major = major.options[major.selectedIndex].innerText;
+
+            alert(selected_major + "를(을) 선택 하셨습니다.");
+        };
+    </script>
+</body>
+</html>
