@@ -1,0 +1,118 @@
+/* 초기화 */
+body,button,h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* 영역 */
+body {
+    background-color: rgb(202, 231, 221);
+}
+header {}
+
+/* 컨테이너 영역 */
+.container {
+    margin: 10px 10px;
+}
+
+/* 헤더 영역 */
+#header {
+    display: flex;
+    height: 900px;
+    background-color: antiquewhite;
+}
+#header_left {
+    height: 900px;
+    width: 15%;
+    position: relative;
+}
+#header_left_btn {
+    position: absolute;
+    top: 5px; left: 10px;
+
+}
+#header_left_btn > span {
+    font-size: 40px;
+    display: block;
+    cursor: pointer;
+    transition: 0.3s ease;
+    height: 40px;
+    line-height: 30px;
+}
+#header_left_btn > span:hover {
+    color: rgb(80, 132, 216);
+}
+#header_left_nav {
+    position: absolute;
+    top: 45px; left: 0;
+    opacity: 0;
+    transition: 0.3s ease;
+    margin-top: 20px;
+    margin-left: 15px;
+    background-color: white;
+    border-radius: 10px;
+}
+#header_left_nav > ul {
+    margin-left: 15px;
+    padding: 10px;
+}
+#header_left_nav > ul > li {
+    margin: 20px 0;
+    position: relative;
+}
+#header_left_nav > ul > li::before {
+    content: '';
+    position: absolute;
+    top: 15px; left: -10px;
+    width: 5px; height: 5px;
+    background-color: black;
+}
+#header_left_nav > ul > li > a {
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+#header_left_nav > ul > li > a::after {
+    content: '';
+    position: absolute;
+    top: 35px; left: 0px;
+    width: 0px; height: 2px;
+    background-color: black;
+    transition: 0.3s ease-in-out;
+}
+#header_left_nav > ul > li > a:hover {
+    color: rgb(59, 110, 108);
+}
+#header_left_nav > ul > li > a:hover::after {
+    width: 121px;
+}
+#header_right {
+    height: 900px;
+    width: 85%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#header_right_title > h1 {
+    font-size: 100px;
+}
+
+/* 미디어 쿼리(반응형) */
+
+@media (max-width: 1200px) {
+    #header_left {width: 30%;}
+    #header_right {width: 70%;}
+}
+
+@media (max-width: 750px) {
+    #header_right_title > h1 {text-align: center; margin-top: 100px;}
+    #header_right_title > h1 > span {display: block;}
+    #header_right {align-items: flex-start;}
+}
