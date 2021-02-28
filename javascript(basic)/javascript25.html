@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>원의 둘레와 넓이 계산</title>
+	,<style>
+          
+		h1 {
+			text-align: center;
+		}
+		#calc {
+			width:300px;
+			margin:50px auto;
+		}
+		#start {
+			border:1px solid #222;
+			background-color:#eee;
+			border-radius:5px;
+			margin-left:10px;
+			padding:15px 30px;
+            cursor: pointer;
+		}
+		hr {
+			width:300px;
+			margin-left:0;
+			margin-top:30px;
+			margin-bottom:40px;
+		}
+		input[type="text"] {
+			height:50px;
+			border:2px solid #222;
+            border-radius:10px;
+            padding-left:20px;
+		}
+		#radius{			
+			width:150px;
+		}
+		#round, #area {
+			width:300px;
+		}
+		#calc > p {
+			line-height:40px;
+		}
+    </style>
+</head>
+<body>
+	<h1>원의 둘레와 넓이 계산</h1>
+	<div id="container">
+		<form>
+			<div id="calc">
+				<p>반지름 : <br>
+					<input type="text" id="radius">					
+					<span id="start">계산</span>
+				</p>
+				<hr>
+				<p>원의 둘레 : <br>
+					<input type="text" id="round">
+				</p>
+				<p>원의 넓이 : <br>
+					<input type="text" id="area">
+				</p>
+			</div>
+		</form>	
+	</div>
+
+	<script>
+        var radius = document.querySelector("#radius");
+        var start = document.querySelector("#start");
+        var round = document.querySelector("#round");
+        var area = document.querySelector("#area");
+
+        start.onclick = function (){
+            round.value = 2 * Math.PI * radius.value;
+            area.value =  Math.PI * Math.pow(radius.value, 2);
+        };
+    </script>
+
+</body>
+</html>
