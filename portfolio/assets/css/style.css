@@ -34,19 +34,69 @@ header {}
 }
 #header_left_btn {
     position: absolute;
-    top: 5px; left: 10px;
-
+    top: 15px; left: 15px;
+    transition: 0.6s ease;
 }
-#header_left_btn > span {
-    font-size: 40px;
+#header_left_btn.live {
+    transform: translateX(150%);
+}
+#header_left_btn > a {
+    display: block;
+    height: 36px;
+    width: 36px;
+    position: relative;
+}
+#header_left_btn > a > span {
     display: block;
     cursor: pointer;
-    transition: 0.3s ease;
-    height: 40px;
-    line-height: 30px;
+    content: '';
+    position: absolute;
+    top: 0px; left: 0;
+    background-color: black;
+    width: 36px;
+    height: 6px;
 }
-#header_left_btn > span:hover {
-    color: rgb(80, 132, 216);
+#header_left_btn > a > span.live {
+    width: 0;
+}
+#header_left_btn > a:hover > span {
+    background-color: rgb(200, 27, 27);
+}
+#header_left_btn > a > span::before {
+    content: '';
+    position: absolute;
+    top: 15px; left: 0;
+    background-color: black;
+    width: 36px;
+    height: 6px;
+    transition: 0.3s ease;
+}
+#header_left_btn > a > span.live::before {
+    transform: rotate(50deg);
+}
+#header_left_btn > a:hover > span.live::before {
+    background-color: rgb(0, 255, 149);
+}
+#header_left_btn > a:hover > span::before {
+    background-color: rgb(255, 115, 0);
+}
+#header_left_btn > a > span::after {
+    content: '';
+    position: absolute;
+    bottom: -30px; left: 0;
+    background-color: black;
+    width: 36px;
+    height: 6px;
+    transition: 0.6s ease;
+}
+#header_left_btn > a > span.live::after {
+    transform: translateY(-250%) rotate(-50deg);
+}
+#header_left_btn > a:hover > span.live::after {
+    background-color: rgb(6, 98, 246);
+}
+#header_left_btn > a:hover > span::after {
+    background-color: rgb(228, 206, 11);
 }
 #header_left_nav {
     position: absolute;
@@ -57,6 +107,11 @@ header {}
     margin-left: 15px;
     background-color: white;
     border-radius: 10px;
+    transform: translateX(-80%);
+}
+#header_left_nav.live {
+    opacity: 1;
+    transform: translateX(0%);
 }
 #header_left_nav > ul {
     margin-left: 15px;
@@ -110,9 +165,11 @@ header {}
     #header_left {width: 30%;}
     #header_right {width: 70%;}
 }
-
+@media (max-width: 920px) {
+    #header_right_title > h1 {text-align: center;}
+}
 @media (max-width: 750px) {
-    #header_right_title > h1 {text-align: center; margin-top: 100px;}
+    #header_right_title > h1 {font-size: 70px; margin-top: 100px;}
     #header_right_title > h1 > span {display: block;}
     #header_right {align-items: flex-start;}
 }
