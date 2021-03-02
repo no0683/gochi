@@ -28,6 +28,7 @@ header {}
     height: 600px;
     display: flex;
     background-color: antiquewhite;
+    border-radius: 25px;
 }
 #header_left {
     width: 20%;
@@ -57,6 +58,7 @@ header {}
     background-color: black;
     width: 36px;
     height: 6px;
+    border-radius: 25px;
 }
 #header_left_btn > a > span.live {
     width: 0;
@@ -72,6 +74,7 @@ header {}
     width: 36px;
     height: 6px;
     transition: 0.3s ease;
+    border-radius: 25px;
 }
 #header_left_btn > a > span.live::before {
     transform: rotate(50deg);
@@ -90,6 +93,7 @@ header {}
     width: 36px;
     height: 6px;
     transition: 0.6s ease;
+    border-radius: 25px;
 }
 #header_left_btn > a > span.live::after {
     transform: translateY(-250%) rotate(-50deg);
@@ -134,6 +138,7 @@ header {}
     background-color: black;
 }
 #header_left_nav > ul > li > a {
+    font-family: 'Bebas Neue', cursive;
     font-size: 25px;
     text-decoration: none;
     color: black;
@@ -151,7 +156,7 @@ header {}
     color: rgb(59, 110, 108);
 }
 #header_left_nav > ul > li > a:hover::after {
-    width: 121px;
+    width: 91px;
 }
 #header_right {
     width: 80%;
@@ -170,7 +175,7 @@ header {}
 #header_right_title > svg > text {
     font-family: 'Bebas Neue', cursive;
     font-size: 170px;
-    animation: stroke 5s infinite;
+    animation: stroke 6s infinite;
 }
 #header_right_title > svg.tit2 {
     display: none;
@@ -204,7 +209,7 @@ header {}
     #header_right_title > svg > text {font-size: 130px;}
     #header_left_nav > ul > li > a {font-size: 20px;}
     #header_left_nav > ul {width: 100px;}
-    #header_left_nav > ul > li > a:hover::after {width: 97px;}
+    #header_left_nav > ul > li > a:hover::after {width: 73px;}
 }
 @media (max-width: 768px) {
     #header_right_title > svg.tit1 {display: none;}
@@ -215,5 +220,6 @@ header {}
 }
 @media (max-width: 600px) {
     #header_right_title > svg > text {font-size: 80px;}
-    #header_right_title {left: 28px;}
+    #header_right_title {left: 100px; width: 65%;}
+    #header_left_nav > ul {width: 100px;}
 }
