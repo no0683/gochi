@@ -28,13 +28,20 @@ body {
     position: relative;
     margin: 20px auto;
     width: 1280px;
+    background-color: antiquewhite;
+    border-radius: 25px;
+}
+/* 패럴랙스 */
+#parallax {
+    right: 20px;
+    bottom: 20px;
+    position: fixed;
+    z-index: 1000;
 }
 
 /* 헤더 영역 */
 #header {
     display: flex;
-    background-color: antiquewhite;
-    border-radius: 25px;
 }
 #header_left {
     width: 20%;
@@ -192,8 +199,6 @@ body {
 
 /* 인트로 영역 */
 #introduction {
-    background-color: antiquewhite;
-    border-radius: 25px;
     height: 900px;
 }
 #intro_title {
@@ -204,8 +209,6 @@ body {
 }
 /* 스킬 영역 */
 #skill {
-    background-color: antiquewhite;
-    border-radius: 25px;
     height: 900px;
 }
 #skill_title {
@@ -216,8 +219,6 @@ body {
 }
 /* 결과물 1 */
 #standard {
-    background-color: antiquewhite;
-    border-radius: 25px;
     height: 900px;
 }
 #standard_title {
@@ -228,8 +229,6 @@ body {
 }
 /* 결과물 2 */
 #responsive {
-    background-color: antiquewhite;
-    border-radius: 25px;
     height: 900px;
 }
 #responsive_title {
@@ -240,21 +239,29 @@ body {
 }
 /* 결과물 3 */
 #mega {
-    background-color: antiquewhite;
-    border-radius: 25px;
     height: 900px;
     position: relative;
 }
-#mega_title {
+#mega > #mega_title {
     font-size: 80px;
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 10px;
     margin: 15px 0 0 15px;
+    opacity: 0;
+    transition: 1s 0.1s ease;
+}
+#mega.show > #mega_title {
+    opacity: 1;
 }
 #mobile_mega_wrap {
     position: absolute;
     top: 376px; left: 25px;
     z-index: 1;
+    opacity: 0;
+    transition: 1s 0.4s ease;
+}
+#mega.show > #mobile_mega_wrap {
+    opacity: 1;
 }
 #mobile_mega {
     width: 200px;
@@ -272,7 +279,7 @@ body {
     height: 250px;
     border-radius: 10px;
     margin-top: 13px;
-    border: 2px solid white;
+    border: 2px solid rgb(218, 165, 32, 0.4);
     overflow: hidden;
 }
 #mobile_mega_screen > img {
@@ -288,10 +295,23 @@ body {
     bottom: 0px; left: 85px;
     background-color: white;
 }
+#mobile_mega_btn_rect {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid black;
+    bottom: 6px; left: 6.1px;
+    border-radius: 1px;
+}
 #tablet_mega_wrap {
     position: absolute;
     top: 312px; left: 475px;
     z-index: 1;
+    opacity: 0;
+    transition: 1s 0.7s ease;
+}
+#mega.show > #tablet_mega_wrap {
+    opacity: 1;
 }
 #tablet_mega {
     width: 370px;
@@ -309,7 +329,7 @@ body {
     height: 500px;
     border-radius: 10px;
     margin-top: 13px;
-    border: 2px solid white;
+    border: 2px solid rgb(218, 165, 32, 0.4);
     overflow: hidden;
 }
 #tablet_mega_screen > img {
@@ -325,9 +345,22 @@ body {
     bottom: 0px; left: 173px;
     background-color: white;
 }
+#tablet_mega_btn_rect {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid black;
+    bottom: 6px; left: 6.1px;
+    border-radius: 1px;
+}
 #pc_mega_wrap {
     position: absolute;
     top: 150px; left: 58px;
+    opacity: 0;
+    transition: 1s 1s ease;
+}
+#mega.show > #pc_mega_wrap {
+    opacity: 1;
 }
 #pc_mega {
     width: 606px;
@@ -345,7 +378,7 @@ body {
     height: 350px;
     border-radius: 10px;
     margin-top: 13px;
-    border: 2px solid white;
+    border: 2px solid rgb(218, 165, 32, 0.4);
     overflow: hidden;
 }
 #pc_mega_screen > img {
@@ -360,6 +393,14 @@ body {
     position: absolute;
     bottom: 0px; left: 285px;
     background-color: white;
+}
+#pc_mega_btn_rect {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid black;
+    bottom: 6px; left: 6.1px;
+    border-radius: 1px;
 }
 #pc_mege_holder1 {
     position: absolute;
@@ -379,8 +420,6 @@ body {
 }
 /* the others */
 #others {
-    background-color: antiquewhite;
-    border-radius: 25px;
     height: 900px;
 }
 #others_title {
@@ -391,8 +430,6 @@ body {
 }
 /* contact */
 #contact {
-    background-color: antiquewhite;
-    border-radius: 25px;
     height: 900px;
 }
 #contact_title {
