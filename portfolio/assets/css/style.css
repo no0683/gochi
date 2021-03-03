@@ -1,5 +1,5 @@
 /* 초기화 */
-body,button,h1,h2,h3,h4,h5,h6 {
+body,button,h1,h2,h3,h4,h5,h6,figure {
     margin: 0;
     padding: 0;
     border: 0;
@@ -14,25 +14,31 @@ ul {
 body {
     background-color: rgb(202, 231, 221);
 }
-header {}
+#head {}
+#intro {}
+#skills {}
+#result1 {}
+#result2 {}
+#result3 {}
+#the_others {}
+#contacts {}
 
 /* 컨테이너 영역 */
 .container {
     position: relative;
-    margin: 0 auto;
+    margin: 20px auto;
     width: 1280px;
 }
 
 /* 헤더 영역 */
 #header {
-    height: 600px;
     display: flex;
     background-color: antiquewhite;
     border-radius: 25px;
 }
 #header_left {
     width: 20%;
-    height: 600px;
+    height: 900px;
 }
 #header_left_btn {
     position: absolute;
@@ -160,7 +166,7 @@ header {}
 }
 #header_right {
     width: 80%;
-    height: 600px;
+    height: 900px;
     position: relative;
 }
 #header_right_title {
@@ -175,13 +181,225 @@ header {}
 #header_right_title > svg > text {
     font-family: 'Bebas Neue', cursive;
     font-size: 170px;
-    animation: stroke 6s infinite;
+    animation: stroke 4s infinite;
 }
 #header_right_title > svg.tit2 {
     display: none;
 }
 #header_right_title > svg.tit3 {
     display: none;
+}
+
+/* 인트로 영역 */
+#introduction {
+    background-color: antiquewhite;
+    border-radius: 25px;
+    height: 900px;
+}
+#intro_title {
+    font-size: 80px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 10px;
+    margin: 15px 0 0 15px;
+}
+/* 스킬 영역 */
+#skill {
+    background-color: antiquewhite;
+    border-radius: 25px;
+    height: 900px;
+}
+#skill_title {
+    font-size: 80px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 10px;
+    margin: 15px 0 0 15px;
+}
+/* 결과물 1 */
+#standard {
+    background-color: antiquewhite;
+    border-radius: 25px;
+    height: 900px;
+}
+#standard_title {
+    font-size: 80px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 10px;
+    margin: 15px 0 0 15px;
+}
+/* 결과물 2 */
+#responsive {
+    background-color: antiquewhite;
+    border-radius: 25px;
+    height: 900px;
+}
+#responsive_title {
+    font-size: 80px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 10px;
+    margin: 15px 0 0 15px;
+}
+/* 결과물 3 */
+#mega {
+    background-color: antiquewhite;
+    border-radius: 25px;
+    height: 900px;
+    position: relative;
+}
+#mega_title {
+    font-size: 80px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 10px;
+    margin: 15px 0 0 15px;
+}
+#mobile_mega_wrap {
+    position: absolute;
+    top: 376px; left: 25px;
+    z-index: 1;
+}
+#mobile_mega {
+    width: 200px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: black;
+    position: relative;
+}
+#mobile_mega_screen {
+    width: 170px;
+    height: 250px;
+    border-radius: 10px;
+    margin-top: 13px;
+    border: 2px solid white;
+    overflow: hidden;
+}
+#mobile_mega_screen > img {
+    width: 100%;
+    border-radius: 3px;
+}
+#mobile_mega_btn {
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0px; left: 85px;
+    background-color: white;
+}
+#tablet_mega_wrap {
+    position: absolute;
+    top: 312px; left: 475px;
+    z-index: 1;
+}
+#tablet_mega {
+    width: 370px;
+    height: 550px;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: black;
+    position: relative;
+}
+#tablet_mega_screen {
+    width: 340px;
+    height: 500px;
+    border-radius: 10px;
+    margin-top: 13px;
+    border: 2px solid white;
+    overflow: hidden;
+}
+#tablet_mega_screen > img {
+    width: 100%;
+    border-radius: 3px;
+}
+#tablet_mega_btn {
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0px; left: 173px;
+    background-color: white;
+}
+#pc_mega_wrap {
+    position: absolute;
+    top: 150px; left: 58px;
+}
+#pc_mega {
+    width: 606px;
+    height: 400px;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: black;
+    position: relative;
+}
+#pc_mega_screen {
+    width: 576px;
+    height: 350px;
+    border-radius: 10px;
+    margin-top: 13px;
+    border: 2px solid white;
+    overflow: hidden;
+}
+#pc_mega_screen > img {
+    width: 100%;
+    border-radius: 3px;
+}
+#pc_mega_btn {
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0px; left: 285px;
+    background-color: white;
+}
+#pc_mege_holder1 {
+    position: absolute;
+    bottom: -67px; left: 284px;
+    width: 35px;
+    height: 67px;
+    background-color: black;
+}
+#pc_mege_holder2 {
+    position: absolute;
+    bottom: -80px; left: 234px;
+    width: 35px;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid black;
+    border-radius: 50px;
+}
+/* the others */
+#others {
+    background-color: antiquewhite;
+    border-radius: 25px;
+    height: 900px;
+}
+#others_title {
+    font-size: 80px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 10px;
+    margin: 15px 0 0 15px;
+}
+/* contact */
+#contact {
+    background-color: antiquewhite;
+    border-radius: 25px;
+    height: 900px;
+}
+#contact_title {
+    font-size: 80px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 10px;
+    margin: 15px 0 0 15px;
 }
 
 /* 애니메이션 */
@@ -210,6 +428,7 @@ header {}
     #header_left_nav > ul > li > a {font-size: 20px;}
     #header_left_nav > ul {width: 100px;}
     #header_left_nav > ul > li > a:hover::after {width: 73px;}
+    #header_left_nav > ul > li::before {top: 10px;}
 }
 @media (max-width: 768px) {
     #header_right_title > svg.tit1 {display: none;}
@@ -220,6 +439,6 @@ header {}
 }
 @media (max-width: 600px) {
     #header_right_title > svg > text {font-size: 80px;}
-    #header_right_title {left: 100px; width: 65%;}
+    #header_right_title {left: 93px; width: 65%;}
     #header_left_nav > ul {width: 100px;}
 }
