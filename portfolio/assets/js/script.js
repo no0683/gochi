@@ -17,9 +17,18 @@ header_left_btn.onclick = function(){
     }
 };
 
+// 탑 버튼 효과
+var topButton = document.querySelector("#top_button");
+
+topButton.addEventListener("click", backToTop);
+
+function backToTop(){
+    window.scrollTo(0, 0);
+};
+
 // 패럭랙스 효과
 window.addEventListener("scroll", function(){
-    var pageYOffset = window.pageYOffset + screen.height / 2;
+    var pageYOffset = window.pageYOffset + screen.height / 3;
 
     // 출력
     document.querySelector(".scrollTop").textContent = parseInt(pageYOffset);
@@ -73,5 +82,10 @@ window.addEventListener("scroll", function(){
         document.querySelector("#mega").classList.add("show");
     } else {
         document.querySelector("#mega").classList.remove("show");
+    }
+    if(pageYOffset > document.querySelector("#intro").offsetTop){
+        document.querySelector("#topButton").classList.add("show");
+    } else {
+        document.querySelector("#topButton").classList.remove("show");
     }
 });

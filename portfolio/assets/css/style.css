@@ -11,6 +11,9 @@ ul {
 }
 
 /* 영역 */
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: rgb(202, 231, 221);
 }
@@ -44,6 +47,83 @@ body {
     opacity: 0.7;
 }
 
+/* 탑 버튼 */
+#topButton {
+    position: fixed;
+    bottom: 75px; left: 15px;
+    z-index: 2;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+#topButton.show {
+    opacity: 1;
+}
+#top_arrow_wrap {
+    position: relative;
+    width: 40px; height: 40px;
+}
+#top_arrow1 {
+    position: absolute;
+    bottom: 0; left: 5px;
+    animation: topArrow 1s 0.3s ease-in-out infinite;
+}
+#top_arrow1 span {
+    background-color: rgb(0, 0, 0, 0.3);
+}
+#top_arrow2 {
+    position: absolute;
+    bottom: 6px; left: 5px;
+    animation: topArrow 1s 0.2s ease-in-out infinite;
+}
+#top_arrow2 span {
+    background-color: rgb(0, 0, 0, 0.6);
+}
+#top_arrow3 {
+    position: absolute;
+    bottom: 12px; left: 5px;
+    animation: topArrow 1s 0.1s ease-in-out infinite;
+}
+#top_arrow3 span {
+    background-color: rgb(0, 0, 0, 0.9);
+}
+.top_arrow_barWrap {
+    width: 30px; height: 20px;
+    position: relative;
+}
+.top_arrow_bar1 {
+    position: absolute;
+    content: '';
+    top: 9px; left: 12px;
+    transform: rotate(50deg);
+    width: 20px; height: 2px;
+    border-radius: 2px;
+}
+.top_arrow_bar2 {
+    position: absolute;
+    content: '';
+    top: 9px; left: 0px;
+    transform: rotate(-50deg);
+    width: 20px; height: 2px;
+    border-radius: 2px;
+}
+#top_button > a {
+    width: 40px; height: 40px;
+    display: block;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    color: black;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 2;
+    cursor: pointer;
+}
+#top_button:hover > a {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
 /* 헤더 영역 */
 #header {
     display: flex;
@@ -53,19 +133,17 @@ body {
     height: 900px;
 }
 #header_left_btn {
-    position: absolute;
-    top: 25px; left: 25px;
+    position: fixed;
+    top: 35px; left: 15px;
     transition: 0.6s ease;
-    z-index: 1;
-}
-#header_left_btn.live {
-    transform: translateX(150%);
+    z-index: 2;
 }
 #header_left_btn > a {
     display: block;
     height: 36px;
     width: 36px;
     position: relative;
+    cursor: pointer;
 }
 #header_left_btn > a > span {
     display: block;
@@ -123,12 +201,10 @@ body {
     background-color: rgb(228, 206, 11);
 }
 #header_left_nav {
-    position: absolute;
-    top: 45px; left: 0;
+    position: fixed;
+    top: 85px; left: 15px;
     opacity: 0;
     transition: 0.3s ease;
-    margin-top: 35px;
-    margin-left: 25px;
     background-color: white;
     border-radius: 10px;
     transform: translateX(-80%);
@@ -271,6 +347,7 @@ body {
     color: rgb(0, 0, 0, 0.4);
     opacity: 0;
     transition: 1s 0.1s ease;
+    transform: translateX(-200px);
 }
 #mega > #mega_title2 {
     font-size: 100px;
@@ -282,12 +359,15 @@ body {
     color: rgb(32, 32, 170);
     opacity: 0;
     transition: 1s 0.1s ease;
+    transform: translateX(-200px);
 }
 #mega.show > #mega_title1 {
     opacity: 1;
+    transform: translateX(0px);
 }
 #mega.show > #mega_title2 {
     opacity: 1;
+    transform: translateX(0px);
 }
 #mobile_mega_wrap {
     position: absolute;
@@ -487,6 +567,12 @@ body {
         fill: rgb(51, 83, 189); stroke: black; 
         stroke-dashoffset: -20%; stroke-dasharray: 50 0; stroke-width: 3;
     }
+}
+
+@keyframes topArrow {
+    0% {transform: translateY(0px);}
+    50% {opacity: 0.5;}
+    100% {transform: translateY(-15px); opacity: 0;}
 }
 
 /* 미디어 쿼리(반응형) */
