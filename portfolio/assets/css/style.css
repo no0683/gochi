@@ -15,27 +15,21 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background-color: rgb(202, 231, 221);
-    scroll-behavior: smooth;
 }
-#wrap {scroll-snap-type: y mandatory; position: relative; overflow: auto; width: 100%; height: 100vh; scroll-behavior: smooth;}
-#head {scroll-snap-align: start; position: relative; width: 100%; height: 100vh;}
-#intro {scroll-snap-align: start; position: relative; width: 100%; height: 100vh;}
-#skills {scroll-snap-align: start; position: relative; width: 100%; height: 100vh;}
-#result1 {scroll-snap-align: start; position: relative; width: 100%; height: 100vh;}
-#result2 {scroll-snap-align: start; position: relative; width: 100%; height: 100vh;}
-#result3 {scroll-snap-align: start; position: relative; width: 100%; height: 100vh;}
-#the_others {scroll-snap-align: start; position: relative; width: 100%; height: 100vh;}
-#contacts {scroll-snap-align: start; position: relative; width: 100%; height: 100vh;}
+#head {width: 100%; height: 100%;}
+#intro {width: 100%; height: 100%;}
+#skills {width: 100%; height: 100%;}
+#result1 {width: 100%; height: 100%;}
+#result2 {width: 100%; height: 100%;}
+#result3 {width: 100%; height: 100%;}
+#the_others {width: 100%; height: 100%;}
+#contacts {width: 100%; height: 100%;}
 
 /* 컨테이너 영역 */
 .container {
     position: relative;
-    margin: 20px auto;
-    width: 1280px;
-    background-color: antiquewhite;
-    border-radius: 25px;
-    border: 2px solid rgb(0, 0, 0, 0.8);
+    margin: 0 auto;
+    width: 100%;
 }
 
 /* 패럴랙스 */
@@ -48,13 +42,152 @@ body {
     letter-spacing: 2px;
     opacity: 0.7;
 }
+/* 메뉴 */
+#menu {
+    position: relative;
+}
+#menu_btn {
+    position: fixed;
+    top: 20px; right: 40px;
+    transition: 0.6s ease;
+    z-index: 2;
+}
+#menu_btn > a {
+    display: block;
+    height: 36px;
+    width: 36px;
+    position: relative;
+    cursor: pointer;
+}
+#menu_btn > a > span {
+    display: block;
+    cursor: pointer;
+    content: '';
+    position: absolute;
+    top: 0px; left: 0;
+    background-color: black;
+    width: 36px;
+    height: 6px;
+    border-radius: 25px;
+}
+#menu_btn > a > span.live {
+    width: 0;
+}
+#menu_btn > a:hover > span {
+    background-color: rgb(200, 27, 27);
+}
+#menu_btn > a > span::before {
+    content: '';
+    position: absolute;
+    top: 15px; left: 0;
+    background-color: black;
+    width: 36px;
+    height: 6px;
+    transition: 0.3s ease;
+    border-radius: 25px;
+}
+#menu_btn > a > span.live::before {
+    transform: rotate(50deg);
+}
+#menu_btn > a:hover > span.live::before {
+    background-color: rgb(0, 255, 149);
+}
+#menu_btn > a:hover > span::before {
+    background-color: rgb(255, 115, 0);
+}
+#menu_btn > a > span::after {
+    content: '';
+    position: absolute;
+    bottom: -30px; left: 0;
+    background-color: black;
+    width: 36px;
+    height: 6px;
+    transition: 0.6s ease;
+    border-radius: 25px;
+}
+#menu_btn > a > span.live::after {
+    transform: translateY(-250%) rotate(-50deg);
+}
+#menu_btn > a:hover > span.live::after {
+    background-color: rgb(6, 98, 246);
+}
+#menu_btn > a:hover > span::after {
+    background-color: rgb(228, 206, 11);
+}
+#menu_nav {
+    width: 100%; height: 70px;
+    z-index: 1;
+    position: fixed;
+    top: 0; right: 0;
+    transition: 0.5s ease;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+    transform: translateY(-80px);
+    background-color: white;
+}
+#menu_nav::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 0; height: 70px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    transition: 1s ease;
+}
+#menu_nav.live {
+    transform: translateY(0);
+}
+#menu_nav.live::before {
+    width: 100%;
+}
+#menu_nav > ul {
+    position: fixed;
+    top: 20px; right: 100px;
+    display: flex;
+}
+#menu_nav > ul > li {
+    margin: 0 20px;
+    position: relative;
+}
+#menu_nav > ul > li::before {
+    content: '';
+    position: absolute;
+    top: 13px; left: 8px;
+    width: 0; height: 30px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    transition: 1s ease;
+}
+#menu_nav > ul > li.live:nth-child(1)::before {
+    width: 75px;
+}
+#menu_nav > ul > li.live:nth-child(2)::before {
+    width: 78px;
+}
+#menu_nav > ul > li.live:nth-child(3)::before {
+    width: 90px;
+}
+#menu_nav > ul > li.live:nth-child(4)::before {
+    width: 90px;
+}
+#menu_nav > ul > li.live:nth-child(5)::before {
+    width: 66px;
+}
+#menu_nav > ul > li > a {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    transition: 0.5s ease;
+}
+#menu_nav > ul > li > a:hover {
+    color: rgb(149, 134, 134);
+}
 
 /* 탑 버튼 */
 #topButton {
     position: fixed;
-    bottom: 75px; left: 15px;
+    bottom: 250px; right: 40px;
     z-index: 2;
-    opacity: 1;
+    opacity: 0;
     transition: 0.5s ease;
 }
 #topButton.show {
@@ -128,162 +261,53 @@ body {
 
 /* 헤더 영역 */
 #header {
-    display: flex;
+    height: 910px;
 }
-#header_left {
-    width: 20%;
-    height: 100vh;
-}
-#header_left_btn {
-    position: fixed;
-    top: 35px; left: 15px;
-    transition: 0.6s ease;
-    z-index: 2;
-}
-#header_left_btn > a {
-    display: block;
-    height: 36px;
-    width: 36px;
-    position: relative;
-    cursor: pointer;
-}
-#header_left_btn > a > span {
-    display: block;
-    cursor: pointer;
-    content: '';
-    position: absolute;
-    top: 0px; left: 0;
-    background-color: black;
-    width: 36px;
-    height: 6px;
-    border-radius: 25px;
-}
-#header_left_btn > a > span.live {
-    width: 0;
-}
-#header_left_btn > a:hover > span {
-    background-color: rgb(200, 27, 27);
-}
-#header_left_btn > a > span::before {
-    content: '';
-    position: absolute;
-    top: 15px; left: 0;
-    background-color: black;
-    width: 36px;
-    height: 6px;
-    transition: 0.3s ease;
-    border-radius: 25px;
-}
-#header_left_btn > a > span.live::before {
-    transform: rotate(50deg);
-}
-#header_left_btn > a:hover > span.live::before {
-    background-color: rgb(0, 255, 149);
-}
-#header_left_btn > a:hover > span::before {
-    background-color: rgb(255, 115, 0);
-}
-#header_left_btn > a > span::after {
-    content: '';
-    position: absolute;
-    bottom: -30px; left: 0;
-    background-color: black;
-    width: 36px;
-    height: 6px;
-    transition: 0.6s ease;
-    border-radius: 25px;
-}
-#header_left_btn > a > span.live::after {
-    transform: translateY(-250%) rotate(-50deg);
-}
-#header_left_btn > a:hover > span.live::after {
-    background-color: rgb(6, 98, 246);
-}
-#header_left_btn > a:hover > span::after {
-    background-color: rgb(228, 206, 11);
-}
-#header_left_nav {
-    position: fixed;
-    top: 85px; left: 15px;
-    opacity: 0;
-    transition: 0.3s ease;
-    background-color: white;
-    border-radius: 10px;
-    transform: translateX(-80%);
-    z-index: -1;
-    border: 2px solid rgb(0, 0, 0, 0.8);
-}
-#header_left_nav.live {
-    opacity: 1;
-    z-index: 1;
-    transform: translateX(0%);
-}
-#header_left_nav > ul {
-    margin-left: 15px;
-    width: 150px;
-    padding: 10px;
-}
-#header_left_nav > ul > li {
-    margin: 20px 0;
-    position: relative;
-}
-#header_left_nav > ul > li::before {
-    content: '';
-    position: absolute;
-    top: 15px; left: -10px;
-    width: 5px; height: 5px;
-    background-color: black;
-}
-#header_left_nav > ul > li > a {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 25px;
-    text-decoration: none;
-    color: black;
-    position: relative;
-}
-#header_left_nav > ul > li > a::after {
-    content: '';
-    position: absolute;
-    top: 35px; left: 0px;
-    width: 0px; height: 2px;
-    background-color: black;
-    transition: 0.3s ease-in-out;
-}
-#header_left_nav > ul > li > a:hover {
-    color: rgb(59, 110, 108);
-}
-#header_left_nav > ul > li > a:hover::after {
-    width: 91px;
-}
-#header_right {
-    width: 80%;
-    height: 100vh;
-    position: relative;
-}
-#header_right_title {
+#header_title {
     width: 100%;
     position: absolute;
-    top: 60px; left: 0;
+    top: 390px; left: -25px;
 }
-#header_right_title > svg {
+#header_title > svg {
     width: 100%;
     overflow: visible;
 }
-#header_right_title > svg > text {
+#header_title > svg > text {
     font-family: 'Bebas Neue', cursive;
-    font-size: 170px;
-    animation: stroke 5s infinite;
+    font-size: 200px;
+    animation: stroke 5s;
+    fill: rgb(58, 58, 58);
 }
-#header_right_title > svg.tit2 {
+#header_title > svg.tit2 {
     display: none;
 }
-#header_right_title > svg.tit3 {
+#header_title > svg.tit3 {
     display: none;
+}
+#header_bg1 {
+    width: 100%;
+    height: 310px;
+    background-color: rgb(0, 0, 0, 0.1);
+    animation: bg1 5s ease;
+}
+#header_bg2 {
+    width: 100%;
+    height: 310px;
+    background-color: rgb(0, 0, 0, 0.2);
+    animation: bg2 5s ease;
+    border-top: 3px solid rgb(0, 0, 0, 0.2);
+    border-bottom: 3px solid rgb(0, 0, 0, 0.2);
+}
+#header_bg3 {
+    width: 100%;
+    height: 310px;
+    background-color: rgb(0, 0, 0, 0.1);
+    animation: bg3 5s ease;
 }
 
 /* 인트로 영역 */
 #introduction {
-    height: 100vh;
+    height: 900px;
     position: relative;
 }
 #intro_title1 {
@@ -308,7 +332,7 @@ body {
 }
 /* 스킬 영역 */
 #skill {
-    height: 100vh;
+    height: 900px;
 }
 #skill_title1 {
     position: absolute;
@@ -332,7 +356,7 @@ body {
 }
 /* 결과물 1 */
 #standard {
-    height: 100vh;
+    height: 900px;
 }
 #standard_title1 {
     position: absolute;
@@ -356,7 +380,7 @@ body {
 }
 /* 결과물 2 */
 #responsive {
-    height: 100vh;
+    height: 900px;
 }
 #responsive_title1 {
     position: absolute;
@@ -380,7 +404,7 @@ body {
 }
 /* 결과물 3 */
 #mega {
-    height: 100vh;
+    height: 900px;
     position: relative;
 }
 #mega > #mega_title1 {
@@ -582,7 +606,7 @@ body {
 }
 /* the others */
 #others {
-    height: 100vh;
+    height: 900px;
 }
 #others_title1 {
     position: absolute;
@@ -606,7 +630,7 @@ body {
 }
 /* contact */
 #contact {
-    height: 100vh;
+    height: 900px;
 }
 #contact_title1 {
     position: absolute;
@@ -630,16 +654,32 @@ body {
 }
 
 /* 애니메이션 */
+@keyframes bg1 {
+    0% {opacity: 0.1; transform: translateX(100%);}
+    100% {opacity: 1; transform: translateX(0%);}
+}
+
+@keyframes bg2 {
+    0% {opacity: 0.1; transform: scale(1);}
+    50% {opacity: 0.5; transform: scale(3);}
+    100% {opacity: 1; transform: scale(1);}
+}
+
+@keyframes bg3 {
+    0% {opacity: 0.1; width: 0%;}
+    100% {opacity: 1; width: 100%;}
+}
+
 @keyframes stroke {
     0%   {
-        fill: antiquewhite; stroke: rgb(160, 160, 160);
+        fill: rgb(255, 255, 255); stroke: rgb(160, 160, 160);
         stroke-dashoffset: 20%; stroke-dasharray: 0 50%; stroke-width: 1;
     }
-    70%  {fill: antiquewhite; stroke: rgb(156, 156, 156); stroke-width: 2;}
-    80%  {fill: antiquewhite; stroke: rgb(148, 148, 148); stroke-width: 3; }
+    70%  {fill: rgb(255, 255, 255); stroke: rgb(156, 156, 156); stroke-width: 2;}
+    80%  {fill: rgb(255, 255, 255); stroke: rgb(148, 148, 148); stroke-width: 3; }
     100% {
-        fill: rgb(51, 83, 189); stroke: black; 
-        stroke-dashoffset: -20%; stroke-dasharray: 50 0; stroke-width: 3;
+        fill: rgb(58, 58, 58, 0.6); stroke: rgb(255, 255, 255); 
+        stroke-dashoffset: -20%; stroke-dasharray: 50% 0; stroke-width: 0;
     }
 }
 

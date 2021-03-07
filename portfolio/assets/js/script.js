@@ -1,19 +1,19 @@
 // 헤더 버튼 효과
-var header_left_btn = document.querySelector("#header_left_btn");
-var header_left_nav = document.querySelector("#header_left_nav");
-var header_left_ham = document.querySelector("#header_left_btn > a > span");
-var header_left_a = document.querySelector("#header_left_btn > a");
+var menu_btn = document.querySelector("#menu_btn");
+var menu_nav = document.querySelector("#menu_nav");
+var menu_btn_ham = document.querySelector("#menu_btn > a > span");
+var menu_btn_a = document.querySelector("#menu_btn > a");
 
 
-header_left_btn.onclick = function(){
-    if(header_left_nav.classList != "live"){
-        header_left_nav.classList = "live";
-        header_left_ham.classList = "live";
-        header_left_btn.classList = "live";
+menu_btn.onclick = function(){
+    if(menu_nav.classList != "live"){
+        menu_nav.classList = "live";
+        menu_btn_ham.classList = "live";
+        menu_btn.classList = "live";
     } else {
-        header_left_nav.classList = "";
-        header_left_ham.classList = "";
-        header_left_btn.classList = "";
+        menu_nav.classList = "";
+        menu_btn_ham.classList = "";
+        menu_btn.classList = "";
     }
 };
 
@@ -85,7 +85,33 @@ window.addEventListener("scroll", function(){
     }
     if(pageYOffset > document.querySelector("#intro").offsetTop){
         document.querySelector("#topButton").classList.add("show");
+        document.querySelector("#menu_nav > ul > li:nth-child(1)").classList.add("live");
     } else {
         document.querySelector("#topButton").classList.remove("show");
+        document.querySelector("#menu_nav > ul > li:nth-child(1)").classList.remove("live");
+    }
+    if(pageYOffset > document.querySelector("#skills").offsetTop){
+        document.querySelector("#menu_nav > ul > li:nth-child(1)").classList.remove("live");
+        document.querySelector("#menu_nav > ul > li:nth-child(2)").classList.add("live");
+    } else {
+        document.querySelector("#menu_nav > ul > li:nth-child(2)").classList.remove("live");
+    }
+    if(pageYOffset > document.querySelector("#result1").offsetTop){
+        document.querySelector("#menu_nav > ul > li:nth-child(2)").classList.remove("live");
+        document.querySelector("#menu_nav > ul > li:nth-child(3)").classList.add("live");
+    } else {
+        document.querySelector("#menu_nav > ul > li:nth-child(3)").classList.remove("live");
+    }
+    if(pageYOffset > document.querySelector("#the_others").offsetTop){
+        document.querySelector("#menu_nav > ul > li:nth-child(3)").classList.remove("live");
+        document.querySelector("#menu_nav > ul > li:nth-child(4)").classList.add("live");
+    } else {
+        document.querySelector("#menu_nav > ul > li:nth-child(4)").classList.remove("live");
+    }
+    if(pageYOffset > document.querySelector("#contacts").offsetTop){
+        document.querySelector("#menu_nav > ul > li:nth-child(4)").classList.remove("live");
+        document.querySelector("#menu_nav > ul > li:nth-child(5)").classList.add("live");
+    } else {
+        document.querySelector("#menu_nav > ul > li:nth-child(5)").classList.remove("live");
     }
 });
