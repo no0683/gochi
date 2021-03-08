@@ -260,7 +260,7 @@ body {
 
 /* 헤더 영역 */
 #header {
-    height: 100%;
+    height: 900px;
     overflow: hidden;
 }
 #header_title {
@@ -286,14 +286,14 @@ body {
 }
 #header_bg1 {
     width: 100%;
-    height: 310px;
+    height: 33%;
     background-color: rgb(0, 0, 0, 0.1);
     animation: bg1 5s ease;
     transform: translateX(20%);
 }
 #header_bg2 {
     width: 100%;
-    height: 310px;
+    height: 33%;
     background-color: rgb(0, 0, 0, 0.2);
     animation: bg2 5s ease;
     border-top: 3px solid rgb(0, 0, 0, 0.2);
@@ -301,7 +301,7 @@ body {
 }
 #header_bg3 {
     width: 80%;
-    height: 310px;
+    height: 33%;
     background-color: rgb(0, 0, 0, 0.1);
     animation: bg3 5s ease;
 }
@@ -381,6 +381,31 @@ body {
 #standard_img > img {
     width: 100%;
 }
+#standard_btn {
+    position: absolute;
+    bottom: 400px; right: 424px;
+    width: 300px;
+    height: 50px;
+}
+#standard_btn:hover > a {
+    background-color: black;
+    color: white;
+}
+#standard_btn > a {
+    border-radius: 10px;
+    border: 1px solid black;
+    transition: 0.3s ease;
+    letter-spacing: 5px;
+    font-size: 30px;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
 /* 결과물 2 */
 #responsive {
     height: 900px;
@@ -422,6 +447,31 @@ body {
 }
 #responsive_img_mobile > img {
     width: 100%;
+}
+#responsive_btn {
+    position: absolute;
+    bottom: 400px; right: 509px;
+    width: 300px;
+    height: 50px;
+}
+#responsive_btn:hover > a {
+    background-color: black;
+    color: white;
+}
+#responsive_btn > a {
+    border-radius: 10px;
+    border: 1px solid black;
+    transition: 0.3s ease;
+    letter-spacing: 5px;
+    font-size: 30px;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 /* 결과물 3 */
 #mega {
@@ -465,6 +515,31 @@ body {
 }
 #mega_img_mobile > img {
     width: 100%;
+}
+#mega_btn {
+    position: absolute;
+    bottom: 361px; right: 509px;
+    width: 300px;
+    height: 50px;
+}
+#mega_btn:hover > a {
+    background-color: black;
+    color: white;
+}
+#mega_btn > a {
+    border-radius: 10px;
+    border: 1px solid black;
+    transition: 0.3s ease;
+    letter-spacing: 5px;
+    font-size: 30px;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 /* the others */
 #others {
@@ -552,16 +627,60 @@ body {
 }
 
 /* 미디어 쿼리(반응형) */
-@media (max-width: 1280px) {
-    .container {width: 100%;}
+@media (max-width: 1200px) {
+
 }
 @media (max-width: 1024px) {
+    #header {height: 800px;}
+    #header_title > svg > text {font-size: 160px;}
+    #header_title {left: -15px; top: 320px;}
 }
 @media (max-width: 960px) {
+    #header {height: 750px;}
+    #header_title {left: -4px; top: 296px;}
+    #header_title > svg > text {font-size: 140px;}
 }
 @media (max-width: 768px) {
+    #header {height: 600px;}
+    #header_title {top: 223px;}
+    #menu_nav > ul > li > a {font-size: 23px;}
+    #header_title > svg > text {font-size: 100px;}
+    #menu_nav > ul > li {margin: 0 10px;}
 }
 @media (max-width: 600px) {
+    #header {height: 500px;}
+    #header_title {top: 166px;}
+    #header_title > svg.tit1 {display: none;}
+    #header_title > svg.tit2 {display: block; height: 85px;}
+    #header_title > svg.tit3 {display: block; height: 85px;}
+    #header_title > svg > text {font-size: 85px;}
+    #menu_btn {top: 14px; right: 16px;}
+    #menu_btn > a {width: 30px; height: 30px;}
+    #menu_btn > a > span {top: 0; width: 30px; height: 4px;}
+    #menu_btn > a > span::before {top: 8px; width: 30px; height: 4px;}
+    #menu_btn > a > span::after {bottom: -16px; width: 30px; height: 4px;}
+    #menu_nav {height: 57px;}
+    #menu_nav > ul {top: 17px; right: 61px;}
+    #menu_nav > ul > li > a {font-size: 19px; width: 100%; height: 100%; display: block; text-align: center;}
+    #menu_nav > ul > li {margin: 0 2px; width: 75px;}
+    #menu_btn > a > span.live::before {transform: translateY(95%) rotate(-50deg);}
+    #menu_btn > a > span.live::after {transform: translateY(-95%) rotate(50deg);}
 }
 @media (max-width: 480px) {
+    #header {height: 400px;}
+    #header_title > svg > text {font-size: 65px;}
+    #header_title > svg.tit2 {display: block; height: 75px;}
+    #header_title > svg.tit3 {display: block; height: 75px;}
+    #menu_btn {display: none;}
+    #menu_nav {transform: translateY(0);}
+    #header_title {left: -5px; top: 126px;}
+    #menu_nav > ul > li {background-color: white; padding: 5px 0; width: 33.1%; border: 1px solid  black; margin: 0; float: left;}
+    #menu_nav > ul > li:nth-child(1) {border-bottom: 0; border-top: 0; border-left: 0; border-right: 0;}
+    #menu_nav > ul > li:nth-child(2) {border-bottom: 0; border-top: 0; border-right: 0;}
+    #menu_nav > ul > li:nth-child(3) {border-bottom: 0; border-top: 0; border-right: 0;}
+    #menu_nav > ul > li:nth-child(4) {width: 49.75%; border-right: 0; border-left: 0;}
+    #menu_nav > ul > li:nth-child(5) {width: 49.75%; border-right: 0; }
+    #menu_nav > ul > li > a {width: 100%; height: 100%; display: block; text-align: center;}
+    #menu_nav > ul {position: static; display: block; overflow: hidden;}
+    #menu_nav {background-color: rgb(0, 0, 0, 0);}
 }
