@@ -79,6 +79,11 @@ window.addEventListener("scroll", function(){
 
     // 나타내기
     if(pageYOffset > document.querySelector("#intro").offsetTop){
+        document.querySelector("#menu_nav").classList.add("live2");
+    } else {
+        document.querySelector("#menu_nav").classList.remove("live2");
+    }
+    if(pageYOffset > document.querySelector("#intro").offsetTop){
         document.querySelector("#topButton").classList.add("show");
         document.querySelector("#menu_nav > ul > li:nth-child(1)").classList.add("live");
     } else {
