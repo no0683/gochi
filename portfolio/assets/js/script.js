@@ -1,10 +1,13 @@
-// 헤더 버튼 효과
+// 클릭 효과
 var menu_btn = document.querySelector("#menu_btn");
 var menu_nav = document.querySelector("#menu_nav");
 var menu_btn_ham = document.querySelector("#menu_btn > a > span");
 var menu_btn_a = document.querySelector("#menu_btn > a");
+var introduction_right_btn = document.querySelector("#introduction_right_btn");
+var introduction_right_detail = document.querySelector("#introduction_right_detail");
+var introduction_right_detail_btn = document.querySelector("#introduction_right_detail_btn");
 
-
+// 메뉴 버튼
 menu_btn.onclick = function(){
     if(menu_nav.classList != "live"){
         menu_nav.classList = "live";
@@ -14,6 +17,20 @@ menu_btn.onclick = function(){
         menu_nav.classList = "";
         menu_btn_ham.classList = "";
         menu_btn.classList = "";
+    }
+};
+
+// 인트로 버튼
+introduction_right_btn.onclick = function(){
+    if(introduction_right_detail.classList != "live"){
+        introduction_right_detail.classList = "live";
+    }
+};
+
+// 디테일 버튼
+introduction_right_detail_btn.onclick = function(){
+    if(introduction_right_detail.classList = "live"){
+        introduction_right_detail.classList = ""
     }
 };
 
