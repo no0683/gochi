@@ -6,6 +6,7 @@ var menu_btn_a = document.querySelector("#menu_btn > a");
 var introduction_right_btn = document.querySelector("#introduction_right_btn");
 var introduction_right_detail = document.querySelector("#introduction_right_detail");
 var introduction_right_detail_btn = document.querySelector("#introduction_right_detail_btn");
+var introduction_right_wrap = document.querySelector("#introduction_right_wrap");
 
 // 메뉴 버튼
 menu_btn.onclick = function(){
@@ -24,6 +25,8 @@ menu_btn.onclick = function(){
 introduction_right_btn.onclick = function(){
     if(introduction_right_detail.classList != "live"){
         introduction_right_detail.classList = "live";
+        introduction_right_detail.style.opacity = "0.5";
+        introduction_right_wrap.classList = "live";
     }
 };
 
@@ -31,6 +34,7 @@ introduction_right_btn.onclick = function(){
 introduction_right_detail_btn.onclick = function(){
     if(introduction_right_detail.classList = "live"){
         introduction_right_detail.classList = ""
+        introduction_right_wrap.classList = "";
     }
 };
 
