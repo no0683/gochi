@@ -19,29 +19,56 @@
 
   // 슬라이드2
   var mySwiper = new Swiper('.swiper-container2', {
+    slidesPerView: 4,
+    spaceBetween: 14,
     breakpoints: {
-      1: {
-        slidesPerView: 1.4,
-        spaceBetween: 15
+      600: {
+       slidesPerView: 1.4,
+       spaceBetween: 14
       },
-      601: {
+      768: {
        slidesPerView: 2,
-       spaceBetween: 15
+       spaceBetween: 14
       },
-      769: {
+      960: {
        slidesPerView: 3,
-       spaceBetween: 15
-      },
-      961: {
-       slidesPerView: 4,
-       spaceBetween: 15
+       spaceBetween: 14
       },
      },
-    // autoplay: {
-    // delay: 4000,
-    // disableOnInteraction: false,
-    // },
+    autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+    },
     });
+
+  //   var swiper = new Swiper('.swiper-container2',{
+  //     slidesPerView: 4,
+  //     spaceBetween: 24,
+  //     //mousewheel: {
+  //     //   invert: true,
+  //     //},
+  //     keyboard: {
+  //         enabled: true,
+  //         onlyInViewport: false,
+  //     },
+  //     autoplay: {
+  //         delay: 6000,
+  //     },
+  //     breakpoints: {
+  //         600: {
+  //             slidesPerView: 1.4,
+  //             spaceBetween: 24
+  //         },
+  //         768: {
+  //             slidesPerView: 2,
+  //             spaceBetween: 24
+  //         },
+  //         960: {
+  //             slidesPerView: 3,
+  //             spaceBetween: 24
+  //         }
+  //     }
+  // });
 
   // 포스터 탭 메뉴
   var mov_btn = $(".poster_title > ul > li");
