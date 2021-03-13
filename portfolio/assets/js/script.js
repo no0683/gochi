@@ -23,19 +23,36 @@ menu_btn.onclick = function(){
 
 // 인트로 버튼
 introduction_right_btn.onclick = function(){
-    if(introduction_right_detail.classList != "live"){
-        introduction_right_detail.classList = "live";
-        introduction_right_detail.style.opacity = "0.5";
-        introduction_right_wrap.classList = "live";
+    if(introduction_right_detail.style.display = "none"){
+        introduction_right_detail.style.display = "block";
+        fadeIn(introduction_right_detail);
+        introduction_right_wrap.style.display = "none";
+        introduction_right_wrap.style.opacity = 0;
     }
 };
 
 // 디테일 버튼
 introduction_right_detail_btn.onclick = function(){
-    if(introduction_right_detail.classList = "live"){
-        introduction_right_detail.classList = ""
-        introduction_right_wrap.classList = "";
+    if(introduction_right_detail.style.display = "block"){
+        introduction_right_detail.style.display = "none";
+        introduction_right_detail.style.opacity = 0;
+        introduction_right_wrap.style.display = "block";
+        fadeIn(introduction_right_wrap);
     }
+};
+
+// fadeIn 효과
+function fadeIn(target){
+    let isCount = 0;
+    let obj = target;
+    obj.style.opacity = 0.1;
+    let period = setInterval(function(){
+        obj.style.opacity = isCount;
+        isCount = isCount + 0.1;
+    if(isCount > 0.9){
+        clearInterval(period);
+    }    
+    }, 20);
 };
 
 // 탑 버튼 효과

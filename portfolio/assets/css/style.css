@@ -13,12 +13,12 @@ ul {
 /* 영역 */
 html {scroll-behavior: smooth;}
 body {}
-#head {width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
-#intro {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
+#head {width: 100%; height: 100vh; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
+#intro {width: 100%; height: 100vh; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #skills {display: none; width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
-#result1 {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
-#result2 {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
-#result3 {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
+#result1 {padding: 20px 0 110px 0; width: 100%; height: 100vh; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
+#result2 {padding: 20px 0 110px 0; width: 100%; height: 100vh; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
+#result3 {padding: 20px 0 110px 0; width: 100%; height: 100vh; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #the_others {display: none; width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #contacts {display: none; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 
@@ -261,7 +261,7 @@ body {}
 
 /* 헤더 영역 */
 #header {
-    height: 900px;
+    height: 100%;
     overflow: hidden;
 }
 #header_title {
@@ -309,12 +309,12 @@ body {}
 
 /* 인트로 영역 */
 #introduction {
-    height: 100%;
     display: flex;
 }
 #intro_title {
+    padding-top: 10vh;
     font-size: 120px;
-    margin-left: 40px;
+    margin: 0 0 50px 40px;
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 10px;
     color: rgba(0, 0, 0);
@@ -324,7 +324,7 @@ body {}
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding: 60px 0 40px 0;
+    padding: 0 0 40px 0;
 }
 #introduction_left_imgWrap {
     position: relative;
@@ -350,13 +350,7 @@ body {}
     width: 100%;
     height: 100%;
     position: relative;
-    padding: 50px 0 40px 0;
-}
-#introduction_right_wrap {
-
-}
-#introduction_right_wrap.live {
-    display: none;
+    padding: 0 20px 40px 20px;
 }
 #introduction_right_title {
     font-size: 70px;
@@ -414,17 +408,15 @@ body {}
     color: rgb(255, 255, 255);
 }
 #introduction_right_detail {
-    width: 550px;
-    height: 531px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
     border: 2px solid rgb(0, 0, 0, 0.2);
     background-color: white;
     display: none;
     transition: 0.5s ease-in-out;
     padding: 20px;
     font-family: 'Noto Sans KR', sans-serif;
-}
-#introduction_right_detail.live {
-    display: block;
 }
 #introduction_right_detail_wrap {
     position: relative;
@@ -527,6 +519,7 @@ body {}
 }
 /* 결과물 1 */
 #standard_title {
+    padding-top: 5vh;
     font-size: 120px;
     margin: 0 0 50px 40px;
     font-family: 'Bebas Neue', cursive;
@@ -534,7 +527,6 @@ body {}
     color: rgba(0, 0, 0);
 }
 #standard {
-    height: 100%;
     display: flex;
 }
 #standard_left {
@@ -581,6 +573,7 @@ body {}
 }
 /* 결과물 2 */
 #responsive_title {
+    padding-top: 5vh;
     font-size: 120px;
     margin: 0 0 50px 40px;
     font-family: 'Bebas Neue', cursive;
@@ -588,7 +581,6 @@ body {}
     color: rgba(0, 0, 0);
 }
 #responsive {
-    height: 100%;
     display: flex;
 }
 #responsive_left {
@@ -654,6 +646,7 @@ body {}
 }
 /* 결과물 3 */
 #mega_title {
+    padding-top: 5vh;
     font-size: 120px;
     margin: 0 0 50px 40px;
     font-family: 'Bebas Neue', cursive;
@@ -661,7 +654,6 @@ body {}
     color: rgba(0, 0, 0);
 }
 #mega {
-    height: 100%;
     display: flex;
 }
 #mega_left {
@@ -790,43 +782,48 @@ body {}
     #introduction_left_img {width: 400px; height: 400px;}
     #introduction_left {display: block; width: 90%;}
     #introduction_left_imgWrap {margin-left: 20px;}
-    #introduction_right {margin-right: 20px;}
-    #introduction_right_title {text-align: center;}
+    #introduction_right_title {text-align: center; margin: 0 0 20px 0;}
     #introduction_right_bar {width: 100%;}
-    #introduction_right_detail {box-sizing: border-box; left: 0; width: 526px; height: 572px;}
+    #introduction_right_detail {padding: 15px;}
     #introduction_right_btn {margin: 0 auto;}
     #introduction_right_desc {text-align: center;}
 }
 @media (max-width: 1024px) {
-    #header {height: 800px;}
     #header_title > svg > text {font-size: 160px;}
     #header_title {left: -15px; top: 320px;}
     #standard_desc {font-size: 25px;}
     #standard_title {font-size: 100px;}
     #responsive_desc {font-size: 25px;}
     #responsive_title {font-size: 100px;}
+    #standard_btn > a {font-size: 25px;}
     #mega_desc {font-size: 25px;}
     #mega_title {font-size: 100px;}
-    #intro_title {font-size: 100px;}
+    #intro_title {font-size: 100px; padding-top: 8vh; margin: 0 0 0 40px;}
     #introduction {flex-direction: column; align-items: center;}
-    #introduction_right {width: 630px; height: 300px; margin: 0;}
+    #introduction_right {width: 630px; height: 300px; padding: 0;}
     #introduction_right_desc {font-size: 25px;}
     #introduction_right_title {margin: 30px 0 20px 0; font-size: 60px;}
-    #introduction_right_detail {left: -17px; height: 380px; overflow-y: auto; width: 549px; border-radius: 10px;}
+    #introduction_right_detail {overflow-y: auto; border-radius: 10px; height: 90%;}
     #introduction_right_detail::-webkit-scrollbar {width: 10px;}
     #introduction_right_detail::-webkit-scrollbar-thumb {background-color: rgb(0, 0, 0, 0.5); border-radius: 10px;}
     #introduction_right_detail::-webkit-scrollbar-track {background-color: rgb(0, 0, 0, 0.1); border-radius: 10px;}
-    #introduction_left {width: 500px; height: 450px; padding: 50px 0 0 0;}
+    #introduction_left {width: 500px; height: 450px; padding: 0;}
     #introduction_left_imgWrap {margin: 0; display: flex; justify-content: center;}
     #introduction_left_img {left: 80px;}
+    #introduction_right_title {margin: 20px 0;}
 }
 @media (max-width: 960px) {
-    #header {height: 750px;}
     #header_title {left: -4px; top: 296px;}
     #header_title > svg > text {font-size: 140px;}
-    #standard_btn > a {font-size: 25px; width: 80%;}
-    #standard_desc {font-size: 22px;}
-    #standard_title {font-size: 80px;}
+    #standard {display: block;}
+    #standard_title {font-size: 80px; margin: 0; text-align: center; }
+    #standard_left {margin: 0; text-align: center; padding: 15px 0;}
+    #standard_right {padding: 0;}
+    #standard_img > img {width: 70%;}
+    #standard_btn {width: 100%; display: flex; justify-content: center; padding-bottom: 30px;}
+    #standard_btn > a {font-size: 22px; width: 60%;}
+    #standard_desc {font-size: 22px; text-align: center; padding: 20px; box-sizing: border-box; margin: 0 0 20px 0;}
+
     #responsive_btn > a {font-size: 25px; width: 80%;}
     #responsive_desc {font-size: 22px;}
     #responsive_title {font-size: 80px;}
@@ -834,24 +831,19 @@ body {}
     #mega_desc {font-size: 22px;}
     #mega_title {font-size: 80px;}
 
-    #intro_title {font-size: 80px;}
+    #intro_title {font-size: 80px; text-align: center; margin: 0;}
     #introduction_right_desc {font-size: 22px;}
+    #introduction_right_title {font-size: 55px;}
 }
 @media (max-width: 768px) {
-    #header {height: 600px;}
     #header_title {top: 223px;}
     #header_title > svg > text {font-size: 100px;}
     #menu_nav > ul > li > a {font-size: 23px;}
     #menu_nav > ul > li {margin: 0 10px;}
     #menu_nav > ul > li > a > span::before {top: 11px; height: 25px;}
-    #standard {display: block;}
-    #standard_title {margin: 0 0 40px 0; text-align: center; }
-    #standard_left {margin: 0; text-align: center; padding: 15px 0;}
-    #standard_right {padding: 0;}
-    #standard_img > img {width: 80%;}
-    #standard_btn {width: 100%; display: flex; justify-content: center; padding-bottom: 30px;}
-    #standard_btn > a {width: 50%;}
-    #standard_desc {padding: 20px; box-sizing: border-box; margin: 0 0 20px 0;}
+    #standard_title {padding-top: 10vh; font-size: 75px;}
+    #standard_btn > a {font-size: 20px; width: 50%;}
+    #standard_desc {font-size: 20px;}
     #responsive {display: block;}
     #responsive_title {margin: 0 0 40px 0; text-align: center;}
     #responsive_left {margin: 0; text-align: center; padding: 15px 0;}
@@ -872,17 +864,14 @@ body {}
     #mega_desc {padding: 20px; box-sizing: border-box; margin: 0 0 20px 0;}
     #mega_img_tablet {bottom: 12px;}
     #mega_img_mobile {bottom: 13px; right: 42px;}
-    #intro_title {text-align: center; margin: 0;}
+    #intro_title {font-size: 75px; text-align: center; margin: 0;}
     #introduction_right {width: 100%;}
     #introduction_right_bar {width: 90%; margin: 30px auto;}
-
-    #intro {padding: 50px 0;}
-    #result1 {padding: 50px 0;}
-    #result2 {padding: 50px 0;}
-    #result3 {padding: 50px 0;}
+    #introduction_right_detail {width: 90%; margin: 0 auto;}
+    #introduction_right_title {font-size: 50px;}
+    #introduction_right_desc {font-size: 20px;}
 }
 @media (max-width: 600px) {
-    #header {height: 500px;}
     #header_title {top: 166px;}
     #header_title > svg.tit1 {display: none;}
     #header_title > svg.tit2 {display: block; height: 85px;}
@@ -900,30 +889,31 @@ body {}
     #menu_nav > ul > li > a > span::before {top: 9px; height: 20px;}
     #menu_btn > a > span.live::before {transform: translateY(95%) rotate(-50deg);}
     #menu_btn > a > span.live::after {transform: translateY(-95%) rotate(50deg);}
-    #standard_title {font-size: 50px;}
-    #standard_desc {font-size: 20px; margin: 0;}
-    #standard_btn > a {font-size: 20px;}
+    #standard_title {font-size: 65px; padding-top: 15vh; margin-bottom: 30px;}
+    #standard_desc {font-size: 18px;}
+    #standard_btn > a {font-size: 18px;}
     #responsive_title {font-size: 50px;}
     #responsive_desc {font-size: 20px; margin: 0;}
     #responsive_btn > a {font-size: 20px;}
     #mega_title {font-size: 50px;}
     #mega_desc {font-size: 20px; margin: 0;}
     #mega_btn > a {font-size: 20px;}
-    #intro_title {font-size: 50px;}
-    #introduction_right_desc {font-size: 20px;}
-    #introduction_right_title {font-size: 50px;}
+    #intro_title {font-size: 65px; padding-top: 15vh; margin-bottom: 30px;}
+    #introduction_right_desc {font-size: 18px;}
+    #introduction_right_title {font-size: 45px;}
     #introduction_left {width: 300px; height: 300px;}
     #introduction_left_border {width: 300px; height: 300px;}
     #introduction_left_img {width: 300px; height: 300px; left: 30px;}
-    #introduction_right {margin-top: 20px;}
+    #introduction_right {margin-top: 50px;}
 
-    #introduction_right_detail {width: 350px; height: 283px; left: 25px;}
     .introduction_right_detail_desc h3 {font-size: 25px;}
     .introduction_right_detail_desc ul li {font-size: 18px;}
     #introduction_right_detail_btn {width: 20px; height: 20px; line-height: 20px;}
+    #introduction_right_btn > span > span {font-size: 18px;}
+    #introduction_right_btn > span > span:last-child {font-size: 18px; margin-left: 22px;}
+    #introduction_right_btn:hover > span {transform: translateX(10px);}
 }
 @media (max-width: 480px) {
-    #header {height: 400px;}
     #header_title {left: -5px; top: 126px;}
     #header_title > svg > text {font-size: 65px;}
     #header_title > svg.tit2 {display: block; height: 75px;}
@@ -946,20 +936,15 @@ body {}
     #menu_nav > ul > li > a {width: 100%; height: 100%; display: block; text-align: center;}
     #menu_nav > ul {position: static; display: block; overflow: hidden;}
     #standard_btn > a {height: 62%; line-height: 31px;}
-    #standard_title {font-size: 40px;}
-    #standard_desc {font-size: 18px; padding: 0 20px 20px 20px;}
+    #standard_title {font-size: 50px; padding-top: 15vh;}
+    #standard_desc {padding: 0 20px 20px 20px;}
     #responsive_btn > a {height: 62%; line-height: 31px;}
-    #responsive_title {font-size: 40px;}
+    #responsive_title {font-size: 40px; padding-top: 15vh;}
     #responsive_desc {font-size: 18px; padding: 0 20px 20px 20px;}
     #mega_btn > a {height: 62%; line-height: 31px;}
     #mega_title {font-size: 40px;}
     #mega_desc {font-size: 18px; padding: 0 20px 20px 20px;}
-    #intro_title {font-size: 40px;}
-    #introduction_right_desc {font-size: 18px;}
+    #intro_title {font-size: 50px;}
     #introduction_right_title {font-size: 40px;}
     #introduction_left_img {top: 20px; left: 20px;}
-
-    #result1 {padding: 25px 0;}
-    #result2 {padding: 25px 0;}
-    #result3 {padding: 25px 0;}
 }
