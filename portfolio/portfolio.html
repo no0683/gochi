@@ -11,6 +11,14 @@
     <!-- 폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+        <!-- HTLM5shiv ie6~8 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script type="text/javascript">
+         alert("현재 브라우저는 지원하지 않습니다. 크롬 브라우저를 추천합니다.!");
+      </script>
+    <![endif]-->
 </head>
 <body>
     <!-- parallax -->
@@ -175,14 +183,66 @@
         <div class="container">
             <h1 id="skill_title">MY SKILLS</h1>
             <div id="skill">
-                <div id="skill_html_wrap">
-                    <div id="skill_html"><span>HTML</span></div>
+                <div id="skill_left">
+                    <h3># MARK UP</h3>
+                    <p>웹 표준을 바탕으로 꼼꼼한 시맨틱 마크업을 작성 합니다.</p>
+                    <ul>
+                        <li id="skill_html" class="skill_list">
+                            <img class="skill_img" src="assets/img/html5.png" alt="html5">
+                            <span class="bar_top"></span>
+                            <span class="bar_bottom"></span>
+                            <span class="skill_desc">웹 표준을 준수하고 효율적인 코드를 설계 합니다.</span>
+                            <span id="html_percent" class="skill_percent n85"></span>
+                        </li>
+                        <li id="skill_css" class="skill_list">
+                            <img class="skill_img" src="assets/img/css3.png" alt="css3">
+                            <span class="bar_top"></span>
+                            <span class="bar_bottom"></span>
+                            <span class="skill_desc">미디어쿼리를 활용하여 반응형 레이아웃을 이해 및 구현 합니다.</span>
+                            <span id="css_percent" class="skill_percent n80"></span>
+                        </li>
+                        <li id="skill_js" class="skill_list">
+                            <img class="skill_img" src="assets/img/js.png" alt="js">
+                            <span class="bar_top"></span>
+                            <span class="bar_bottom"></span>
+                            <span class="skill_desc">자바스크립트의 기본 문법을 이해하고 기본적인 알고리즘 문제를 해결 합니다.</span>
+                            <span id="js_percent" class="skill_percent n60"></span>
+                        </li>
+                        <li id="skill_jq" class="skill_list">
+                            <img class="skill_img" src="assets/img/jq.png" alt="jq">
+                            <span class="bar_top"></span>
+                            <span class="bar_bottom"></span>
+                            <span class="skill_desc">제이쿼리 라이브러리를 활용하여 기능을 구현하고 유용한 플러그인을 적용 합니다.</span>
+                            <span id="jq_percent" class="skill_percent n65"></span>
+                        </li>
+                    </ul>
                 </div>
-                <div id="skill_css_wrap">
-                    <div id="skill_css"><span>CSS</span></div>
-                </div>
-                <div id="skill_javascript_wrap">
-                    <div id="skill_javascript"><span>JAVA<br>SCRIPT</span></div>
+                <div id="skill_right">
+                    <h3># DESIGN</h3>
+                    <p>인터페이스(UI)와 사용자경험(UX)을 고려한 모바일 앱&웹 디자인을 합니다.</p>
+                    <ul>
+                        <li id="skill_ps" class="skill_list">
+                            <img class="skill_img" src="assets/img/ps.png" alt="photoshop">
+                            <span class="bar_top"></span>
+                            <span class="bar_bottom"></span>
+                            <span class="skill_desc">기본적인 레이아웃,디자인 구성 및 협업 가능 합니다.</span>
+                            <span id="ps_percent" class="skill_percent n50"></span>
+                        </li>
+                        <li id="skill_ai" class="skill_list">
+                            <img class="skill_img" src="assets/img/ai.png" alt="illustration">
+                            <span class="bar_top"></span>
+                            <span class="bar_bottom"></span>
+                            <span class="skill_desc">간단한 아이콘 제작 및 편집 가능 합니다.</span>
+                            <span id="ai_percent" class="skill_percent n40"></span>
+                        </li>
+                    </ul>
+                    <h3># MORE</h3>
+                    <p>효율좋은 코드를 그려내기 위해 계속해서 공부 합니다.</p>
+                    <ul>
+                        <li><img class="skill_img" src="assets/img/github.png" alt="github"></li>
+                        <li><img class="skill_img" src="assets/img/codepen.png" alt="codepen"></li>
+                        <li><img class="skill_img" src="assets/img/figma.png" alt="figma"></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -278,6 +338,7 @@
         </div>
     </section>
     <!-- //contacts -->
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </body>
 </html>

@@ -43,10 +43,10 @@ introduction_right_detail_btn.onclick = function(){
 
 // fadeIn 효과
 function fadeIn(target){
-    let isCount = 0;
-    let obj = target;
+    var isCount = 0;
+    var obj = target;
     obj.style.opacity = 0.1;
-    let period = setInterval(function(){
+    var period = setInterval(function(){
         obj.style.opacity = isCount;
         isCount = isCount + 0.1;
     if(isCount > 0.9){
@@ -54,6 +54,47 @@ function fadeIn(target){
     }    
     }, 20);
 };
+
+// Count 효과
+function count(target){
+    var isCount = 0;
+    var obj = target;
+    var period = setInterval(function(){
+        obj.innerHTML = isCount;
+        isCount = isCount + 5;
+    if(isCount == 85 && target.classList == "skill_percent n85"){
+        obj.innerHTML = isCount + "%";
+        clearInterval(period);
+    }
+    if(isCount == 80 && target.classList == "skill_percent n80"){
+        obj.innerHTML = isCount + "%";
+        clearInterval(period);
+    }    
+    if(isCount == 60 && target.classList == "skill_percent n60"){
+        obj.innerHTML = isCount + "%";
+        clearInterval(period);
+    }     
+    if(isCount == 65 && target.classList == "skill_percent n65"){
+        obj.innerHTML = isCount + "%";
+        clearInterval(period);
+    }   
+    if(isCount == 50 && target.classList == "skill_percent n50"){
+        obj.innerHTML = isCount + "%";
+        clearInterval(period);
+    }  
+    if(isCount == 40 && target.classList == "skill_percent n40"){
+        obj.innerHTML = isCount + "%";
+        clearInterval(period);
+    }  
+    }, 100);
+};
+
+count(document.querySelector("#html_percent"));
+count(document.querySelector("#css_percent"));
+count(document.querySelector("#js_percent"));
+count(document.querySelector("#jq_percent"));
+count(document.querySelector("#ps_percent"));
+count(document.querySelector("#ai_percent"));
 
 // 탑 버튼 효과
 var topButton = document.querySelector("#top_button");

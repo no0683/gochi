@@ -15,10 +15,10 @@ html {scroll-behavior: smooth;}
 body {}
 #head {width: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #intro {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
-#skills {display: none; width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
-#result1 {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
-#result2 {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
-#result3 {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
+#skills {width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
+#result1 {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
+#result2 {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
+#result3 {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #the_others {display: none; width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #contacts {display: none; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 
@@ -85,7 +85,7 @@ body {}
     border-radius: 25px;
 }
 #menu_btn > a > span.live::before {
-    transform: rotate(50deg);
+    -webkit-transform: rotate(50deg);
 }
 #menu_btn > a:hover > span.live::before {
     background-color: rgb(0, 255, 149);
@@ -104,7 +104,7 @@ body {}
     border-radius: 25px;
 }
 #menu_btn > a > span.live::after {
-    transform: translateY(-250%) rotate(-50deg);
+    -webkit-transform: translateY(-250%) rotate(-50deg);
 }
 #menu_btn > a:hover > span.live::after {
     background-color: rgb(6, 98, 246);
@@ -119,6 +119,8 @@ body {}
     top: 0; right: 0;
     transition: 0.5s ease;
     transform: translateY(-80px);
+    -webkit-transform: translateY(-80px);
+    -ms-transform: translateY(-80px);
     background-color: rgb(0, 0, 0, 0.1);
 }
 #menu_nav::before {
@@ -131,6 +133,8 @@ body {}
 }
 #menu_nav.live {
     transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
 }
 #menu_nav.live::before {
     width: 100%;
@@ -458,63 +462,113 @@ body {}
 #skill {
     height: 100%;
     display: flex;
+    justify-content: center;
 }
 #skill_title {
     font-size: 120px;
-    margin-left: 40px;
+    margin: 0 0 50px 40px;
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 10px;
     color: rgba(0, 0, 0);
 }
-#skill_html_wrap {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
+#skill_left {
+    padding: 0 60px 0 20px;
 }
-#skill_html {
+#skill_left > h3 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 25px;
+}
+#skill_left > p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+#skill_right {
+    padding: 0 20px 0 60px;
+}
+#skill_right > h3 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 25px;
+}
+#skill_right > p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+#skill_right > ul:last-child {
+    display: flex;
+}
+#skill_right > ul:last-child > li {
+    margin-right: 50px;
+}
+#skill_right > ul:last-child > li:nth-child(2) {
+    margin-right: 10px;
+}
+#skill_right #skill_ai {
+    margin-bottom: 100px;
+}
+.skill_list {
+    position: relative;
+    width: 600px;
+    margin-bottom: 50px;
+}
+.bar_bottom {
+    position: absolute;
+    top: 0; left: 137px;
+    display: block;
+    width: 400px;
+    height: 15px;
+    background-color: rgb(0, 0, 0, 0.1);
+}
+.bar_top {
+    position: absolute;
+    top: 0; left: 137px;
+    display: block;
     width: 300px;
-    height: 300px;
-    border: 1px solid black;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 300px;
-    font-size: 60px;
-    margin: 20px;
+    height: 15px;
+    background-color: black;
 }
-#skill_css_wrap {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
+#skill_html > .bar_top {
+    width: 340px;
+    animation: html 2.5s ease;
 }
-#skill_css {
+#skill_css > .bar_top {
+    width: 320px;
+    animation: css 2.5s ease;
+}
+#skill_js > .bar_top {
+    width: 240px;
+    animation: js 2.5s ease;
+}
+#skill_jq > .bar_top {
+    width: 260px;
+    animation: jq 2.5s ease;
+}
+#skill_ps > .bar_top {
+    width: 200px;
+    animation: ps 2.5s ease;
+}
+#skill_ai > .bar_top {
+    width: 160px;
+    animation: ai 2.5s ease;
+}
+.skill_desc {
+    position: absolute;
+    bottom: 0; left: 140px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
     width: 300px;
-    height: 300px;
-    border: 1px solid black;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 300px;
-    font-size: 60px;
-    margin: 20px;
+    display: block;
 }
-#skill_javascript_wrap {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
+.skill_img {
+    width: 110px;
 }
-#skill_javascript {
-    width: 300px;
-    height: 300px;
-    border: 1px solid black;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 60px;
-    margin: 20px;
+.skill_percent {
+    display: block;
+    position: absolute;
+    bottom: 56px; right: 64px;
+    font-size: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 /* 결과물 1 */
 #standard_title {
@@ -737,6 +791,36 @@ body {}
 }
 
 /* 애니메이션 */
+@keyframes html {
+    0% {width: 0;}
+    100% {width: 340px;}
+}
+
+@keyframes css {
+    0% {width: 0;}
+    100% {width: 320px;}
+}
+
+@keyframes js {
+    0% {width: 0;}
+    100% {width: 240px;}
+}
+
+@keyframes jq {
+    0% {width: 0;}
+    100% {width: 260px;}
+}
+
+@keyframes ps {
+    0% {width: 0;}
+    100% {width: 200px;}
+}
+
+@keyframes ai {
+    0% {width: 0;}
+    100% {width: 160px;}
+}
+
 @keyframes bg1 {
     0% {opacity: 0.1; transform: translateX(100%);}
     100% {opacity: 1; transform: translateX(20%);}
