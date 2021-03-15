@@ -78,11 +78,11 @@ function count(target){
         obj.innerHTML = isCount + "%";
         clearInterval(period);
     }   
-    if(isCount == 50 && target.classList == "skill_percent n50"){
+    if(isCount == 45 && target.classList == "skill_percent n50"){
         obj.innerHTML = isCount + "%";
         clearInterval(period);
     }  
-    if(isCount == 40 && target.classList == "skill_percent n40"){
+    if(isCount == 35 && target.classList == "skill_percent n40"){
         obj.innerHTML = isCount + "%";
         clearInterval(period);
     }  
