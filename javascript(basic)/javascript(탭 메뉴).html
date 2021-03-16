@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>탭 메뉴</title>
+  
+  <style>
+    #wrap {display: flex; align-items: center;}
+    #wrap > a {text-align: center; border: 1px solid black; list-style: none; padding: 20px 40px;}
+    #wrap > a.live {background-color: rgb(0, 0, 0, 0.5);}
+
+    #content > li {display: none;}
+    #content > li.show {display: block;}
+
+  </style>
+</head>
+<body>
+  <ul id="wrap">
+    <a href="#num1" class="live">1번</a>
+    <a href="#num2" >2번</a>
+    <a href="#num3" >3번</a>
+    <a href="#num4" >4번</a>
+  </ul>
+  <ul id="content">
+    <li id="num1" class="show">첫번째 내용</li>
+    <li id="num2">두번째 내용</li>
+    <li id="num3">세번째 내용</li>
+    <li id="num4">네번째 내용</li>
+  </ul>
+
+  <script>
+    var li = document.querySelectorAll("#wrap > a");
+    var li2 = document.querySelectorAll("#content > li");
+
+    for(i = 0; i < li.length; i++){
+      li[i].addEventListener("click", function(e){
+        e.preventDefault();
+
+        var target = e.target.getAttribute("href");
+        var replace = target.replace("#","");
+
+        for(i = 0; i < li2.length; i++){
+          li2[i].style.display = "none";
+        }
+
+        document.getElementById(replace).style.display = "block";
+        
+        for(i = 0; i < li.length; i++){
+          li[i].classList.remove("live");
+          e.target.classList.add("live");
+        }
+      });
+    };
+
+
+  </script>
+</body>
+</html>
