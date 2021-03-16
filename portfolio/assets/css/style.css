@@ -12,7 +12,6 @@ ul {
 
 /* 영역 */
 html {scroll-behavior: smooth;}
-body {}
 #head {width: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #intro {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #skills {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
@@ -20,14 +19,19 @@ body {}
 #result2 {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #result3 {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #the_others {display: none; width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
-#contacts {display: none; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
+#contacts {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 
 /* 컨테이너 영역 */
 .container {
     position: relative;
+    padding: 0 30px;
+    box-sizing: border-box;
     margin: 0 auto;
     width: 100%;
     height: 100%;
+}
+#head > .container {
+    padding: 0;
 }
 
 /* 패럴랙스 */
@@ -35,7 +39,7 @@ body {}
     right: 20px;
     bottom: 20px;
     position: fixed;
-    z-index: 1000;
+    z-index: -1;
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 2px;
     opacity: 0;
@@ -189,10 +193,13 @@ body {}
 /* 탑 버튼 */
 #topButton {
     position: fixed;
-    bottom: 250px; right: 40px;
+    bottom: 250px; right: 20px;
     z-index: -1;
     opacity: 0;
     transition: 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #topButton.show {
     opacity: 1;
@@ -200,51 +207,8 @@ body {}
 }
 #top_arrow_wrap {
     position: relative;
-    width: 40px; height: 40px;
-}
-#top_arrow1 {
-    position: absolute;
-    bottom: 0; left: 5px;
-    animation: topArrow 1s 0.3s ease-in-out infinite;
-}
-#top_arrow1 span {
-    background-color: rgb(0, 0, 0, 0.3);
-}
-#top_arrow2 {
-    position: absolute;
-    bottom: 6px; left: 5px;
-    animation: topArrow 1s 0.2s ease-in-out infinite;
-}
-#top_arrow2 span {
-    background-color: rgb(0, 0, 0, 0.6);
-}
-#top_arrow3 {
-    position: absolute;
-    bottom: 12px; left: 5px;
-    animation: topArrow 1s 0.1s ease-in-out infinite;
-}
-#top_arrow3 span {
-    background-color: rgb(0, 0, 0, 0.9);
-}
-.top_arrow_barWrap {
-    width: 30px; height: 20px;
-    position: relative;
-}
-.top_arrow_bar1 {
-    position: absolute;
-    content: '';
-    top: 9px; left: 12px;
-    transform: rotate(50deg);
-    width: 20px; height: 2px;
-    border-radius: 2px;
-}
-.top_arrow_bar2 {
-    position: absolute;
-    content: '';
-    top: 9px; left: 0px;
-    transform: rotate(-50deg);
-    width: 20px; height: 2px;
-    border-radius: 2px;
+    width: 32px; height: 32px;
+    animation: topArrow 1s ease infinite;
 }
 #top_button > a {
     width: 40px; height: 40px;
@@ -273,7 +237,7 @@ body {}
 #header_title {
     width: 100%;
     position: absolute;
-    top: 370px; left: -25px;
+    top: 390px; left: -25px;
 }
 #header_title > svg {
     width: 100%;
@@ -609,11 +573,31 @@ body {}
     width: 100%;
     padding: 0 20px 0 40px;
 }
-#standard_desc {
-    font-size: 30px;
-    width: 100%;
+#standard_right > ul {
     margin: 0 0 40px 0;
+}
+.standard_desc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.standard_desc > img {
+    margin-right: 20px;
+}
+.standard_desc > img:last-child {
+    margin: 0;
+}
+.standard_desc > span {
+    font-size: 25px;
     font-family: 'Noto Sans KR', sans-serif;
+}
+.standard_desc em {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-style: normal;
+    font-size: 35px;
+    font-weight: 500;
+    text-shadow: 1px 2px 3px rgb(0, 0, 0, 0.2);
+    margin-right: 20px;
 }
 #standard_btn {
     width: 300px;
@@ -655,16 +639,40 @@ body {}
     display: flex;
     justify-content: center;
 }
+
+
 #responsive_right {
-    width: 80%;
+    width: 100%;
     padding: 0 20px 0 40px;
 }
-#responsive_desc {
-    font-size: 30px;
-    width: 100%;
+#responsive_right > ul {
     margin: 0 0 40px 0;
+}
+.responsive_desc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.responsive_desc > img {
+    margin-right: 20px;
+}
+.responsive_desc > img:last-child {
+    margin: 0;
+}
+.responsive_desc > span {
+    font-size: 25px;
     font-family: 'Noto Sans KR', sans-serif;
 }
+.responsive_desc em {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-style: normal;
+    font-size: 35px;
+    font-weight: 500;
+    text-shadow: 1px 2px 3px rgb(0, 0, 0, 0.2);
+    margin-right: 20px;
+}
+
+
 #responsive_img_pc {
     width: 90%;
 }
@@ -731,11 +739,26 @@ body {}
     width: 80%;
     padding: 0 20px 0 40px;
 }
-#mega_desc {
-    font-size: 30px;
-    width: 100%;
+#mega_right > ul {
     margin: 0 0 40px 0;
+}
+.mega_desc {
+    display: flex;
+    align-items: center;
+}
+.mega_desc > img {
+    margin-right: 20px;
+}
+.mega_desc > span {
+    font-size: 25px;
     font-family: 'Noto Sans KR', sans-serif;
+}
+.mega_desc > span > em {
+    font-style: normal;
+    font-size: 35px;
+    font-weight: 500;
+    text-shadow: 1px 2px 3px rgb(0, 0, 0, 0.2);
+    margin-right: 20px;
 }
 #mega_img_pc {
     width: 90%;
@@ -794,14 +817,79 @@ body {}
 }
 /* contact */
 #contact {
-    height: 400px;
+    height: 100%;
 }
 #contact_title {
     font-size: 120px;
-    margin-left: 40px;
+    margin: 0 0 50px 40px;
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 10px;
     color: rgba(0, 0, 0);
+}
+#contact_top {
+    display: flex;
+    align-items: center;
+}
+#contact_top_bar {
+    display: block;
+    width: 53%;
+    height: 3px;
+    background-color: black;
+}
+#contact_top_title > h2 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 80px;
+    text-shadow: 1px 2px 5px rgb(0, 0, 0, 0.5);
+}
+#contact_top_title > p {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#contact_bottom {
+    position: relative;
+}
+.contact_bottom_list:first-child > a {
+    display: block;
+    position: absolute;
+    bottom: 0; right: 0;
+}
+.contact_bottom_list:first-child > a > img:last-child {
+    width: 80px;
+    display: block;
+}
+.contact_bottom_list {
+    width: 30%;
+    border-bottom: 2px dotted black;
+    margin-bottom: 50px;
+    position: relative;
+}
+.contact_bottom_list > span {
+    position: absolute;
+    bottom: 0; right: 0;
+}
+.contact_bottom_list > span > a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#contact_bottom > ul:last-child {
+    position: absolute;
+    bottom: 0; right: 0;
+    display: flex;
+}
+#contact_bottom > ul:last-child > li:last-child > a > img {
+    margin-left: 40px;
+}
+#contact_bottom > ul > li > img {
+    width: 80px;
+}
+#contact_bottom > ul:last-child > li > a > img {
+    width: 80px;
+    opacity: 0.6;
+    transition: 0.5s ease;
+}
+#contact_bottom > ul:last-child > li > a > img:hover {
+    opacity: 1;
 }
 
 /* 애니메이션 */
@@ -867,7 +955,7 @@ body {}
 @keyframes topArrow {
     0% {transform: translateY(0px);}
     50% {opacity: 0.5;}
-    100% {transform: translateY(-15px); opacity: 0;}
+    100% {transform: translateY(-10px); opacity: 0;}
 }
 
 /* 미디어 쿼리(반응형) */
@@ -877,6 +965,8 @@ body {}
     .skill_img {width: 90px;}
     .skill_desc {left: 100px;}
     .skill_percent {bottom: 35px; right: 0;}
+
+    .standard_desc > img {width: 47px;}
 }
 @media (max-width: 1200px) {
     #introduction_left_border {width: 400px; height: 400px;}
@@ -895,6 +985,9 @@ body {}
     .bar_wrap > div {width: 355px;}
     .skill_percent {bottom: 25px; font-size: 20px;}
 
+    .standard_desc em {font-size: 30px;}
+    .standard_desc > img {margin-right: 10px; width: 40px;}
+
     #intro {padding: 90px 0;}
     #skills {padding: 90px 0;}
     #result1 {padding: 90px 0;}
@@ -906,7 +999,9 @@ body {}
     #header_title > svg > text {font-size: 160px;}
     #header_title {left: -15px; top: 320px;}
 
-    #standard_desc {font-size: 25px;}
+    .standard_desc em {font-size: 25px;}
+    .standard_desc > span {font-size: 20px;}
+    .standard_desc > img {width: 35px;}
     #standard_title {font-size: 100px;}
     #standard_btn > a {font-size: 25px;}
 
@@ -944,14 +1039,14 @@ body {}
     #header {height: 750px;}
     #header_title {left: -4px; top: 296px;}
     #header_title > svg > text {font-size: 140px;}
-    #standard {display: block;}
+
+    #standard {flex-direction: column; align-items: center;}
     #standard_title {font-size: 80px; margin: 0; text-align: center;}
     #standard_left {margin: 0; text-align: center; padding: 15px 0;}
-    #standard_right {padding: 0;}
+    #standard_right {padding: 0; width: 70%;}
     #standard_img > img {width: 70%;}
     #standard_btn {width: 100%; display: flex; justify-content: center;}
-    #standard_btn > a {font-size: 22px; width: 50%;}
-    #standard_desc {font-size: 22px; padding: 20px; box-sizing: border-box; margin: 0 0 20px 0;}
+    #standard_btn > a {font-size: 22px; width: 70%;}
 
     #responsive {display: block;}
     #responsive_title {font-size: 80px; margin: 0; text-align: center;}
@@ -960,7 +1055,7 @@ body {}
     #responsive_left img {width: 75%;}
     #responsive_btn {width: 100%; display: flex; justify-content: center;}
     #responsive_btn > a {font-size: 22px; width: 50%;}
-    #responsive_desc {font-size: 22px; padding: 20px; box-sizing: border-box; margin: 0 0 20px 0;}
+    #responsive_desc {font-size: 22px; padding: 20px 0; box-sizing: border-box; margin: 0 0 20px 0;}
     #responsive_img_tablet {bottom: 12px; left: 13px;}
     #responsive_img_mobile {bottom: 13px; right: 90px;}
 
@@ -971,7 +1066,7 @@ body {}
     #mega_left img {width: 70%;}
     #mega_btn {width: 100%; display: flex; justify-content: center;}
     #mega_btn > a {font-size: 22px; width: 50%;}
-    #mega_desc {font-size: 22px; padding: 20px; box-sizing: border-box; margin: 0 0 20px 0;}
+    #mega_desc {font-size: 22px; padding: 20px 0; box-sizing: border-box; margin: 0 0 20px 0;}
     #mega_img_tablet {bottom: 12px; left: 13px;}
     #mega_img_mobile {bottom: 13px; right: 90px;}
 
@@ -1001,7 +1096,6 @@ body {}
     #menu_nav > ul > li > a > span::before {top: 11px; height: 25px;}
     #standard_title {font-size: 75px;}
     #standard_btn > a {font-size: 20px;}
-    #standard_desc {font-size: 20px;}
 
     #responsive_title {font-size: 75px;}
     #responsive_btn > a {font-size: 20px;}
@@ -1054,8 +1148,7 @@ body {}
     #menu_btn > a > span.live::before {transform: translateY(95%) rotate(-50deg);}
     #menu_btn > a > span.live::after {transform: translateY(-95%) rotate(50deg);}
     #standard_title {font-size: 60px;}
-    #standard_desc {font-size: 18px;}
-    #standard_btn > a {font-size: 18px;}
+    #standard_right {width: 90%;}
 
     #responsive_title {font-size: 60px;}
     #responsive_desc {font-size: 18px;}
@@ -1099,11 +1192,9 @@ body {}
     #header_title > svg > text {font-size: 65px;}
     #header_title > svg.tit2 {display: block; height: 75px;}
     #header_title > svg.tit3 {display: block; height: 75px;}
-    #top_button {display: flex; justify-content: center;}
-    .top_arrow_bar1 {left: 14px; width: 11px; height: 1px;}
-    .top_arrow_bar2 {left: 6px; width: 11px; height: 1px;}
+    #top_arrow_wrap {width: 22px; height: 22px;}
+    #top_arrow_wrap > img {width: 22px; height: 22px;}
     #top_button > a {width: 30px; height: 30px; font-size: 15px;}
-    #topButton {right: 5px;}
     #menu_btn {display: none;}
     #menu_nav {transform: translateY(-80px); background-color: rgb(0, 0, 0, 0);}
     #menu_nav.live2 {transform: translateY(0);}
@@ -1118,7 +1209,11 @@ body {}
     #menu_nav > ul {position: static; display: block; overflow: hidden;}
     #standard_btn > a {height: 62%; line-height: 31px;}
     #standard_title {font-size: 40px;}
-    #standard_desc {margin: 0;}
+    .standard_desc em {font-size: 20px;}
+    .standard_desc > span {font-size: 18px;}
+    .standard_desc > img {width: 30px;}
+    #standard_right {width: 100%;}
+    #standard_right > ul {margin: 0 0 35px 0;}
 
     #responsive_btn > a {height: 62%; line-height: 31px;}
     #responsive_title {font-size: 40px;}
