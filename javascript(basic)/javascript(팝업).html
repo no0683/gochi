@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팝업</title>
+
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        p {
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+    <p>이 문서가 열리면 자동으로 팝업이 표시 됩니다.</p>
+
+    <script>
+
+        function openPopup(){
+            window.open("javascript(팝업창).html","","width=400, height=400");
+
+            if(window.open() == null){
+                alert("팝업이 차단되어 있습니다. 팝업 차단을 해제하고 새로고침 해주세요.");
+            }
+        };
+
+        window.onload = openPopup;
+    </script>
+
+</body>
+</html>
