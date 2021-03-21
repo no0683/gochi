@@ -11,15 +11,20 @@ ul {
 }
 
 /* 영역 */
+#wrap {display: none;}
+#wrap.show {display: block;}
+
 html {scroll-behavior: smooth;}
 #head {width: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #intro {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
-#skills {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
+#skills {opacity: 0; transition: 0.5s ease-in-out; padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #result1 {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #result2 {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #result3 {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #the_others {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #contacts {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
+
+#skills.live {opacity: 1;}
 
 /* 컨테이너 영역 */
 .container {
@@ -34,20 +39,59 @@ html {scroll-behavior: smooth;}
     padding: 0;
 }
 
-/* 바텀 */
-#bottom {
-    width: 100%;
+/* 팝업(오프닝) */
+#popUp {
+    transition: 1s ease;
     position: fixed;
-    bottom: 0;
-    background-color: rgb(255, 255, 255, 0.5);
-    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    background-color: blanchedalmond;
 }
-#bottom > p {
-    font-family: 'Noto Sans KR', sans-serif;
+#popUp.hide {
+    opacity: 0;
+    z-index: -1;
+}
+#popUp.show {
+    transition: 0.5s ease;
+    opacity: 1;
+    z-index: 9999;
+}
+#popUp_img > img {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+#popUp_img > img:last-child {
+    margin: 0 0 20px 0;
+}
+#popUp_btn {
+    position: absolute;
+    top: 15px; right: 15px;
+    width: 30px; height: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    line-height: 30px;
+    cursor: pointer;
+}
+#popUp p:first-child {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+#popUp p {
     font-size: 18px;
-    opacity: 0.5;
+    margin-bottom: 10px;
 }
-
+#popUp_count {
+    font-size: 30px;
+}
+#popUp > div > span:last-child {
+    font-size: 16px;
+}
 /* 패럴랙스 */
 #parallax {
     right: 20px;
@@ -137,8 +181,6 @@ html {scroll-behavior: smooth;}
     top: 0; right: 0;
     transition: 0.5s ease;
     transform: translateY(-80px);
-    -webkit-transform: translateY(-80px);
-    -ms-transform: translateY(-80px);
     background-color: rgb(0, 0, 0, 0.1);
 }
 #menu_nav::before {
@@ -151,8 +193,6 @@ html {scroll-behavior: smooth;}
 }
 #menu_nav.live {
     transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
 }
 #menu_nav.live::before {
     width: 100%;
@@ -521,6 +561,9 @@ html {scroll-behavior: smooth;}
     background-color: black;
 }
 #skill_html > .bar_wrap > div > .bar_top {
+    width: 85%;
+}
+#skill_html.live > .bar_wrap > div > .bar_top {
     width: 85%;
     animation: html 2.5s ease;
 }

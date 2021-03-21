@@ -1,4 +1,29 @@
-// 클릭 효과
+// Count(opening) 효과
+var popUp_btn = document.querySelector("#popUp_btn");
+var popUp = document.querySelector("#popUp");
+var count1 = document.querySelector("#popUp_count");
+var wrap = document.querySelector("#wrap");
+
+window.onload = popUp.classList = "show";
+
+function opening(target){
+    var isCount = 5;
+    var obj = target;
+    var period = setInterval(function(){
+        count1.innerHTML = parseInt(isCount);
+        isCount = isCount - 0.5;
+    if(isCount == 0){
+        count1.innerHTML = parseInt(isCount);
+        obj.classList = "hide";
+        wrap.classList = "show";
+        clearInterval(period);
+    }
+    }, 500);
+};
+
+opening(popUp);
+
+// 버튼(클릭) 효과
 var menu_btn = document.querySelector("#menu_btn");
 var menu_nav = document.querySelector("#menu_nav");
 var menu_btn_ham = document.querySelector("#menu_btn > a > span");
@@ -8,38 +33,44 @@ var introduction_right_detail = document.querySelector("#introduction_right_deta
 var introduction_right_detail_btn = document.querySelector("#introduction_right_detail_btn");
 var introduction_right_wrap = document.querySelector("#introduction_right_wrap");
 
-// 메뉴 버튼
-menu_btn.onclick = function(){
-    if(menu_nav.classList != "live"){
-        menu_nav.classList = "live";
-        menu_btn_ham.classList = "live";
-        menu_btn.classList = "live";
-    } else {
-        menu_nav.classList = "";
-        menu_btn_ham.classList = "";
-        menu_btn.classList = "";
-    }
-};
+    // 오프닝 버튼
+    popUp_btn.addEventListener("click", function(){
+        popUp.classList = "hide";
+        wrap.classList = "show";
+    });
 
-// 인트로 버튼
-introduction_right_btn.onclick = function(){
-    if(introduction_right_detail.style.display = "none"){
-        introduction_right_detail.style.display = "block";
-        fadeIn(introduction_right_detail);
-        introduction_right_wrap.style.display = "none";
-        introduction_right_wrap.style.opacity = 0;
-    }
-};
+    // 메뉴 버튼
+    menu_btn.onclick = function(){
+        if(menu_nav.classList != "live"){
+            menu_nav.classList = "live";
+            menu_btn_ham.classList = "live";
+            menu_btn.classList = "live";
+        } else {
+            menu_nav.classList = "";
+            menu_btn_ham.classList = "";
+            menu_btn.classList = "";
+        }
+    };
 
-// 디테일 버튼
-introduction_right_detail_btn.onclick = function(){
-    if(introduction_right_detail.style.display = "block"){
-        introduction_right_detail.style.display = "none";
-        introduction_right_detail.style.opacity = 0;
-        introduction_right_wrap.style.display = "block";
-        fadeIn(introduction_right_wrap);
-    }
-};
+    // 인트로 버튼
+    introduction_right_btn.onclick = function(){
+        if(introduction_right_detail.style.display = "none"){
+            introduction_right_detail.style.display = "block";
+            fadeIn(introduction_right_detail);
+            introduction_right_wrap.style.display = "none";
+            introduction_right_wrap.style.opacity = 0;
+        }
+    };
+
+    // 디테일 버튼
+    introduction_right_detail_btn.onclick = function(){
+        if(introduction_right_detail.style.display = "block"){
+            introduction_right_detail.style.display = "none";
+            introduction_right_detail.style.opacity = 0;
+            introduction_right_wrap.style.display = "block";
+            fadeIn(introduction_right_wrap);
+        }
+    };
 
 // fadeIn 효과
 function fadeIn(target){
@@ -55,7 +86,7 @@ function fadeIn(target){
     }, 20);
 };
 
-// Count 효과
+// Count(skill) 효과
 function count(target){
     var isCount = 0;
     var obj = target;
@@ -89,7 +120,7 @@ function count(target){
     }, 100);
 };
 
-count(document.querySelector("#html_percent"));
+
 count(document.querySelector("#css_percent"));
 count(document.querySelector("#js_percent"));
 count(document.querySelector("#jq_percent"));
@@ -169,15 +200,29 @@ window.addEventListener("scroll", function(){
         document.querySelector("#topButton").classList.remove("show");
         document.querySelector("#menu_nav > ul > li:nth-child(1)").classList.remove("live");
     }
+
+
     if(pageYOffset > document.querySelector("#skills").offsetTop){
         document.querySelector("#menu_nav > ul > li:nth-child(1)").classList.remove("live");
         document.querySelector("#menu_nav > ul > li:nth-child(2)").classList.add("live");
+
+        document.querySelector("#skills").classList.add("live");
+        document.querySelector("#skill_html").classList.add("live");
+        count(document.querySelector("#html_percent"));
     } else {
         document.querySelector("#menu_nav > ul > li:nth-child(2)").classList.remove("live");
+
+        document.querySelector("#skills").classList.remove("live");
+        document.querySelector("#skill_html").classList.remove("live");
     }
+
+
     if(pageYOffset > document.querySelector("#result1").offsetTop){
         document.querySelector("#menu_nav > ul > li:nth-child(2)").classList.remove("live");
         document.querySelector("#menu_nav > ul > li:nth-child(3)").classList.add("live");
+
+        document.querySelector("#skills").classList.remove("live");
+        document.querySelector("#skill_html").classList.remove("live");
     } else {
         document.querySelector("#menu_nav > ul > li:nth-child(3)").classList.remove("live");
     }
