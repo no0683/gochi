@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실시간 로컬시간</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .text {
+            font-size: 70px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap" class="text"></div>
+
+    <script>
+
+        setInterval(time, 1000);
+
+        function time(){
+            var now = new Date();
+
+            document.querySelector("#wrap").innerHTML = now.toLocaleTimeString();
+        };
+
+    </script>
+</body>
+</html>

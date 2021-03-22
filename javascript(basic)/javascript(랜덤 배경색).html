@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤 배경색</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .desc {
+            font-size: 30px;
+        }
+        #wrap {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <p class="desc">새로고침을 누르면 랜덤으로 배경색이 변경 됩니다.</p>
+        <button class="btn" onclick="location.reload();">새로고침</button>
+    </div>
+
+    <script>
+        function randomBg(){
+            var x = Math.floor(Math.random() * 256);
+            var y = Math.floor(Math.random() * 256);
+            var z = Math.floor(Math.random() * 256);
+            var bg = "rgb(" + x + "," + y + "," + z + ")";
+            document.querySelector("body").style.background = bg;
+        };
+
+        randomBg();
+    </script>
+</body>
+</html>
