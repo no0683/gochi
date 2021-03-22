@@ -1,3 +1,5 @@
+var skills_offsetTop_chk = false;
+
 // Count(opening) 효과
 var popUp_btn = document.querySelector("#popUp_btn");
 var popUp = document.querySelector("#popUp");
@@ -120,13 +122,6 @@ function count(target){
     }, 100);
 };
 
-
-count(document.querySelector("#css_percent"));
-count(document.querySelector("#js_percent"));
-count(document.querySelector("#jq_percent"));
-count(document.querySelector("#ps_percent"));
-count(document.querySelector("#ai_percent"));
-
 // 탑 버튼 효과
 var topButton = document.querySelector("#top_button");
 
@@ -200,29 +195,25 @@ window.addEventListener("scroll", function(){
         document.querySelector("#topButton").classList.remove("show");
         document.querySelector("#menu_nav > ul > li:nth-child(1)").classList.remove("live");
     }
-
-
     if(pageYOffset > document.querySelector("#skills").offsetTop){
         document.querySelector("#menu_nav > ul > li:nth-child(1)").classList.remove("live");
         document.querySelector("#menu_nav > ul > li:nth-child(2)").classList.add("live");
-
-        document.querySelector("#skills").classList.add("live");
-        document.querySelector("#skill_html").classList.add("live");
-        count(document.querySelector("#html_percent"));
+        if(!skills_offsetTop_chk){
+            count(document.querySelector("#html_percent"));
+            count(document.querySelector("#css_percent"));
+            count(document.querySelector("#js_percent"));
+            count(document.querySelector("#jq_percent"));
+            count(document.querySelector("#ps_percent"));
+            count(document.querySelector("#ai_percent"));
+            document.querySelector("#skills").classList.add("live");
+            skills_offsetTop_chk = true;
+        }
     } else {
         document.querySelector("#menu_nav > ul > li:nth-child(2)").classList.remove("live");
-
-        document.querySelector("#skills").classList.remove("live");
-        document.querySelector("#skill_html").classList.remove("live");
     }
-
-
     if(pageYOffset > document.querySelector("#result1").offsetTop){
         document.querySelector("#menu_nav > ul > li:nth-child(2)").classList.remove("live");
         document.querySelector("#menu_nav > ul > li:nth-child(3)").classList.add("live");
-
-        document.querySelector("#skills").classList.remove("live");
-        document.querySelector("#skill_html").classList.remove("live");
     } else {
         document.querySelector("#menu_nav > ul > li:nth-child(3)").classList.remove("live");
     }
