@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+        #wrap {
+            width: 100%;
+            height: 100%;
+        }
+        .contents {
+            width: 100%;
+            height: 937px;
+            text-align: center;
+            line-height: 900px;
+            font-size: 50px;
+        }
+        .contents:nth-child(1) {
+            background-color: rgb(0, 0, 0, 0.3);
+        }
+        .contents:nth-child(2) {
+            background-color: rgb(0, 0, 0, 0.4);
+        }
+        .contents:nth-child(3) {
+            background-color: rgb(0, 0, 0, 0.5);
+        }
+        .contents:nth-child(4) {
+            background-color: rgb(0, 0, 0, 0.6);
+        }
+        .btn {
+            cursor: pointer;
+            position: absolute;
+            display: block;
+            opacity: 0.5;
+            transition: 0.5s ease;
+        }
+        .btn:hover {
+            opacity: 1;
+        }
+        #prev {
+            top: 50%; left: 25px;
+        }
+        #next {
+            top: 50%; right: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="contents">1번</div>
+        <div class="contents">2번</div>
+        <div class="contents">3번</div>
+        <div class="contents">4번</div>
+        <img id="prev" class="btn" src="assets/img/prev.png">
+        <img id="next" class="btn" src="assets/img/next.png">
+    </div>
+
+    <script>
+        var contents = document.querySelectorAll(".contents");
+        var prev = document.querySelector("#prev");
+        var next = document.querySelector("#next");
+        var current = 0;
+
+        slideShow(current);
+
+        function slideShow(n){
+            for(i = 0; i < contents.length; i++){
+                contents[i].style.display = "none";
+            }
+            contents[n].style.display = "block";
+        };
+
+        function prevShow(){
+            if(current > 0) current -= 1;
+            else current = contents.length - 1;
+            slideShow(current);
+            fadeIn(contents[current]);
+        };
+
+        function nextShow(){
+            if(current < 3) current += 1;
+            else current = 0;
+            slideShow(current);
+            fadeIn(contents[current]);
+        };
+
+        prev.onclick = prevShow;
+        next.onclick = nextShow;
+
+        // fadeIn 효과
+        function fadeIn(target){
+            var isCount = 0;
+            var obj = target;
+            obj.style.opacity = 0.1;
+            var period = setInterval(function(){
+                obj.style.opacity = isCount;
+                isCount = isCount + 0.1;
+            if(isCount > 0.9){
+                clearInterval(period);
+            }    
+            }, 30);
+        };
+    </script>
+</body>
+</html>
