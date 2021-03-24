@@ -230,3 +230,73 @@ window.addEventListener("scroll", function(){
         document.querySelector("#menu_nav > ul > li:nth-child(5)").classList.remove("live");
     }
 });
+
+// 슬라이드(결과물)
+var results = document.querySelectorAll(".results");
+var prev = document.querySelector("#prev");
+var next = document.querySelector("#next");
+var nav = document.querySelectorAll(".nav");
+var nav1 = document.querySelector("#nav1");
+var nav2 = document.querySelector("#nav2");
+var nav3 = document.querySelector("#nav3");
+var current = 0;
+
+slideShow(current);
+navShow(current);
+
+function navShow(n){
+    for(i = 0; i < nav.length; i++){
+        nav[i].style.opacity = 0.5;
+    }
+    nav[n].style.opacity = 1;
+};
+
+function navBtn1(){
+    if(current == 1 || current == 2) current = 0;
+    slideShow(current);
+    fadeIn(results[current]);
+    navShow(current);
+};
+
+function navBtn2(){
+    if(current == 0 || current == 2) current = 1;
+    slideShow(current);
+    fadeIn(results[current]);
+    navShow(current);
+};
+
+function navBtn3(){
+    if(current == 0 || current == 1) current = 2;
+    slideShow(current);
+    fadeIn(results[current]);
+    navShow(current);
+};
+
+function slideShow(n){
+    for(i = 0; i < results.length; i++){
+        results[i].style.display = "none";
+    }
+    results[n].style.display = "block";
+};
+
+function prevShow(){
+    if(current > 0) current -= 1;
+    else current = results.length - 1;
+    slideShow(current);
+    fadeIn(results[current]);
+    navShow(current);
+};
+
+function nextShow(){
+    if(current < 2) current += 1;
+    else current = 0;
+    slideShow(current);
+    fadeIn(results[current]);
+    navShow(current);
+};
+
+prev.onclick = prevShow;
+next.onclick = nextShow;
+nav1.onclick = navBtn1;
+nav2.onclick = navBtn2;
+nav3.onclick = navBtn3;

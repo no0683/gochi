@@ -18,9 +18,7 @@ html {scroll-behavior: smooth;}
 #head {width: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #intro {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #skills {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
-#result1 {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
-#result2 {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
-#result3 {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
+#slide_wrap {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #the_others {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #contacts {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 
@@ -625,6 +623,46 @@ html {scroll-behavior: smooth;}
     font-size: 30px;
     font-family: 'Noto Sans KR', sans-serif;
 }
+
+/* 슬라이드(결과물) */
+#slide_wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.btn {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    opacity: 0.5;
+    transition: 0.5s ease;
+}
+.btn:hover {
+    opacity: 1;
+}
+#prev {
+    top: 50%; left: 0;
+}
+#next {
+    top: 50%; right: 0;
+}
+#slide_nav {
+    justify-content: center;
+    display: flex;
+    margin-top: 25px;
+}
+#slide_nav .nav {
+    width: 30px; height: 30px;
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+#slide_nav .nav:last-child {
+    margin: 0;
+}
 /* 결과물 1 */
 #standard_title {
     font-size: 120px;
@@ -639,16 +677,19 @@ html {scroll-behavior: smooth;}
 #standard_left {
     width: 100%;
     margin: 0 0 0 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 #standard_img {
-    width: 100%;
+    width: 90%;
 }
 #standard_img > img {
     width: 100%;
 }
 #standard_right {
     width: 100%;
-    padding: 0 20px 0 40px;
+    padding: 0 40px 0 40px;
 }
 #standard_right > ul {
     margin: 0 0 40px 0;
@@ -718,7 +759,7 @@ html {scroll-behavior: smooth;}
 }
 #responsive_right {
     width: 100%;
-    padding: 0 20px 0 40px;
+    padding: 0 40px 0 40px;
 }
 #responsive_right > ul {
     margin: 0 0 40px 0;
@@ -810,7 +851,7 @@ html {scroll-behavior: smooth;}
 }
 #mega_right {
     width: 100%;
-    padding: 0 20px 0 40px;
+    padding: 0 40px 0 40px;
 }
 #mega_right > ul {
     margin: 0 0 40px 0;
@@ -1283,7 +1324,7 @@ html {scroll-behavior: smooth;}
 }
 
 /* 미디어 쿼리(반응형) */
-@media (max-width: 1350px) {
+@media (max-width: 1400px) {
     #skill_left {padding: 0 60px 0 20px; width: 500px;}
     #skill_right {padding: 0 20px 0 0; width: 500px;}
     .skill_img {width: 90px;}
@@ -1326,9 +1367,9 @@ html {scroll-behavior: smooth;}
 
     #intro {padding: 90px 0;}
     #skills {padding: 90px 0;}
-    #result1 {padding: 90px 0;}
-    #result2 {padding: 90px 0;}
-    #result3 {padding: 90px 0;}
+    #slide_wrap {padding: 90px 0;}
+    #the_others {padding: 90px 0;}
+    #contacts {padding: 90px 0;}
 
     .animation_box {width: 400px; height: 400px;}
     .animation_text > p {font-size: 20px;}
@@ -1351,6 +1392,9 @@ html {scroll-behavior: smooth;}
     #header {height: 800px;}
     #header_title > svg > text {font-size: 160px;}
     #header_title {left: -15px; top: 320px;}
+
+    #prev {width: 50px;}
+    #next {width: 50px;}
 
     .standard_desc em {font-size: 25px;}
     .standard_desc > span {font-size: 20px;}
@@ -1390,9 +1434,9 @@ html {scroll-behavior: smooth;}
 
     #intro {padding: 80px 0;}
     #skills {padding: 80px 0;}
-    #result1 {padding: 80px 0;}
-    #result2 {padding: 80px 0;}
-    #result3 {padding: 80px 0;}
+    #slide_wrap {padding: 80px 0;}
+    #the_others {padding: 80px 0;}
+    #contacts {padding: 80px 0;}
 
     #contact_title {font-size: 100px; margin: 0 0 30px 40px;}
     #contact_top_title > h2 {font-size: 80px;}
@@ -1450,9 +1494,9 @@ html {scroll-behavior: smooth;}
 
     #intro {padding: 70px 0;}
     #skills {padding: 70px 0;}
-    #result1 {padding: 70px 0;}
-    #result2 {padding: 70px 0;}
-    #result3 {padding: 70px 0;}
+    #slide_wrap {padding: 70px 0;}
+    #the_others {padding: 70px 0;}
+    #contacts {padding: 70px 0;}
 
     #others_title {font-size: 80px; margin: 0 0 30px 0; text-align: center;}
     #animation_wrap {flex-direction: column; width: 100%;}
@@ -1477,6 +1521,7 @@ html {scroll-behavior: smooth;}
     #menu_nav > ul > li > a {font-size: 23px;}
     #menu_nav > ul > li {margin: 0 10px;}
     #menu_nav > ul > li > a > span::before {top: 11px; height: 25px;}
+
     #standard_title {font-size: 70px;}
     #standard_btn > a {font-size: 20px;}
 
@@ -1510,9 +1555,9 @@ html {scroll-behavior: smooth;}
 
     #intro {padding: 60px 0;}
     #skills {padding: 60px 0;}
-    #result1 {padding: 60px 0;}
-    #result2 {padding: 60px 0;}
-    #result3 {padding: 60px 0;}
+    #slide_wrap {padding: 60px 0;}
+    #the_others {padding: 60px 0;}
+    #contacts {padding: 60px 0;}
 
     #others_title {font-size: 70px;}
 
@@ -1542,6 +1587,10 @@ html {scroll-behavior: smooth;}
     #menu_nav > ul > li > a > span::before {top: 9px; height: 20px;}
     #menu_btn > a > span.live::before {transform: translateY(95%) rotate(-50deg);}
     #menu_btn > a > span.live::after {transform: translateY(-95%) rotate(50deg);}
+
+    #prev {display: none;}
+    #next {display: none;}
+
     #standard_title {font-size: 53px;}
     #standard_right {width: 90%;}
 
@@ -1578,9 +1627,9 @@ html {scroll-behavior: smooth;}
 
     #intro {padding: 50px 0;}
     #skills {padding: 50px 0;}
-    #result1 {padding: 50px 0;}
-    #result2 {padding: 50px 0;}
-    #result3 {padding: 50px 0;}
+    #slide_wrap {padding: 50px 0;}
+    #the_others {padding: 50px 0;}
+    #contacts {padding: 50px 0;}
 
     #others_title {font-size: 53px;}
 
@@ -1654,9 +1703,9 @@ html {scroll-behavior: smooth;}
 
     #intro {padding: 40px 0;}
     #skills {padding: 40px 0;}
-    #result1 {padding: 40px 0;}
-    #result2 {padding: 40px 0;}
-    #result3 {padding: 40px 0;}
+    #slide_wrap {padding: 40px 0;}
+    #the_others {padding: 40px 0;}
+    #contacts {padding: 40px 0;}
 
     #others_title {font-size: 37px;}
     .animation_box {width: 300px; height: 300px;}
