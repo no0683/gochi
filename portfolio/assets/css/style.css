@@ -1452,6 +1452,8 @@ html {scroll-behavior: smooth;}
     #header_title {left: -4px; top: 296px;}
     #header_title > svg > text {font-size: 140px;}
 
+    #slide_nav .nav {width: 20px; height: 20px;}
+
     #standard {flex-direction: column; align-items: center;}
     #standard_title {font-size: 80px; margin: 0; text-align: center;}
     #standard_left {margin: 0; text-align: center; padding: 15px 0 25px 0;}

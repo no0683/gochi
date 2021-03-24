@@ -211,7 +211,7 @@ window.addEventListener("scroll", function(){
     } else {
         document.querySelector("#menu_nav > ul > li:nth-child(2)").classList.remove("live");
     }
-    if(pageYOffset > document.querySelector("#result1").offsetTop){
+    if(pageYOffset > document.querySelector("#slide_wrap").offsetTop){
         document.querySelector("#menu_nav > ul > li:nth-child(2)").classList.remove("live");
         document.querySelector("#menu_nav > ul > li:nth-child(3)").classList.add("live");
     } else {
