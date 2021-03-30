@@ -111,11 +111,15 @@ function count(target){
         obj.innerHTML = isCount + "%";
         clearInterval(period);
     }   
-    if(isCount == 45 && target.classList == "skill_percent n50"){
+    if(isCount == 45 && target.classList == "skill_percent n45"){
         obj.innerHTML = isCount + "%";
         clearInterval(period);
     }  
-    if(isCount == 35 && target.classList == "skill_percent n40"){
+    if(isCount == 35 && target.classList == "skill_percent n35"){
+        obj.innerHTML = isCount + "%";
+        clearInterval(period);
+    }  
+    if(isCount == 40 && target.classList == "skill_percent n40"){
         obj.innerHTML = isCount + "%";
         clearInterval(period);
     }  
@@ -205,6 +209,7 @@ window.addEventListener("scroll", function(){
             count(document.querySelector("#jq_percent"));
             count(document.querySelector("#ps_percent"));
             count(document.querySelector("#ai_percent"));
+            count(document.querySelector("#react_percent"));
             document.querySelector("#skills").classList.add("live");
             skills_offsetTop_chk = true;
         }
