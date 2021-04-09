@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <article>
+
+        </article>
+        <input type="button" value="fetch" onclick="
+        // fetch('html').then(function(response){
+        //     response.text().then(function(text){
+        //         document.querySelector('article').innerHTML = text;
+        //     })
+        // })
+
+        // Asynchronous(비동기)
+        // 동작방식: 브라우저가 서버에게 fetch로 htmls라는 파일을 요청, 요청을 처리하는동안 then 안에있는 내용을 실행
+        // 처리방식
+        // 1. 동기: fetch('htmls').then(~)의 처리가 끝나면 그다음 console.log(~) 명령 실행
+        // 2. 비동기: fetch('htmls').then(~) 요청과 동시에 그다음 console.log(~) 명령 실행
+        // response 객체: 속성중에 status는 응답결과에대한 상태를 나타냄(200은 성공, 404는 실패: 파일을 찾을 수 없음)
+        fetch('htmls').then(function(response){
+            if(response.status == '404'){
+                alert('Not Found')
+            }
+        });
+        console.log('1');
+        console.log('2');
+        ">
+    </body>
+</html>
