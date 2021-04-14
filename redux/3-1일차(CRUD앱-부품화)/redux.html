@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="control"></div>
+        <div id="content"></div>
+        <script>
+            function header(){
+                document.querySelector('#header').innerHTML = `
+                <header>
+                    <h1>WEB</h1>
+                    Hello, world!
+                </header>
+                `;
+            }
+            function nav(){
+                document.querySelector('#nav').innerHTML = `
+                <nav>
+                    <ol>
+                        <li><a href="1.html">HTML</a></li>
+                        <li><a href="1.html">CSS</a></li>
+                    </ol>
+                </nav>
+                `;
+            }
+            function control(){
+                document.querySelector('#control').innerHTML = `
+                <ul>
+                    <li><a href="/create">create</a></li>
+                    <li><input type="button" value="delete"></li>
+                </ul>
+                `;
+            }
+            function content(){
+                document.querySelector('#content').innerHTML = `
+                <article>
+                    <h2>HTML</h2>
+                    HTML is ...
+                </article>
+                `;
+            }
+            
+            header();
+            nav();
+            control();
+            content();
+        </script>
+    </body>
+</html>
