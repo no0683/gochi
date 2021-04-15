@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.0-beta.1/redux.min.js"></script>
+    </head>
+    <body>
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="control"></div>
+        <div id="content"></div>
+
+        <script>
+            function header(){
+                document.querySelector('#header').innerHTML = `
+                <header>
+                    <h1>WEB</h1>
+                    Hello, world!
+                </header>
+                `;
+            }
+            function nav(){
+                // state값을 가져와 변수에 저장
+                var state = store.getState();
+                var listTag = '';
+                // 반복문과 state값을 이용하여 리스트 구현
+                for(i = 0; i < state.contents.length; i++){
+                    listTag = listTag + 
+                        `<li>
+                            <a onclick="
+                            // a태그의 기본기능을 막음
+                            event.preventDefault();
+                            // store에 전송할 action내용을 변수에 저장
+                            var action = {type: 'SELECT', id: ${state.contents[i].id}};
+                            // dispatch를 이용하여 store에 action값 전달
+                            store.dispatch(action);
+                            " href="
+                            ${state.contents[i].id}
+                            ">
+                            ${state.contents[i].title}
+                            </a>
+                        </li>`;
+                }
+
+                document.querySelector('#nav').innerHTML = `
+                <nav>
+                    <ol>
+                        ${listTag}
+                    </ol>
+                </nav>
+                `;
+            }
+            function control(){
+                document.querySelector('#control').innerHTML = `
+                <ul>
+                    <li><a href="/create">create</a></li>
+                    <li><input type="button" value="delete"></li>
+                </ul>
+                `;
+            }
+            function content(){
+                document.querySelector('#content').innerHTML = `
+                <article>
+                    <h2>HTML</h2>
+                    HTML is ...
+                </article>
+                `;
+            }
+
+            // state를 컨트롤해줄 reducer 생성
+            function reducer(state, action){
+                    if(state === undefined){
+                        return {
+                            selected_id: null,
+                            contents: [
+                                {id: 1, title: 'HTML', desc: 'HTML is ...'},
+                                {id: 2, title: 'CSS', desc: 'CSS is ...'}
+                            ]
+                        }
+                    }
+                    // 원본 state를 직접 변경하지않고 객체를 복사하여 변수에저장후 사용
+                    var newState = Object.assign({}, state, {selected_id: action.id});
+                    if(action.type === 'SELECT'){
+                        console.log(action, state, newState);
+                        return newState;
+                    }
+                }
+            // 전역 스토어 생성
+            var store = Redux.createStore(reducer);       
+
+            // 각각의 요소를 함수로 부품화
+            header();
+            nav();
+            control();
+            content();
+        </script>
+
+    </body>
+</html>
