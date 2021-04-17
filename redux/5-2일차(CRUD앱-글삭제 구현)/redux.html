@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.0-beta.1/redux.min.js"></script>
+    </head>
+    <body>
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="control"></div>
+        <div id="content"></div>
+
+        <script>
+            function header(){
+                document.querySelector('#header').innerHTML = `
+                <header>
+                    <h1>WEB</h1>
+                    Hello, world!
+                </header>
+                `;
+            }
+            function nav(){
+                // state값을 가져와 변수에 저장
+                var state = store.getState();
+                var listTag = '';
+                // 반복문과 state값을 이용하여 리스트 구현
+                for(i = 0; i < state.contents.length; i++){
+                    listTag = listTag + 
+                        `<li>
+                            <a onclick="
+                            // a태그의 기본기능을 막음
+                            event.preventDefault();
+                            // store에 전송할 action내용을 변수에 저장
+                            var action = {type: 'SELECT', id: ${state.contents[i].id}, mode: 'read'};
+                            // dispatch를 이용하여 store에 action값 전달
+                            store.dispatch(action);
+                            " href="
+                            ${state.contents[i].id}
+                            ">
+                            ${state.contents[i].title}
+                            </a>
+                        </li>`;
+                }
+
+                document.querySelector('#nav').innerHTML = `
+                <nav>
+                    <ol>
+                        ${listTag}
+                    </ol>
+                </nav>
+                `;
+            }
+            function control(){
+                document.querySelector('#control').innerHTML = `
+                <ul>
+                    <li><a onclick="
+                        event.preventDefault();
+                        store.dispatch({
+                            type: 'CONTROL',
+                            mode: 'create'
+                        });
+                        " href="/create">create</a></li>
+                    <li><input onclick="
+                        store.dispatch({
+                            type: 'DELETE'
+                        });
+                        " type="button" value="delete"></li>
+                </ul>
+                `;
+            }
+            function content(){
+                var state = store.getState();
+                if(state.mode === 'create'){
+                    document.querySelector('#content').innerHTML = `
+                    <article>
+                        <form onsubmit="
+                            event.preventDefault();
+                            var _title = this.title.value;
+                            var _desc = this.desc.value;
+                            store.dispatch({
+                                type: 'CREATE',
+                                title: _title,
+                                desc: _desc
+                            });
+                        ">
+                            <p>
+                                <input type="text" name="title" placeholder="title">
+                            </p>
+                            <p>
+                                <textarea name="desc" placeholder="description"></textarea>
+                            </p>
+                            <p>
+                                <input type="submit">
+                            </p>
+                        </form>
+                    </article>
+                    `;
+                } else if(state.mode === 'read'){
+                    for(i = 0; i < state.contents.length; i++){
+                        if(state.contents[i].id === state.selected_id){
+                            var cTitle = state.contents[i].title;
+                            var cDesc = state.contents[i].desc;
+                        }
+                    }
+                    document.querySelector('#content').innerHTML = `
+                    <article>
+                        <h2>${cTitle}</h2>
+                        ${cDesc}
+                    </article>
+                    `;
+                } else if(state.mode === 'welcome'){
+                    document.querySelector('#content').innerHTML = `
+                    <article>
+                        <h2>Welcome!</h2>
+                        Hello, Redux!
+                    </article>
+                    `;
+                }
+            }
+
+            // state를 컨트롤해줄 reducer 생성
+            function reducer(state, action){
+                    if(state === undefined){
+                        return {
+                            max_id: 2,
+                            mode: 'welcome',
+                            selected_id: null,
+                            contents: [
+                                {id: 1, title: 'HTML', desc: 'HTML is ...'},
+                                {id: 2, title: 'CSS', desc: 'CSS is ...'}
+                            ]
+                        }
+                    }
+                    // 원본 state를 직접 변경하지않고 객체를 복사하여 변수에저장후 사용
+                    var newState;
+                    if(action.type === 'SELECT'){
+                        newState = Object.assign({}, state, {selected_id: action.id, mode: action.mode});
+                    } else if(action.type === 'CREATE'){
+                        var newMaxid = state.max_id + 1;
+                        // concat은 배열을 복사할때 쓰임
+                        var newContents = state.contents.concat();
+                        newContents.push({
+                            id: newMaxid,
+                            title: action.title,
+                            desc: action.desc
+                        });
+                        newState = Object.assign({}, state, {
+                            mode: 'read',
+                            max_id: newMaxid,
+                            contents: newContents
+                        });
+                    } else if(action.type === 'CONTROL'){
+                        newState = Object.assign({}, state, {mode: action.mode});
+                    } else if(action.type === 'DELETE'){
+                        var newContents = [];
+                        for(i = 0; i < state.contents.length; i++){
+                            if(state.selected_id !== state.contents[i].id){
+                                newContents.push(
+                                    state.contents[i]
+                                );
+                            }
+                        }
+                        newState = Object.assign({}, state, {mode: 'welcome', contents: newContents});
+                    }
+                    console.log(action, state, newState);
+                    return newState;
+                }
+            // 전역 스토어 생성
+            var store = Redux.createStore(reducer);       
+
+            // 각각의 요소를 함수로 부품화
+            header();
+            nav();
+            control();
+            content();
+            
+            // subscribe로 만들어둔 부품(함수)을 구독(연결) 해두면 state값이 변경될때마다 그에맞게 ui가 변경됨 
+            store.subscribe(nav);
+            store.subscribe(content);
+        </script>
+
+    </body>
+</html>
