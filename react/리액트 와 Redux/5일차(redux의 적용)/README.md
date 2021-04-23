@@ -9,7 +9,7 @@
 
 [ 코드 화면 ]
 
-```
+```C
 import DisplayNumber from '../Components/DisplayNumber';
 import { connect } from 'react-redux';
 
@@ -48,7 +48,7 @@ export default connect(mapReduxStateToReactProps)(DisplayNumber);
 
 [ 코드 화면 ]
 
-```
+```C
 import AddNumber from '../Components/AddNumber';
 import {connect} from 'react-redux';
 
@@ -86,7 +86,7 @@ export default connect(null, mapReduxDispatchToReactProps)(AddNumber);
 
 [ 코드 화면 ]
 
-```
+```C
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
