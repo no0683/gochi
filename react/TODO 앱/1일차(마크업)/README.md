@@ -1,6 +1,6 @@
 # TODO 앱 만들기 (VER.2021/04/25)
 
-<img src="/img/todo_app_20210425.png" width="40%" height="30%" alt="todo_app"></img>
+<img src="public/img/todo_app_20210425.png" width="40%" height="30%" alt="todo_app"></img>
 
 * 컴포넌트는 크게 Header, Nav, Article로 구성했다.
 -Header는 앱의 제목과 버전을 표시
