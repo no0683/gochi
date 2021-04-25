@@ -1,6 +1,6 @@
 # TODO 앱 만들기 (VER.2021/04/26)
 
-<img src="/img/todo_app_20210426.png" width="40%" height="30%" alt="todo_app"></img>
+<img src="public/img/todo_app_20210426.png" width="40%" height="30%" alt="todo_app"></img>
 
 * 각 컴포넌트를 별도의 폴더로 분리하고 최상위컴포넌트에 연결
 * state,props,반복문을 사용하여 CRUD중 Read기능을 구현
