@@ -1,0 +1,96 @@
+
+/* 초기화 */
+body,h1,h2,h3,h4,h5,h6,ul,p {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* 영역 */
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+#app {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 30px 20px;
+  width: 300px;
+}
+
+/* Header 컴포넌트 */
+#header_wrap {
+  margin-bottom: 30px;
+}
+#header_wrap > h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#header_wrap > p {
+  text-align: right;
+}
+
+/* Nav 컴포넌트 */
+#nav_wrap {
+  margin-bottom: 30px;
+}
+#nav_wrap > ul > li {
+  overflow: hidden;
+  margin-bottom: 10px;
+  border-bottom: 1px dotted rgb(0, 0, 0, 0.3);
+}
+#nav_wrap > ul > li > input {
+  margin-right: 10px;
+}
+#nav_wrap > ul > li > span {
+  float: right;
+  cursor: pointer;
+  margin-right: 10px;
+}
+#nav_wrap > ul > li > span > svg > path {
+  width: 0;
+  height: 0;
+}
+#nav_wrap > ul > li > #nav_del {
+  margin: 0;
+}
+#nav_wrap > ul > li:last-child {
+  display: flex;
+  justify-content: center;
+  border: none;
+}
+#nav_wrap > ul > li:last-child > span {
+  margin: 0;
+}
+
+/* ReadContent 컴포넌트 */
+#readContent_wrap {
+  text-align: center;
+}
+#readContent_wrap > h3 {
+  margin-bottom: 20px;
+}
+
+/* CreateContent 컴포넌트 */
+#createContent_wrap > form > p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+#createContent_wrap > form > p .input {
+  width: 200px;
+  padding: 5px 0;
+}
+#createContent_wrap > form > p:last-child {
+  margin: 0;
+}
+#createContent_wrap > form > p:last-child > input {
+  cursor: pointer;
+}
