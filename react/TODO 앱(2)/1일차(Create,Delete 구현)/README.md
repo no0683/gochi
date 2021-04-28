@@ -61,8 +61,8 @@ export default class App extends Component {
   }
   // TODO앱의 delete기능을 담당하는 함수 입니다. 함수의 매개변수의 key는 자식 컴포넌트(ListItems.js)에서 보낸값을 받습니다.
   deleteItem(key){
-      // filter는 괄호안의 내용은 제외한 나머지 내용들을 반환 합니다. 나머지 내용들을 filteredItems 변수로 저장 합니다.
-    const filterdItems = this.state.items.filter(item => item.key !== key) // 여기서 item.key값은 부모컴포넌트의 key값 ""이고 key값은 자식 컴포넌트에서 전달한 값(현재 items에 들어있는 목록의 값) 
+      // filter는 괄호안의 조건을 충족시키는 요소만 리턴 해줍니다. 이 값들을 filteredItems 변수로 저장 합니다.
+    const filterdItems = this.state.items.filter(item => item.key !== key)
     this.setState({ // 새로저장한변수로 items값을 변경 합니다.
       items: filterdItems
     });
