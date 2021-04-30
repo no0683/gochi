@@ -1,5 +1,3 @@
-var skills_offsetTop_chk = false;
-
 // Count(opening) 효과
 var popUp_btn = document.querySelector("#popUp_btn");
 var popUp = document.querySelector("#popUp");
@@ -74,6 +72,15 @@ var introduction_right_wrap = document.querySelector("#introduction_right_wrap")
         }
     };
 
+    // 탑 버튼 효과
+    var topButton = document.querySelector("#top_button");
+
+    topButton.addEventListener("click", backToTop);
+
+    function backToTop(){
+        window.scrollTo(0, 0);
+    };
+
 // fadeIn 효과
 function fadeIn(target){
     var isCount = 0;
@@ -89,6 +96,8 @@ function fadeIn(target){
 };
 
 // Count(skill) 효과
+var skills_offsetTop_chk = false;
+
 function count(target){
     var isCount = 0;
     var obj = target;
@@ -124,15 +133,6 @@ function count(target){
         clearInterval(period);
     }  
     }, 100);
-};
-
-// 탑 버튼 효과
-var topButton = document.querySelector("#top_button");
-
-topButton.addEventListener("click", backToTop);
-
-function backToTop(){
-    window.scrollTo(0, 0);
 };
 
 // 패럭랙스 효과

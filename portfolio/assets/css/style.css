@@ -13,7 +13,6 @@ ul {
 /* 영역 */
 #wrap {display: none;}
 #wrap.show {display: block;}
-
 html {scroll-behavior: smooth;}
 #head {width: 100%; background: linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
 #intro {padding: 100px 0; width: 100%; height: 100%; background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));}
@@ -88,6 +87,7 @@ html {scroll-behavior: smooth;}
 #popUp > div > span:last-child {
     font-size: 16px;
 }
+
 /* 패럴랙스 */
 #parallax {
     right: 20px;
@@ -98,6 +98,7 @@ html {scroll-behavior: smooth;}
     letter-spacing: 2px;
     opacity: 0;
 }
+
 /* 메뉴 */
 #menu {
     position: relative;
@@ -475,6 +476,7 @@ html {scroll-behavior: smooth;}
 .introduction_right_detail_desc ul li {
     font-size: 20px;
 }
+
 /* 스킬 영역 */
 #skill {
     height: 100%;
@@ -664,6 +666,7 @@ html {scroll-behavior: smooth;}
 #slide_nav .nav:last-child {
     margin: 0;
 }
+
 /* 결과물 1 */
 #standard_title {
     font-size: 120px;
@@ -740,6 +743,7 @@ html {scroll-behavior: smooth;}
     height: 100%;
     display: block;
 }
+
 /* 결과물 2 */
 #responsive_title {
     font-size: 120px;
@@ -832,6 +836,7 @@ html {scroll-behavior: smooth;}
     height: 100%;
     display: block;
 }
+
 /* 결과물 3 */
 #mega_title {
     font-size: 120px;
@@ -924,6 +929,7 @@ html {scroll-behavior: smooth;}
     height: 100%;
     display: block;
 }
+
 /* the others */
 #others {
     height: 100%;
@@ -994,6 +1000,7 @@ html {scroll-behavior: smooth;}
     color: #fff;
     font-family: 'Noto Sans KR', sans-serif;
 }
+
 /* 큐브 애니메이션 */
 .cube {
     position: relative;
@@ -1082,6 +1089,7 @@ html {scroll-behavior: smooth;}
     50% {transform: rotatex(180deg) translatez(50px) scaley(2);}
     100% {transform: rotatex(180deg) translatez(50px) scaley(1);}
 }
+
 /* 테일 애니메이션 */
 .circle {
     position: absolute;
@@ -1136,6 +1144,7 @@ html {scroll-behavior: smooth;}
     75% {transform: translate(0,-80px);}
     100% {transform: translate(0,0;)}
 }
+
 /* 웨이브 애니메이션 */
 .row {
     display: flex;
@@ -1159,6 +1168,7 @@ html {scroll-behavior: smooth;}
     50% {transform: rotate(180deg) scale(0.3);}
     100% {transform: rotate(360deg) scale(1.0);}
 }
+
 /* 바 애니메이션 */
 .bar {
     background: rgb(255, 102, 0, 0.8);
@@ -1177,6 +1187,7 @@ html {scroll-behavior: smooth;}
     50% {transform: rotate(180deg); height: 200px;}
     100% {transform: rotate(180deg); height: 0;}
 }
+
 /* contact */
 #contact {
     height: 100%;
@@ -1344,7 +1355,6 @@ html {scroll-behavior: smooth;}
 @media (max-width: 1200px) {
     #introduction_left_border {width: 400px; height: 400px;}
     #introduction_left_img {width: 400px; height: 400px;}
-    #introduction_left {}
     #introduction_left_imgWrap {width: 430px; height: 430px;}
     #introduction_right {margin-right: 30px;}
     #introduction_right_title {text-align: center; margin: 0 0 20px 0;}
@@ -1453,6 +1463,7 @@ html {scroll-behavior: smooth;}
 
     #others_title {font-size: 100px;}
 }
+
 @media (max-width: 960px) {
     #header {height: 750px;}
     #header_title {left: -4px; top: 296px;}
@@ -1522,6 +1533,7 @@ html {scroll-behavior: smooth;}
     #contact_bottom > ul:first-child > li:last-child {margin: 0;}
     .contact_bottom_list {height: 100%;}
 }
+
 @media (max-width: 768px) {
     #header {height: 600px;}
     #header_title {top: 223px;}
@@ -1576,6 +1588,7 @@ html {scroll-behavior: smooth;}
     #contact_bottom > ul:last-child > li > a > img {width: 65px;}
     .contact_bottom_list > span > a {font-size: 20px;}
 }
+
 @media (max-width: 600px) {
     #header {height: 500px;}
     #header_title {top: 166px;}
@@ -1650,6 +1663,7 @@ html {scroll-behavior: smooth;}
     #contact_bottom > ul:first-child {width: 100%;}
     .contact_bottom_list {width: 100%;}
 }
+
 @media (max-width: 480px) {
     #header {height: 400px;}
     #header_title {left: -5px; top: 126px;}
