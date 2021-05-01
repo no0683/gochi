@@ -1,6 +1,6 @@
 # React를 이용한 web site 만들기 튜토리얼(ver.2021/05/01)
 
-<img src="public/images/react_website_20210501.gif" width="40%" height="30%" alt="react_website"></img>
+<img src="public/images/react_website_20210501.gif" width="90%" height="80%" alt="react_website"></img>
 
 * 오늘은 최상단에 nav 영역을 구현 해보았습니다.
 * nav 영역은 좌측에는 로고영역, 우측에는 목록과 버튼으로 구성되어있습니다.
