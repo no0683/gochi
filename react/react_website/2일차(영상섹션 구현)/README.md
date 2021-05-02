@@ -1,6 +1,6 @@
 # React를 이용한 web site 만들기 튜토리얼(ver.2021/05/02)
 
-<img src="public/images/react_website_20210502.gif" width="40%" height="30%" alt="react_website"></img>
+<img src="public/images/react_website_20210502.gif" width="90%" height="70%" alt="react_website"></img>
 
 * 오늘은 nav영역아래에 video영상을 배경으로한 섹션을 구현해보았습니다.
 * 영상배경과 제목,내용,버튼으로 구성되어있습니다.
