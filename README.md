@@ -20,6 +20,11 @@ https://no0683.github.io/gochi/mega/index.html
 <img src="todo_app.gif" width="40%" height="30%" alt="todo_app"></img><br>
 https://no0683.github.io/react_todo_app
 
-## 5. 포트폴리오(ver.21/03/30 13:11)
+## 5. 리액트를 이용한 웹사이트 만들기(ver.21/05/08 12:16)
+
+<img src="react_website.gif" width="60%" height="50%" alt="todo_app"></img><br>
+https://no0683.github.io/react_web
+
+## 6. 포트폴리오(ver.21/03/30 13:11)
 
 https://no0683.github.io/gochi/portfolio/portfolio.html
