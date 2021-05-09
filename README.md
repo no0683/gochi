@@ -25,6 +25,6 @@ https://no0683.github.io/react_todo_app
 <img src="react_website.gif" width="60%" height="50%" alt="todo_app"></img><br>
 https://no0683.github.io/react_web
 
-## 6. 포트폴리오(ver.21/03/30 13:11)
+## 6. 포트폴리오(ver.21/05/09 15:22)
 
 https://no0683.github.io/gochi/portfolio/portfolio.html
