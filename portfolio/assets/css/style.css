@@ -526,9 +526,6 @@ html {scroll-behavior: smooth;}
     font-size: 20px;
     margin-bottom: 30px;
 }
-#skill_right #skill_ai {
-    margin-bottom: 70px;
-}
 .skill_list {
     position: relative;
     width: 100%;
@@ -587,26 +584,19 @@ html {scroll-behavior: smooth;}
     width: 65%;
     animation: jq 2.5s ease;
 }
-#skill_ps > .bar_wrap > div > .bar_top {
-    width: 45%;
-}
-#skills.live #skill_ps > .bar_wrap > div > .bar_top {
-    width: 45%;
-    animation: ps 2.5s ease;
-}
-#skill_ai > .bar_wrap > div > .bar_top {
-    width: 35%;
-}
-#skills.live #skill_ai > .bar_wrap > div > .bar_top {
-    width: 35%;
-    animation: ai 2.5s ease;
-}
 #skill_react > .bar_wrap > div > .bar_top {
-    width: 40%;
+    width: 50%;
 }
 #skills.live #skill_react > .bar_wrap > div > .bar_top {
-    width: 40%;
+    width: 50%;
     animation: react 2.5s ease;
+}
+#skill_redux > .bar_wrap > div > .bar_top {
+    width: 40%;
+}
+#skills.live #skill_redux > .bar_wrap > div > .bar_top {
+    width: 40%;
+    animation: redux 2.5s ease;
 }
 .skill_desc {
     position: absolute;
@@ -1290,17 +1280,12 @@ html {scroll-behavior: smooth;}
     100% {width: 65%;}
 }
 
-@keyframes ps {
-    0% {width: 0;}
-    100% {width: 45%;}
-}
-
-@keyframes ai {
-    0% {width: 0;}
-    100% {width: 35%;}
-}
-
 @keyframes react {
+    0% {width: 0;}
+    100% {width: 50%;}
+}
+
+@keyframes redux {
     0% {width: 0;}
     100% {width: 40%;}
 }
@@ -1722,6 +1707,7 @@ html {scroll-behavior: smooth;}
     #skill_css > .skill_desc {bottom: -55px;}
     #skill_js > .skill_desc {bottom: -55px;}
     #skill_react > .skill_desc {bottom: -55px;}
+    #skill_redux > .skill_desc {bottom: -55px;}
     .skill_list {margin-bottom: 70px;}
 
     #intro {padding: 40px 0;}

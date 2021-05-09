@@ -119,15 +119,11 @@ function count(target){
     if(isCount == 65 && target.classList == "skill_percent n65"){
         obj.innerHTML = isCount + "%";
         clearInterval(period);
-    }   
-    if(isCount == 45 && target.classList == "skill_percent n45"){
+    }
+    if(isCount == 50 && target.classList == "skill_percent n50"){
         obj.innerHTML = isCount + "%";
         clearInterval(period);
-    }  
-    if(isCount == 35 && target.classList == "skill_percent n35"){
-        obj.innerHTML = isCount + "%";
-        clearInterval(period);
-    }  
+    }     
     if(isCount == 40 && target.classList == "skill_percent n40"){
         obj.innerHTML = isCount + "%";
         clearInterval(period);
@@ -207,9 +203,8 @@ window.addEventListener("scroll", function(){
             count(document.querySelector("#css_percent"));
             count(document.querySelector("#js_percent"));
             count(document.querySelector("#jq_percent"));
-            count(document.querySelector("#ps_percent"));
-            count(document.querySelector("#ai_percent"));
             count(document.querySelector("#react_percent"));
+            count(document.querySelector("#redux_percent"));
             document.querySelector("#skills").classList.add("live");
             skills_offsetTop_chk = true;
         }
