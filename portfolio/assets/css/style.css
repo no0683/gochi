@@ -920,6 +920,83 @@ html {scroll-behavior: smooth;}
     display: block;
 }
 
+/* 결과물 4 */
+#todo_title {
+    font-size: 120px;
+    margin: 0 0 50px 40px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 10px;
+    color: rgba(0, 0, 0);
+}
+#todo {
+    display: flex;
+}
+#todo_left {
+    width: 100%;
+    margin: 0 0 0 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+#todo_img {
+    width: 90%;
+}
+#todo_img > img {
+    width: 100%;
+}
+#todo_right {
+    width: 100%;
+    padding: 0 40px 0 40px;
+}
+#todo_right > ul {
+    margin: 0 0 40px 0;
+}
+.todo_desc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo_desc > img {
+    margin-right: 20px;
+}
+.todo_desc > img:last-child {
+    margin: 0;
+}
+.todo_desc > span {
+    font-size: 25px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.todo_desc em {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-style: normal;
+    font-size: 35px;
+    font-weight: 500;
+    text-shadow: 1px 2px 3px rgb(0, 0, 0, 0.2);
+    margin-right: 20px;
+}
+#todo_btn {
+    width: 300px;
+    height: 50px;
+}
+#todo_btn > a:hover {
+    background-color: black;
+    color: white;
+}
+#todo_btn > a {
+    border-radius: 10px;
+    border: 1px solid black;
+    transition: 0.3s ease;
+    font-size: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 /* the others */
 #others {
     height: 100%;
@@ -1336,6 +1413,7 @@ html {scroll-behavior: smooth;}
     .standard_desc > img {width: 47px;}
     .responsive_desc > img {width: 47px;}
     .mega_desc > img {width: 47px; margin-right: 13px;}
+    .todo_desc > img {width: 47px; margin-right: 13px;}
 }
 @media (max-width: 1200px) {
     #introduction_left_border {width: 400px; height: 400px;}
@@ -1365,6 +1443,9 @@ html {scroll-behavior: smooth;}
     .mega_desc > img {margin-right: 6px; width: 40px;}
     #mega_img_tablet {bottom: 80px;}
     #mega_img_mobile {bottom: 80px;}
+
+    .todo_desc em {font-size: 30px;}
+    .todo_desc > img {margin-right: 6px; width: 40px;}
 
     #intro {padding: 90px 0;}
     #skills {padding: 90px 0;}
@@ -1416,6 +1497,12 @@ html {scroll-behavior: smooth;}
     #mega_btn > a {font-size: 25px;}
     #mega_img_tablet {bottom: 50px;}
     #mega_img_mobile {bottom: 50px;}
+
+    .todo_desc em {font-size: 25px;}
+    .todo_desc > span {font-size: 20px;}
+    .todo_desc > img {width: 35px;}
+    #todo_title {font-size: 100px;}
+    #todo_btn > a {font-size: 25px;}
 
     #intro_title {font-size: 100px; margin: 0 0 30px 40px;}
     #introduction {flex-direction: column; align-items: center;}
@@ -1485,6 +1572,14 @@ html {scroll-behavior: smooth;}
     #mega_img_mobile {bottom: 10px; right: 100px;}
     .mega_desc > img {margin-right: 10px;}
 
+    #todo {flex-direction: column; align-items: center;}
+    #todo_title {font-size: 80px; margin: 0; text-align: center;}
+    #todo_left {margin: 0; text-align: center; padding: 15px 0 25px 0;}
+    #todo_right {padding: 0; width: 70%;}
+    #todo_img > img {width: 70%;}
+    #todo_btn {width: 100%; display: flex; justify-content: center;}
+    #todo_btn > a {font-size: 22px; width: 70%;}
+
     #intro_title {font-size: 80px; text-align: center; margin: 0;}
     #introduction_left {margin-top: 30px;}
     #introduction_right_desc {font-size: 22px;}
@@ -1540,6 +1635,9 @@ html {scroll-behavior: smooth;}
     .mega_desc > img {margin-right: 6px;}
     #mega_img_tablet {left: 20px;}
     #mega_img_mobile {right: 60px;}
+
+    #todo_title {font-size: 70px;}
+    #todo_btn > a {font-size: 20px;}
 
     #intro_title {font-size: 70px;}
     #introduction_right {width: 100%;}
@@ -1609,6 +1707,9 @@ html {scroll-behavior: smooth;}
     #mega_img_mobile {right: 45px;}
     .mega_desc > img {margin-right: 5px;}
 
+    #todo_title {font-size: 53px;}
+    #todo_right {width: 90%;}
+
     #intro_title {font-size: 53px;}
     #introduction_right_desc {font-size: 18px;}
     #introduction_right_title {font-size: 45px;}
@@ -1670,6 +1771,7 @@ html {scroll-behavior: smooth;}
     #menu_nav > ul > li:nth-child(5) {width: 49.75%; border-right: 0; }
     #menu_nav > ul > li > a {width: 100%; height: 100%; display: block; text-align: center;}
     #menu_nav > ul {position: static; display: block; overflow: hidden;}
+
     #standard_btn > a {height: 62%; line-height: 31px;}
     #standard_title {font-size: 37px;}
     .standard_desc em {font-size: 20px;}
@@ -1693,6 +1795,14 @@ html {scroll-behavior: smooth;}
     .mega_desc > img {width: 30px; margin-right: 10px;}
     #mega_right {width: 100%;}
     #mega_right > ul {margin: 0 0 35px 0;}
+
+    #todo_btn > a {height: 62%; line-height: 31px;}
+    #todo_title {font-size: 37px;}
+    .todo_desc em {font-size: 20px;}
+    .todo_desc > span {font-size: 18px;}
+    .todo_desc > img {width: 30px;}
+    #todo_right {width: 100%;}
+    #todo_right > ul {margin: 0 0 35px 0;}
 
     #intro_title {font-size: 37px;}
     #introduction_right_title {font-size: 40px;}

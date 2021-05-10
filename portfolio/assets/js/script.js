@@ -239,6 +239,7 @@ var nav = document.querySelectorAll(".nav");
 var nav1 = document.querySelector("#nav1");
 var nav2 = document.querySelector("#nav2");
 var nav3 = document.querySelector("#nav3");
+var nav4 = document.querySelector("#nav4");
 var current = 0;
 
 slideShow(current);
@@ -252,21 +253,28 @@ function navShow(n){
 };
 
 function navBtn1(){
-    if(current == 1 || current == 2) current = 0;
+    if(current == 1 || current == 2 || current == 3) current = 0;
     slideShow(current);
     fadeIn(results[current]);
     navShow(current);
 };
 
 function navBtn2(){
-    if(current == 0 || current == 2) current = 1;
+    if(current == 0 || current == 2 || current == 3) current = 1;
     slideShow(current);
     fadeIn(results[current]);
     navShow(current);
 };
 
 function navBtn3(){
-    if(current == 0 || current == 1) current = 2;
+    if(current == 0 || current == 1 || current == 3) current = 2;
+    slideShow(current);
+    fadeIn(results[current]);
+    navShow(current);
+};
+
+function navBtn4(){
+    if(current == 0 || current == 1 || current == 2) current = 3;
     slideShow(current);
     fadeIn(results[current]);
     navShow(current);
@@ -288,7 +296,7 @@ function prevShow(){
 };
 
 function nextShow(){
-    if(current < 2) current += 1;
+    if(current < 3) current += 1;
     else current = 0;
     slideShow(current);
     fadeIn(results[current]);
@@ -300,3 +308,4 @@ next.onclick = nextShow;
 nav1.onclick = navBtn1;
 nav2.onclick = navBtn2;
 nav3.onclick = navBtn3;
+nav4.onclick = navBtn4;
