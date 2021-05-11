@@ -364,9 +364,12 @@ html {scroll-behavior: smooth;}
     width: 500px;
     height: 500px;
     background-color: rgb(0, 0, 0, 0.1);
-    background: url(../img/bestM01.jpg) no-repeat center center;
     background-size: cover;
     z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
 }
 #introduction_right {
     width: 100%;
