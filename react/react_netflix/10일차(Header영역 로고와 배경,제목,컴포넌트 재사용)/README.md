@@ -1,6 +1,6 @@
 ## Netflix 클론 사이트 만들기(ver.2021/05/21)
 
-<img src="public/images/misc/react_netflix_20210521.jpg" width="90%" height="80%" alt="react_netflix"></img>
+<img src="public/images/misc/react_netflix_20210521.gif" width="90%" height="80%" alt="react_netflix"></img>
 
 * 오늘은 Header영역에 logo를 넣어주고 bg를 넣어주었습니다.
 * 그리고 Header안에 Title과 이전에 만들었던 OptForm을 재사용하여 Header영역을 완성 시켰습니다.
