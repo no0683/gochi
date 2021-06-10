@@ -1,6 +1,5 @@
-## Netflix 클론 사이트 만들기(ver.2021/06/09
+## Netflix 클론 사이트 만들기(ver.2021/06/09)
 
-[카드영역 예시 이미지]
 <img src="public/images/misc/react_netflix_20210609.png" width="90%" height="80%" alt="react_netflix"></img>
 
 * 오늘은 browse페이지의 card영역에 firebase에저장한 series,films 컬렉션별로 데이터를 가져왔습니다.
