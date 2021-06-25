@@ -1,4 +1,4 @@
-## Netflix 클론 사이트 만들기(ver.2021/06/23)
+## Netflix 클론 사이트 만들기(ver.2021/06/24)
 
 [code coverage를 이용한 unit test 진행상황]
 <img src="public/images/misc/react_netflix_20210623.jpg" width="90%" height="80%" alt="react_netflix"></img>
