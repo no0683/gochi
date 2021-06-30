@@ -4,7 +4,7 @@
 <img src="public/images/misc/react_netflix_20210630.jpg" width="90%" height="80%" alt="react_netflix"></img>
 
 [fireEvent를 통한 검증이되지않은 오류]
-* <SearchInput /> 의 onChange속성과 <SearchIcon />의 onClick속성 의 fireEvent를 통한 이벤트 동작검증이 되지않음
+* SearchInput 의 onChange속성과 SearchIcon의 onClick속성 의 fireEvent를 통한 이벤트 동작검증이 되지않음
 <img src="public/images/misc/react_netflix_20210630(2).jpg" width="90%" height="80%" alt="react_netflix"></img>
 
 * 오늘은 browse 컨테이너에서 header영역의 요소들이 정상적으로 작동하는지 테스트 했습니다.
