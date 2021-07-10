@@ -1,14 +1,18 @@
 ## nextjs tutorial(ver.2021/07/10)
 
+```
 [에러 페이지]
+
 <img src="public/images/react_nextjs_20210710.jpg" width="90%" height="80%" alt="react_nextjs"></img>
-
 <img src="public/images/react_nextjs_20210710(2).jpg" width="90%" height="80%" alt="react_nextjs"></img>
+```
 
+```
 [개발,프로덕션 환경예따른 페이지]
-<img src="public/images/react_nextjs_20210710(3).jpg" width="90%" height="80%" alt="react_nextjs"></img>
 
+<img src="public/images/react_nextjs_20210710(3).jpg" width="90%" height="80%" alt="react_nextjs"></img>
 <img src="public/images/react_nextjs_20210710(4).jpg" width="90%" height="80%" alt="react_nextjs"></img>
+```
 
 * 오늘은 아래내용들을 추가작업 했습니다.
 
