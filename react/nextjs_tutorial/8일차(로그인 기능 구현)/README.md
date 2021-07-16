@@ -1,6 +1,6 @@
 ## nextjs tutorial(ver.2021/07/16)
 
-[메인 홈화면을 정적 생성방식 도입(pre-rendering)]
+[간단한 로그인,로그아웃 기능]
 <img src="public/images/react_nextjs_20210716.gif" width="90%" height="80%" alt="react_nextjs"></img>
 
 * 오늘은 아래내용들을 추가작업 했습니다.
